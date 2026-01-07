@@ -29,16 +29,18 @@ class Cat extends Animal {
 }
 
 /*
-public 클래스가 있는 경우 :
-- 하나의 .java 파일에는 public 클래스는 단 하나만 가능
-- 그리고 파일명은 그 public 클래스명과 반드시 같아야 함
-*/
+ * public 클래스가 있는 경우 :
+ * - 하나의 .java 파일에는 public 클래스는 단 하나만 가능
+ * - 그리고 파일명은 그 public 클래스명과 반드시 같아야 함
+ */
 public class Main {
     public static void main(String[] args) {
         Animal a1 = new Dog(); // 다형성
         Animal a2 = new Cat();
+        Animal a3 = new Animal(); // Animal 객체 생성
 
         a1.speak(); // 개가 짖습니다.
         a2.speak(); // 고양이가 웁니다.
+        a3.speak(); // 동물이 소리를 냅니다.
     }
 }
