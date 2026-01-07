@@ -1,3 +1,4 @@
+
 /*
 try {
     // 예외 발생 가능 코드
@@ -13,7 +14,7 @@ throw new Exception("메시지");
 // 메서드에서 예외 선언
 throws Exception
 */
-
+// 이 프로그램은 숫자를 반복 입력받다가, 음수가 입력되면 checkNumber()에서 예외를 던지고, main에서 그 예외를 받아 메시지를 출력한 뒤 반복을 종료하는 구조다.
 import java.util.Scanner;
 
 public class ExceptionExample2 {
