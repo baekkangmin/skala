@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스 예제</title>
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .box {
+            width: 200px;
+            padding: 20px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .box:hover {
+            background-color: red;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .box::before {
+            content: "👉 ";
+            font-size: 18px;
+        }
+
+        .box::after {
+            content: " 👈";
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <p class="box">HOVER</p>
+</body>
+</html>

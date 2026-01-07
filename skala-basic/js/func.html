@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 desconstructing</title>
+</head>
+
+<body>
+    <script>
+        // 객체 비구조화
+        function buildObject(name, age) {
+            return { name: name, age: age, className: "Cloud반", address: "분당구 정자동" };
+        }
+        const { name, className } = buildObject("홍길동", 25);
+        console.log(name, className);
+
+        // 배열 비구조화
+        function buildArray(a, b, c) {
+            return [a, b, c];
+        }
+        const [first, ,Third] = buildArray(10, 20, 30)
+        console.log(first, Third);
+    </script>
+</body>
+
+</html>

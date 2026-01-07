@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transform Effects Demo</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding: 24px;
+      background: #f6f7fb;
+      color: #111;
+    }
+
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      display: grid;
+      gap: 16px;
+    }
+
+    /* 버튼 영역 */
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    button {
+      border: 1px solid #cfcfcf;
+      background: #fff;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.12s ease, background 0.12s ease;
+    }
+    button:hover { background: aqua; }
+    button:active { transform: scale(0.98); }
+
+    /* 데모 영역 */
+    .stage {
+      height: 320px;
+      border: 2px dashed #b9b9b9;
+      border-radius: 14px;
+      background: #ffffff;
+      display: grid;
+      place-items: center;
+      /* 3D 효과를 보기 위한 원근감 */
+      perspective: 800px;
+    }
+
+    .box {
+      width: 160px;
+      height: 160px;
+      border-radius: 16px;
+      background: #2563eb;
+      color: #fff;
+      font-weight: 900;
+      font-size: 18px;
+
+      display: grid;
+      place-items: center;
+
+      /* 애니메이션을 부드럽게 */
+      transition: transform 0.45s ease;
+      /* 3D transform(translateZ) 효과를 안정적으로 */
+      transform-style: preserve-3d;
+      user-select: none;
+    }
+
+    .hint {
+      font-size: 14px;
+      opacity: 0.75;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="controls">
+      <button data-effect="translate">translate</button>
+      <button data-effect="scale">scale</button>
+      <button data-effect="rotate">rotate</button>
+      <button data-effect="skew">skew</button>
+      <button data-effect="translateZ">translateZ</button>
+      <button data-effect="reset">reset</button>
+    </div>
+
+    <div class="stage">
+      <div class="box" id="box">BOX</div>
+    </div>
+
+    <div class="hint">
+      버튼을 누르면 아래 박스에 transform 효과가 적용됩니다. (translateZ는 3D라 stage에 perspective가 필요함)
+    </div>
+  </div>
+
+  <script>
+    const box = document.getElementById("box");
+    const buttons = document.querySelectorAll("button[data-effect]");
+
+    const effects = {
+      translate: "translate(180px, 125px)",
+      scale: "scale(1.25)",
+      rotate: "rotate(90deg)",
+      skew: "skew(28deg, 0deg)",
+      translateZ: "translateZ(400px)",
+      reset: "none"
+    };
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const key = btn.dataset.effect;
+        box.style.transform = effects[key];
+        box.textContent = key === "reset" ? "BOX" : key.toUpperCase();
+      });
+    });
+  </script>
+</body>
+</html>

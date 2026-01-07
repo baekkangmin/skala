@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>식량 분배</title>
+</head>
+<body>
+  <h2>식량 분배 결과</h2>
+  <div id="result"></div>
+
+  <script>
+    const foods = ["쌀", "보리", "콩", "감자", "양파", "마늘", "배추", "무", "고구마", "호박"];
+    const poors = ["철수", "영희", "민수"];
+
+    // results: [{ name, items: { foods: [] } }]
+    const results = poors.map(name => ({ name, items: { foods: [] } }));
+
+    // 순환 분배 (공평하게 반복)
+    foods.forEach((food, i) => {
+      results[i % results.length].items.foods.push(food);
+    });
+
+    // console.table 출력(보기 좋게: items 객체 대신 문자열 컬럼으로 변환)
+    console.table(
+      results.map(r => ({
+        name: r.name,
+        items: r.items.foods.join(", ")
+      }))
+    );
+
+    // document 출력(table 태그)
+    const rows = results
+      .map(r => `<tr><td>${r.name}</td><td>${r.items.foods.join(", ")}</td></tr>`)
+      .join("");
+
+    document.getElementById("result").innerHTML = `
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr><th>이름</th><th>받은 식량</th></tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+  </script>
+</body>
+</html>

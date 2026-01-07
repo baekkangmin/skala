@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>나의 일과</title>
+  <style>
+    :root{
+      --text:#111;
+      --muted:#666;
+      --hl:#fff36a;
+    }
+    body{
+      margin:0;
+      background:#fff;
+      color:var(--text);
+      font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR",
+                   Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.35;
+    }
+    .wrap{
+      max-width: 520px;
+      padding: 22px 18px 28px;
+    }
+
+    h1{
+      margin: 0 0 12px;
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    h1 .icon{
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .section{
+      margin-top: 16px;
+    }
+    .section h2{
+      margin: 0 0 8px;
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.4px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .timeline{
+      margin: 0;
+      padding: 0 0 0 6px;
+      list-style: none;
+    }
+    .timeline li{
+      display:flex;
+      align-items: baseline;
+      gap: 14px;               /* 간격 확대 */
+      padding: 4px 0;
+      font-size: 16px;
+    }
+    .time{
+      width: 120px;            /* 시간 컬럼 확장 */
+      color: var(--text);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .dot{
+      width: 18px;
+      text-align:center;
+    }
+    .text{
+      flex: 1;
+    }
+
+    mark{
+      background: var(--hl);
+      padding: 0 4px;
+      border-radius: 4px;
+    }
+
+    .foot{
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1><span class="icon">📅</span>나의 일과</h1>
+
+    <!-- 미라클 모닝 -->
+    <section class="section" id="morning">
+      <h2>🌅 미라클 모닝</h2>
+      <ul class="timeline">
+        <li>
+          <span class="time">06:30</span><span class="dot">⏰</span>
+          <span class="text"><mark>일찍 일어나기</mark></span>
+        </li>
+        <li>
+          <span class="time">09:00</span><span class="dot">🏫</span>
+          <span class="text">SKALA 출근 및 <mark>교육 시작</mark></span>
+        </li>
+        <li>
+          <span class="time">12:00</span><span class="dot">🍱</span>
+          <span class="text">점심 식사</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 알찬 오후 활동 -->
+    <section class="section" id="afternoon">
+      <h2>📚 알찬 오후 활동</h2>
+      <ul class="timeline">
+        <li>
+          <span class="time">14:00 ~ 18:00</span><span class="dot">🧑‍💻</span>
+          <span class="text">SKALA <mark>교육 종료</mark></span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 여유로운 저녁과 밤 -->
+    <section class="section" id="evening">
+      <h2>🌙 여유로운 저녁과 밤</h2>
+      <ul class="timeline">
+        <li>
+          <span class="time">18:00</span><span class="dot">🚶‍♂️</span>
+          <span class="text">퇴근</span>
+        </li>
+        <li>
+          <span class="time">20:00</span><span class="dot">🍽️</span>
+          <span class="text">저녁 식사</span>
+        </li>
+        <li>
+          <span class="time">21:00</span><span class="dot">📺</span>
+          <span class="text">유튜브 시청</span>
+        </li>
+        <li>
+          <span class="time">23:00</span><span class="dot">🛏️</span>
+          <span class="text"><mark>취침</mark></span>
+        </li>
+      </ul>
+    </section>
+
+    <div class="foot">🗓️ 일정 메모</div>
+  </div>
+</body>
+</html>

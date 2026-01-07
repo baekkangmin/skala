@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS 변수 테마 전환</title>
+
+  <style>
+    /* =========================
+       1. 테마 변수 정의
+       ========================= */
+
+    /* 기본(화이트) 테마 */
+    :root {
+      -color-bg-: #f5f6f8;
+      --color-surface: #ffffff;
+      --color-text: #111827;
+      --color-muted: #6b7280;
+      --color-border: #e5e7eb;
+      --color-accent: #2563eb; /* 블루 */
+    }
+
+    /* 다크 + 레드 테마 */
+    body[data-theme="dark"] {
+      --color-bg: #0f0f10;
+      --color-surface: #1a1a1d;
+      --color-text: #f5f5f5;
+      --color-muted: #a1a1aa;
+      --color-border: #2a2a2e;
+      --color-accent: #dc2626; /* 🔴 레드 */
+    }
+
+    /* =========================
+       2. 공통 스타일
+       ========================= */
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: Arial, sans-serif;
+
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .card {
+      width: min(760px, 92vw);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      padding: 20px;
+
+      transition: background 0.25s ease, border-color 0.25s ease;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .muted {
+      color: var(--color-muted);
+      margin: 0;
+    }
+
+    /* =========================
+       3. 테마 선택 (라디오)
+       ========================= */
+
+    .theme-switch {
+      display: flex;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .theme-switch label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    input[type="radio"] {
+      accent-color: var(--color-accent);
+      cursor: pointer;
+    }
+
+    /* =========================
+       4. 샘플 UI
+       ========================= */
+
+    .box {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+    }
+
+    .btn {
+      margin-top: 14px;
+      padding: 10px 16px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+
+      background: var(--color-accent);
+      color: #fff;
+      font-weight: 800;
+
+      transition: transform 0.12s ease, opacity 0.12s ease;
+    }
+
+    .btn:hover { opacity: 0.9; }
+    .btn:active { transform: scale(0.97); }
+  </style>
+</head>
+
+<body data-theme="light">
+
+  <div class="card">
+    <h1>CSS 변수 기반 테마 전환</h1>
+    <p class="muted">
+      모든 색상은 CSS 사용자 정의 변수로만 제어됩니다.
+    </p>
+
+    <div class="theme-switch">
+      <label>
+        <input type="radio" name="theme" value="light" checked />
+        White
+      </label>
+      <label>
+        <input type="radio" name="theme" value="dark" />
+        Dark
+      </label>
+    </div>
+
+    <div class="box">
+      <strong>샘플 영역</strong>
+      <p class="muted" style="margin-top:8px;">
+        배경 / 텍스트 / 보더 / 포인트 컬러 모두 변수 기반
+      </p>
+      <button class="btn">Action</button>
+    </div>
+  </div>
+
+  <script>
+    const radios = document.querySelectorAll('input[name="theme"]');
+
+    radios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        document.body.setAttribute('data-theme', radio.value);
+      });
+    });
+  </script>
+
+</body>
+</html>

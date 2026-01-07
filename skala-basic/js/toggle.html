@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>DOM 스타일 토글</title>
+  <style>
+    /* highlight 클래스 */
+    .highlight {
+      background-color: yellow;
+      color: red;
+      font-weight: bold;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <p id="text">
+    토글 버튼을 누르면 이 문장이 강조됩니다.
+  </p>
+
+  <button id="toggleBtn">강조 토글</button>
+
+  <script>
+    const text = document.getElementById("text");
+    const button = document.getElementById("toggleBtn");
+
+    button.addEventListener("click", function () {
+        if (text.classList.contains("highlight")) {
+            text.classList.remove("highlight");
+            console.log("강조 해제됨");
+        } else {
+            text.classList.add("highlight");
+            console.log("강조 설정됨");
+        }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>분신 홍길동 - 깊은 복제</title>
+</head>
+<body>
+  <script>
+    function deepCopy(obj){
+        return JSON.parse(JSON.stringify(obj));
+    }
+
+    // 진짜 홍길동
+    const realHong = {
+      name: "홍길동",
+      age: 25,
+      job: "의적",
+      skills: ["검술", "전략", "분신"],
+      shadow: {
+        color: "검은색"
+      }
+    };
+
+    const fakeHong = deepCopy(realHong) // 깊은 복제
+    fakeHong.skills.length = 2; // 가짜 홍길동의 기술을 모두 제거
+    delete fakeHong.shadow; // 가짜 홍길동의 그림자 제거
+
+    console.log("진짜 홍길동:", realHong);
+    console.log("가짜 홍길동:", fakeHong);
+  </script>
+</body>
+</html>

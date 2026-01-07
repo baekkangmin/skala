@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drag & Drop Effect</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+
+    /* 버튼 */
+    .btn {
+      border: none;
+      padding: 14px 22px;
+      border-radius: 12px;
+      cursor: grab;
+
+      background: blue;
+      color: white;
+
+      font-size: 16px;
+      font-weight: 700;
+
+      transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s;
+    }
+
+    .btn:hover {
+      background: green;
+      transform: translateY(-2px);
+    }
+
+    .btn:active {
+      cursor: grabbing;
+      transform: scale(0.95);
+    }
+
+    .dragging {
+      opacity: 0.4;
+    }
+
+    /* 드롭 영역 */
+    .drop-zone {
+      margin-top: 40px;
+      height: 200px;
+      border: 3px dashed #aaa;
+      border-radius: 16px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 20px;
+      font-weight: 700;
+      color: #666;
+
+      transition: all 0.3s ease;
+    }
+
+    /* 드래그가 올라왔을 때 */
+    .drop-zone.drag-over {
+      background: #e0f2fe;
+      border-color: #0284c7;
+      color: #0284c7;
+      transform: scale(1.02);
+    }
+
+    /* 드롭 성공 */
+    .drop-zone.success {
+      background: #dcfce7;
+      border-color: #16a34a;
+      color: #16a34a;
+
+      animation: pop 0.4s ease;
+    }
+
+    @keyframes pop {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <button class="btn" draggable="true" id="dragBtn">
+    드래그해서 박스로 옮기세요
+  </button>
+
+  <div class="drop-zone" id="dropZone">
+    여기에 DROP
+  </div>
+
+  <script>
+    const btn = document.getElementById("dragBtn");
+    const zone = document.getElementById("dropZone");
+
+    // 드래그 시작
+    btn.addEventListener("dragstart", () => {
+      btn.classList.add("dragging");
+    });
+
+    // 드래그 종료
+    btn.addEventListener("dragend", () => {
+      btn.classList.remove("dragging");
+    });
+
+    // 드롭 영역 위에 있을 때 (필수)
+    zone.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      zone.classList.add("drag-over");
+    });
+
+    zone.addEventListener("dragleave", () => {
+      zone.classList.remove("drag-over");
+    });
+
+    // 드롭 성공
+    zone.addEventListener("drop", (e) => {
+      e.preventDefault();
+      zone.classList.remove("drag-over");
+      zone.classList.add("success");
+
+      zone.textContent = "DROP SUCCESS 🎉";
+
+      // 버튼 이동
+      zone.appendChild(btn);
+
+      // 애니메이션 후 상태 유지
+      setTimeout(() => {
+        zone.classList.remove("success");
+      }, 500);
+    });
+  </script>
+
+</body>
+</html>

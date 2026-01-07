@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+<body>
+    <script>
+        const person = {
+            name: "홍길동",
+            age: 30,
+            skills: ["검술", "둔갑술", "말타기"],
+            greet: function() {
+                return `안녕하세요, 저는 ${this.name}입니다. 나이는 ${this.age}살이고 주요 기술은 ${this.skills.join(", ")}입니다.`;
+            }
+        };
+
+        /* 깊은 복사 */
+        // JSON 문자열 변환
+        const msg = JSON.stringify(person);
+        console.log(msg, person);
+        
+        // JSON 문자열을 -> 객체로 변환
+        const obj = JSON.parse(msg);
+        obj.name = "성춘향";
+        obj.skills.push("가야금 연주");
+        obj.age = 18;
+        console.log(obj);
+
+        // delete 연산자
+        delete person.age;
+        console.log(person);
+        //console.log(person.name, person.skills);
+
+        /* 얕은 복사 */
+        //const student = Object.assign({}, person); // person 객체를 student 객체에 복사 -> 얕은 복사
+        //const student = Object.create(person); // 프로토타입 기반 복사
+        const student = {...person}; // 스프레드 문법을 사용한 객체 복사
+        student.name = "이몽룡";
+        student.age = 20;
+        student.skills.push("글쓰기");
+
+
+        //hasOwnProperty는 “이 속성이 내 것인가, 물려받은 것인가”를 구분하는 메서드
+        console.log(person.greet(), student.hasOwnProperty('greet'));
+        console.log(student.greet(), student.hasOwnProperty('greet'));
+
+
+        // skala = {}; // 객체 리터럴 방식
+        const skala = new Object(); // Object 생성자 함수 사용
+        skala.className = "클라우드 반"
+        skala['address'] = "성남시 분당구"
+
+        const key = "address" // 동적 프로퍼티 접근 가능 = 키 값을 가변적으로 변경해가며 접근할 수 있음 
+        console.log(skala[key]);
+    </script>
+</body>
+</html>

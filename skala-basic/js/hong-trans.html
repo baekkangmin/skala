@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>홍길동 변신술</title>
+  <style>
+    .container {
+      width: 260px;
+      border: 2px solid #999;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    h3 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .options label {
+      display: block;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 4px 10px;
+    }
+
+    .result {
+      margin-top: 14px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>홍길동 변신술</h3>
+
+    <p>변신할 대상을 선택하세요.</p>
+
+    <div class="options">
+      <label>
+        <input type="radio" name="transform" value="스님">
+        스님
+      </label>
+      <label>
+        <input type="radio" name="transform" value="곰">
+        곰
+      </label>
+      <label>
+        <input type="radio" name="transform" value="호랑이">
+        호랑이
+      </label>
+    </div>
+
+    <button id="transformBtn">변신</button>
+
+    <div class="result" id="result">
+      변신 결과 :
+    </div>
+  </div>
+
+  <script>
+    // DOM 요소 참조
+    const button = document.getElementById("transformBtn");
+    const result = document.getElementById("result");
+
+    // 이벤트 핸들러 등록
+    button.addEventListener("click", function () {
+      const selected = document.querySelector(
+        'input[name="transform"]:checked'
+      );
+
+      if (!selected) {
+        alert("변신 대상을 선택하세요.");
+        return;
+      }
+
+      result.textContent = "변신 결과 : " + selected.value;
+    });
+  </script>
+</body>
+</html>

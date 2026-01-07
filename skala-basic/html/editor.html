@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selection/Range 기반 심플 웹 에디터</title>
+  <style>
+    body{
+      font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", Segoe UI, Roboto, Arial, sans-serif;
+      margin: 24px;
+      color:#111;
+    }
+    .container{ max-width: 900px; }
+
+    .toolbar{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items:center;
+      padding: 10px;
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      background:#fafafa;
+    }
+    .btn{
+      padding: 8px 10px;
+      border: 1px solid #ddd;
+      background:#fff;
+      border-radius: 8px;
+      cursor:pointer;
+      font-weight: 700;
+    }
+    .btn:active{ transform: translateY(1px); }
+    .btn[aria-pressed="true"]{
+      border-color:#bbb;
+      background:#f1f1f1;
+    }
+
+    .editor{
+      margin-top: 12px;
+      min-height: 220px;
+      padding: 14px;
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      outline: none;
+      background:#fff;
+      line-height: 1.6;
+    }
+    .editor:focus{
+      border-color:#bdbdbd;
+      box-shadow: 0 0 0 3px rgba(0,0,0,0.06);
+    }
+
+    .actions{
+      margin-top: 12px;
+      display:flex;
+      gap: 8px;
+    }
+
+    .output-wrap{
+      margin-top: 18px;
+    }
+    .output-title{
+      font-weight: 800;
+      margin: 0 0 8px;
+    }
+    pre{
+      margin:0;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #e5e5e5;
+      background:#0b1020;
+      color:#e6e6e6;
+      overflow:auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    input[type="color"]{
+      width: 40px;
+      height: 34px;
+      border: none;
+      background: transparent;
+      padding: 0;
+      cursor: pointer;
+    }
+    .hint{
+      margin-top: 8px;
+      color:#666;
+      font-size: 13px;
+    }
+
+    /* 스타일 적용 wrapper */
+    .fmt-bold{ font-weight: 700; }
+    .fmt-italic{ font-style: italic; }
+    .fmt-underline{ text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 style="margin:0 0 12px;">심플 웹 에디터 (Selection/Range)</h1>
+
+    <div class="toolbar">
+      <button class="btn" type="button" id="boldBtn" title="굵게"><b>B</b></button>
+      <button class="btn" type="button" id="italicBtn" title="기울임"><i>I</i></button>
+      <button class="btn" type="button" id="underlineBtn" title="밑줄"><u>U</u></button>
+
+      <span style="width:1px;height:22px;background:#ddd;margin:0 6px;"></span>
+
+      <label style="display:flex;align-items:center;gap:8px;">
+        <span style="font-weight:700;">색상</span>
+        <input type="color" id="colorPicker" value="#111111" />
+      </label>
+
+      <span style="flex:1;"></span>
+
+      <button class="btn" type="button" id="clearBtn" title="선택 영역 서식 제거">서식 제거</button>
+    </div>
+
+    <div
+      id="editor"
+      class="editor"
+      contenteditable="true"
+      spellcheck="false"
+      aria-label="편집 영역"
+    >
+      여기에 글을 입력하고, 드래그로 선택한 뒤 위 버튼을 눌러 서식을 적용하세요.
+    </div>
+
+    <div class="actions">
+      <button class="btn" type="button" id="saveBtn">저장(HTML 보기)</button>
+      <button class="btn" type="button" id="copyBtn">HTML 복사</button>
+    </div>
+
+    <div class="hint">
+      선택 후 버튼을 누르면 Range 기반으로 태그가 감싸집니다. (커서만 있어도 동작)
+    </div>
+
+    <div class="output-wrap">
+      <p class="output-title">저장된 HTML</p>
+      <pre id="output">&lt;!-- 저장 버튼을 누르면 여기에 HTML이 표시됩니다. --&gt;</pre>
+    </div>
+  </div>
+
+  <script>
+    const editor = document.getElementById("editor");
+    const output = document.getElementById("output");
+
+    const boldBtn = document.getElementById("boldBtn");
+    const italicBtn = document.getElementById("italicBtn");
+    const underlineBtn = document.getElementById("underlineBtn");
+    const colorPicker = document.getElementById("colorPicker");
+
+    const saveBtn = document.getElementById("saveBtn");
+    const copyBtn = document.getElementById("copyBtn");
+    const clearBtn = document.getElementById("clearBtn");
+
+    // ---- Selection/Range helpers ----
+    function getEditorRange() {
+      const sel = window.getSelection();
+      if (!sel || sel.rangeCount === 0) return null;
+
+      const range = sel.getRangeAt(0);
+      // editor 내부 선택만 처리
+      const common = range.commonAncestorContainer;
+      if (!editor.contains(common) && common !== editor) return null;
+
+      return range;
+    }
+
+    function setCaretAfter(node) {
+      const sel = window.getSelection();
+      const range = document.createRange();
+      range.setStartAfter(node);
+      range.collapse(true);
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+
+    function setCaretInside(node) {
+      // node의 끝으로 커서 이동
+      const sel = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(node);
+      range.collapse(false);
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+
+    function closestFmtEl(node, className) {
+      let cur = node.nodeType === Node.ELEMENT_NODE ? node : node.parentElement;
+      while (cur && cur !== editor) {
+        if (cur.classList && cur.classList.contains(className)) return cur;
+        cur = cur.parentElement;
+      }
+      return null;
+    }
+
+    function isRangeFullyInsideSingleWrapper(range, className) {
+      // start/end가 동일 wrapper 안이면 "토글 해제" 허용
+      const startEl = closestFmtEl(range.startContainer, className);
+      const endEl = closestFmtEl(range.endContainer, className);
+      return startEl && startEl === endEl ? startEl : null;
+    }
+
+    function unwrapElement(el) {
+      const parent = el.parentNode;
+      while (el.firstChild) parent.insertBefore(el.firstChild, el);
+      parent.removeChild(el);
+    }
+
+    function wrapRange(range, wrapperEl) {
+      // surroundContents는 실패하는 케이스가 많아 extract/insert 방식 사용
+      const frag = range.extractContents();
+      wrapperEl.appendChild(frag);
+      range.insertNode(wrapperEl);
+      setCaretInside(wrapperEl);
+    }
+
+    function insertStyledCaretWrapper(className, styleObj = null) {
+      // 선택이 없을 때: 스타일 span + ZWSP 삽입
+      const range = getEditorRange();
+      if (!range) return;
+
+      const span = document.createElement("span");
+      span.className = className;
+      if (styleObj) Object.assign(span.style, styleObj);
+
+      // 커서 유지를 위한 zero-width space
+      span.appendChild(document.createTextNode("\u200B"));
+      range.insertNode(span);
+      setCaretInside(span);
+    }
+
+    function toggleFormat(className, styleObj = null) {
+      const range = getEditorRange();
+      if (!range) return;
+
+      // 커서만 있는 경우: span 삽입
+      if (range.collapsed) {
+        insertStyledCaretWrapper(className, styleObj);
+        updateActiveStates();
+        return;
+      }
+
+      // 단일 wrapper 내부면 토글 해제
+      const wrapper = isRangeFullyInsideSingleWrapper(range, className);
+      if (wrapper) {
+        unwrapElement(wrapper);
+        updateActiveStates();
+        return;
+      }
+
+      // 적용
+      const span = document.createElement("span");
+      span.className = className;
+      if (styleObj) Object.assign(span.style, styleObj);
+      wrapRange(range, span);
+      updateActiveStates();
+    }
+
+    function applyColor(color) {
+      const range = getEditorRange();
+      if (!range) return;
+
+      // 커서만 있는 경우
+      if (range.collapsed) {
+        insertStyledCaretWrapper("fmt-color", { color });
+        updateActiveStates();
+        return;
+      }
+
+      // 단일 color wrapper 내부면 "색 업데이트"로 처리
+      const startColorEl = closestFmtEl(range.startContainer, "fmt-color");
+      const endColorEl = closestFmtEl(range.endContainer, "fmt-color");
+      if (startColorEl && startColorEl === endColorEl) {
+        startColorEl.style.color = color;
+        updateActiveStates();
+        return;
+      }
+
+      const span = document.createElement("span");
+      span.className = "fmt-color";
+      span.style.color = color;
+      wrapRange(range, span);
+      updateActiveStates();
+    }
+
+    function removeFormattingInSelection() {
+      const range = getEditorRange();
+      if (!range) return;
+
+      if (range.collapsed) return; // 선택 없으면 아무 것도 안 함
+
+      const frag = range.extractContents();
+
+      // 허용할 태그만 유지(br 정도). 나머지는 텍스트로 풀어버림.
+      const walker = document.createTreeWalker(
+        frag,
+        NodeFilter.SHOW_ELEMENT,
+        null
+      );
+
+      const toUnwrap = [];
+      while (walker.nextNode()) {
+        const el = walker.currentNode;
+        const tag = el.tagName.toLowerCase();
+        // br는 유지
+        if (tag === "br") continue;
+
+        // 모든 요소 unwrap 대상으로 (strong/em/u/span 등)
+        toUnwrap.push(el);
+      }
+
+      // 깊은 곳부터 unwrap
+      toUnwrap.reverse().forEach(unwrapElement);
+
+      range.insertNode(frag);
+      // 커서를 선택 끝으로
+      setCaretAfter(editor.lastChild || editor);
+      updateActiveStates();
+    }
+
+    // ---- UI Wiring ----
+    boldBtn.addEventListener("click", () => toggleFormat("fmt-bold"));
+    italicBtn.addEventListener("click", () => toggleFormat("fmt-italic"));
+    underlineBtn.addEventListener("click", () => toggleFormat("fmt-underline"));
+
+    colorPicker.addEventListener("input", (e) => {
+      applyColor(e.target.value);
+    });
+
+    clearBtn.addEventListener("click", () => {
+      removeFormattingInSelection();
+    });
+
+    saveBtn.addEventListener("click", () => {
+      output.textContent = editor.innerHTML; // 태그 그대로 보이게
+    });
+
+    copyBtn.addEventListener("click", async () => {
+      const html = editor.innerHTML;
+      try{
+        await navigator.clipboard.writeText(html);
+        copyBtn.textContent = "복사됨!";
+        setTimeout(() => (copyBtn.textContent = "HTML 복사"), 900);
+      }catch{
+        const ta = document.createElement("textarea");
+        ta.value = html;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        copyBtn.textContent = "복사됨!";
+        setTimeout(() => (copyBtn.textContent = "HTML 복사"), 900);
+      }
+    });
+
+    function updateActiveStates() {
+      const range = getEditorRange();
+      if (!range) {
+        boldBtn.setAttribute("aria-pressed", "false");
+        italicBtn.setAttribute("aria-pressed", "false");
+        underlineBtn.setAttribute("aria-pressed", "false");
+        return;
+      }
+
+      // 커서/선택 시작 지점 기준으로 상태 표시
+      const baseNode = range.startContainer;
+
+      boldBtn.setAttribute("aria-pressed", !!closestFmtEl(baseNode, "fmt-bold"));
+      italicBtn.setAttribute("aria-pressed", !!closestFmtEl(baseNode, "fmt-italic"));
+      underlineBtn.setAttribute("aria-pressed", !!closestFmtEl(baseNode, "fmt-underline"));
+    }
+
+    document.addEventListener("selectionchange", () => {
+      // 에디터 영역 밖 선택은 무시
+      const sel = window.getSelection();
+      if (!sel || sel.rangeCount === 0) return;
+      const range = sel.getRangeAt(0);
+      if (editor.contains(range.commonAncestorContainer) || range.commonAncestorContainer === editor) {
+        updateActiveStates();
+      }
+    });
+
+    editor.addEventListener("keyup", updateActiveStates);
+    editor.addEventListener("mouseup", updateActiveStates);
+
+    updateActiveStates();
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로그인 페이지</title>
+</head>
+<body>
+  <h1>로그인 화면</h1>
+
+  <form id="loginForm">
+    <label for="username">사용자 이름:</label>
+    <input type="text" id="username" name="username" required />
+    <br /><br />
+
+    <label for="password">비밀번호:</label>
+    <input type="password" id="password" name="password" required />
+    <br /><br />
+
+    <button id="submitBtn" type="submit">로그인</button>
+  </form>
+
+  <!-- validator.js를 따로 script src로 로드하지 말고, 아래에서 import로만 사용 -->
+  <script type="module">
+    import { isNotEmpty } from "./validator.js";
+
+    const form = document.getElementById("loginForm");
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const username = usernameInput.value;
+      const password = passwordInput.value;
+
+      if (isNotEmpty(username, "사용자 이름") && isNotEmpty(password, "비밀번호")) {
+        alert("로그인 성공!");
+      }
+    });
+  </script>
+</body>
+</html>

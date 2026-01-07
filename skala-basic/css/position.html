@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS position 예제</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.4; }
+
+    /* 공통 박스 */
+    .section {
+      padding: 24px;
+      border-bottom: 1px solid #ddd;
+      min-height: 260px;
+    }
+    .title {
+      font-weight: 700;
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+    .desc {
+      margin-bottom: 12px;
+      opacity: 0.8;
+    }
+
+    .row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .box {
+      width: 140px;
+      height: 90px;
+      border-radius: 10px;
+      padding: 10px;
+      color: #fff;
+      font-weight: 700;
+    }
+    .a { background: #2563eb; } /* 파랑 */
+    .b { background: #16a34a; } /* 초록 */
+    .c { background: #ef4444; } /* 빨강 */
+
+    /* static: 기본값 (top/left 적용 안 됨) */
+    .static {
+      position: static;
+      top: 20px;   /* 적용 안 됨 */
+      left: 20px;  /* 적용 안 됨 */
+    }
+
+    /* relative: 원래 자리 기준으로 이동, 자리(공간)는 그대로 유지 */
+    .relative {
+      position: relative;
+      top: 100px;
+      left: 100px;
+    }
+
+    /* absolute: 가장 가까운 position 지정 조상(여기선 .abs-parent)을 기준으로 배치 */
+    .abs-parent {
+      position: relative;      /* absolute의 기준점 */
+      border: 2px dashed #999;
+      padding: 16px;
+      width: 100%;
+      min-height: 150px;
+      border-radius: 12px;
+    }
+    .absolute {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 160px;
+      height: 90px;
+    }
+
+    /* fixed: 뷰포트(브라우저 화면)에 고정 */
+    .fixed {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      width: 170px;
+      height: 70px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    /* sticky: 스크롤하다가 특정 지점에 "달라붙음" (top 필수) */
+    .sticky-wrap {
+      border: 2px dashed #999;
+      border-radius: 12px;
+      padding: 12px;
+      height: 220px;
+      overflow: auto; /* 내부 스크롤로 sticky 체감 */
+    }
+    .sticky {
+      position: sticky;
+      top: 0;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      border-radius: 10px;
+    }
+    .filler {
+      height: 600px;
+      padding: 12px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- fixed는 어디서든 보이게 -->
+  <div class="box c fixed">fixed (화면 고정)</div>
+
+  <div class="section">
+    <div class="title">1) position: static (기본값)</div>
+    <div class="desc">top/left를 줘도 이동하지 않음. 문서 흐름(레이아웃) 그대로.</div>
+
+    <div class="row">
+      <div class="box a">일반 박스</div>
+      <div class="box b static">static<br>(top/left 무시)</div>
+      <div class="box a">일반 박스</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="title">2) position: relative</div>
+    <div class="desc">원래 위치 기준으로 이동. 이동해도 원래 자리의 공간은 그대로 남아있음.</div>
+
+    <div class="row">
+      <div class="box a">일반 박스</div>
+      <div class="box b relative">relative<br>(top/left 적용)</div>
+      <div class="box a">일반 박스</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="title">3) position: absolute</div>
+    <div class="desc">문서 흐름에서 빠지고, 가장 가까운 position 조상(.abs-parent)을 기준으로 배치.</div>
+
+    <div class="abs-parent">
+      <div class="desc">이 점선 박스가 absolute의 기준(부모: position: relative)</div>
+
+      <div class="row">
+        <div class="box a">일반 박스</div>
+        <div class="box a">일반 박스</div>
+        <div class="box a">일반 박스</div>
+      </div>
+
+      <div class="box b absolute">absolute<br>(부모 기준)</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="title">4) position: sticky</div>
+    <div class="desc">스크롤하다가 top 위치에 도달하면 “붙어서” 따라다님. (top 필수)</div>
+
+    <div class="sticky-wrap">
+      <div class="box b sticky">sticky (top:0)</div>
+      <div class="filler">
+        내부 스크롤을 내려보면 sticky가 위에 달라붙어 유지됨.<br><br>
+        sticky는 "스크롤 컨테이너" 안에서만 동작해.<br>
+        (여기서는 .sticky-wrap가 overflow:auto라 내부 스크롤 기준)
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="title">스크롤 테스트용 영역</div>
+    <div class="desc">fixed는 계속 오른쪽 아래에 떠 있을 거야.</div>
+    <div class="filler">아래로 내려서 fixed 동작 확인</div>
+  </div>
+
+</body>
+</html>

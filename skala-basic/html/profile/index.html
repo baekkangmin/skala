@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>백강민 소개 페이지</title>
+
+  <style>
+    :root{
+      /* 🔴 레드톤 컬러 시스템 */
+      --bg: #140b0b;
+      --panel: rgba(255,255,255,.06);
+      --panel-strong: rgba(255,255,255,.10);
+      --text: #fff1f1;
+      --muted: rgba(255,225,225,.72);
+      --line: rgba(255,200,200,.20);
+
+      --accent:  #dc2626;   /* 메인 레드 */
+      --accent2: #f97316;   /* 오렌지 레드 */
+      --accent3: #ef4444;   /* 소프트 레드 */
+
+      --shadow: 0 18px 40px rgba(0,0,0,.38);
+      --radius: 18px;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+
+    body{
+      margin: 0;
+      font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 10% 10%, rgba(220,38,38,.30), transparent 55%),
+        radial-gradient(700px 420px at 90% 18%, rgba(239,68,68,.25), transparent 55%),
+        radial-gradient(900px 520px at 50% 100%, rgba(249,115,22,.22), transparent 60%),
+        var(--bg);
+      line-height: 1.6;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 26px 16px 52px;
+    }
+
+    /* 헤더 */
+    header.hero{
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--panel-strong), var(--panel));
+      border-radius: calc(var(--radius) + 6px);
+      box-shadow: var(--shadow);
+      padding: 20px 18px;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-top{
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .hero h1{
+      margin: 0;
+      font-size: clamp(22px, 3.2vw, 34px);
+      letter-spacing: -0.3px;
+      line-height: 1.2;
+    }
+
+    .badges{
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .badge{
+      font-size: 12px;
+      font-weight: 800;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      white-space: nowrap;
+    }
+
+    .badge.b1{ background: rgba(220,38,38,.22); }
+    .badge.b2{ background: rgba(249,115,22,.20); }
+    .badge.b3{ background: rgba(239,68,68,.22); }
+
+    .hero-sub{
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* 레이아웃 */
+    main{
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 14px;
+    }
+
+    @media (max-width: 900px){
+      main{ grid-template-columns: 1fr; }
+    }
+
+    section.card{
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: 0 10px 26px rgba(0,0,0,.22);
+      backdrop-filter: blur(10px);
+    }
+
+    section.card h2{
+      margin: 0 0 10px;
+      font-size: 16px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    /* 프로필 */
+    .profile{
+      display: flex;
+      gap: 14px;
+    }
+
+    .avatar{
+      width: 120px;
+      height: 120px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      flex-shrink: 0;
+    }
+
+    .avatar img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .name{
+      font-weight: 900;
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .role{
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .chips{
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .chips li{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .kv{
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .kv b{ color: var(--text); }
+
+    /* 스택 */
+    .stack-grid{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill{
+      font-size: 13px;
+      font-weight: 800;
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+    }
+
+    .pill.p1{ background: rgba(239,68,68,.22); }
+    .pill.p2{ background: rgba(249,115,22,.22); }
+    .pill.p3{ background: rgba(220,38,38,.22); }
+
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,.14);
+    }
+
+    th, td{
+      padding: 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+    }
+
+    th{
+      width: 120px;
+      color: var(--muted);
+      font-weight: 900;
+      background: rgba(255,255,255,.06);
+    }
+
+    /* 링크 버튼 */
+    .actions{
+      display: grid;
+      gap: 10px;
+    }
+
+    .btn{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      font-weight: 900;
+    }
+
+    .btn:hover{
+      background: rgba(255,255,255,.10);
+      text-decoration: none;
+    }
+
+    .btn small{
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    footer{
+      margin-top: 14px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="hero-top">
+        <h1>👋 안녕하세요, 백강민입니다!</h1>
+        <div class="badges">
+          <span class="badge b1">🧑‍💻 Profile</span>
+          <span class="badge b2">☁️ Cloud</span>
+          <span class="badge b3">✨ 2025</span>
+        </div>
+      </div>
+      <p class="hero-sub"><b>Solution Architect로 성장하고 싶습니다.</b></p>
+      <p class="hero-sub"><b>SKALA를 통해 시장에서 경쟁력 있는 SA가 될 수 있도록 최선을 다하겠습니다!</b></p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>📝 자기 소개</h2>
+
+        <div class="profile">
+        <div class="avatar">
+          <img src="profile.jpg" alt="백강민 프로필 이미지" />
+        </div>
+
+          <div>
+            <p class="name">백강민</p>
+            <p class="role">Cloud / DevOps Engineer · Solution Architect 지향</p>
+
+            <ul class="kv">
+              <li><b>직무</b>: DevOps Engineer</li>
+              <li><b>나이</b>: 28살</li>
+              <li><b>전공</b>: 정보통신공학</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>🔗 Link</h2>
+        <div class="actions">
+          <a
+            class="btn"
+            href="https://tan-lungfish-ffe.notion.site/Cloud-DevOps-Engineer-b3e6212f331d4476ad9ff956d544deca?source=copy_link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>👔 Notion 포트폴리오</span>
+            <small>새 탭으로 열기</small>
+          </a>
+
+          <a
+            class="btn"
+            href="https://github.com/baekkangmin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>🐙 GitHub</span>
+            <small>새 탭으로 열기</small>
+          </a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>🧰 기술 스택 &amp; 경력</h2>
+
+        <div class="stack-grid">
+          <span class="pill p1">☁️ AWS</span>
+          <span class="pill p2">☸️ Kubernetes</span>
+          <span class="pill p3">🏗️ OpenStack</span>
+          <span class="pill">🔁 CI/CD</span>
+        </div>
+
+        <table>
+          <tbody>
+            <tr>
+              <th>기술</th>
+              <td>AWS · Kubernetes · OpenStack · CI/CD</td>
+            </tr>
+            <tr>
+              <th>경력</th>
+              <td>⏱️ 1년 10개월</td>
+            </tr>
+            <tr>
+              <th>강점</th>
+              <td>
+              1. 금융권 Private Cloud 구축 경험<br />
+              2. AWS 환경에서 DevOps 실무 경험<br />
+              3. IaC 및 자동화 도구 활용 경험<br />
+              4. SI 프로젝트 경험
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>❤️ 좋아하는 것 / 관심사</h2>
+        <ul class="chips">
+          <li>🧥 패션</li>
+          <li>📺 애니메이션</li>
+          <li>🎮 LoL</li>
+          <li>☁️ Cloud</li>
+          <li>⚙️ 자동화</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>© 2025 백강민</footer>
+  </div>
+</body>
+</html>

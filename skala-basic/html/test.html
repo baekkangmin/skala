@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>오늘의 뉴스</title>
+</head>
+<body>
+  <!-- header: 주요 제목 -->
+  <header>
+    <h1>오늘의 뉴스</h1>
+  </header>
+
+  <!-- nav: 카테고리 링크 -->
+  <nav>
+    <ul>
+      <li><a href="#society">사회</a></li>
+      <li><a href="#economy">경제</a></li>
+      <li><a href="#sports">스포츠</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- 사회 섹션 -->
+    <section id="society">
+      <h2>사회</h2>
+
+      <article>
+        <h3>독감 유행</h3>
+
+        <!-- 관련 기사 사진 -->
+        <figure>
+          <!-- 파일 경로는 프로젝트에 맞게 수정 -->
+          <img src="media/flu.jpg" alt="독감 유행 관련 이미지" width="480" />
+          <figcaption>독감 유행 관련 이미지</figcaption>
+        </figure>
+
+        <p>
+          최근 기온 변화로 인해 독감 의심 증상이 늘면서 예방 접종과 개인 위생 관리의 중요성이 다시 강조되고 있다.
+          사람 많은 곳에서는 마스크 착용과 손 씻기를 생활화하는 것이 권장된다.
+        </p>
+      </article>
+    </section>
+
+    <hr />
+
+    <!-- 경제 섹션 -->
+    <section id="economy">
+      <h2>경제</h2>
+
+      <article>
+        <h3>증권 시장 상승세</h3>
+        <p>
+          주요 지수는 기술주 강세와 투자 심리 회복의 영향으로 상승 흐름을 보였다.
+          다만 변동성이 커질 수 있어 분산 투자와 리스크 관리가 필요하다는 분석이 나온다.
+        </p>
+      </article>
+    </section>
+
+    <hr />
+
+    <!-- 스포츠 섹션 -->
+    <section id="sports">
+      <h2>스포츠</h2>
+
+      <article>
+        <h3>축구 경기 하이라이트</h3>
+        <p>
+          후반 막판 연속 득점으로 승부가 갈리며 팬들의 환호를 이끌어냈다.
+          아래 영상에서 주요 장면 하이라이트를 확인할 수 있다.
+        </p>
+
+        <!-- 하이라이트 비디오 플레이어 -->
+        <!-- 파일 경로는 프로젝트에 맞게 수정 -->
+        <video controls width="480">
+          <source src="media/highlight.mp4" type="video/mp4" />
+          브라우저가 video 태그를 지원하지 않습니다.
+        </video>
+      </article>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <p>© 2026 SKALA 뉴스.</p>
+  </footer>
+</body>
+</html>

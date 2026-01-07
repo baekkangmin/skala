@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoist 예시</title>
+</head>
+<body>
+    <script>
+
+        const add = (a,b) => {
+            return a + b;   
+        }
+        
+        let x = add(5, 10); // let은 var과 다르게 최초에 선언을 해줘야함
+        console.log(`x: ${x}`); // undefined
+        
+
+
+    </script>
+</body>
+</html>

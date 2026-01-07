@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>div 블록 vs 인라인 스타일 비교</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .wrap { border: 1px solid #ddd; border-radius: 12px; padding: 16px; margin-bottom: 18px; }
+    .title { font-weight: 800; margin-bottom: 10px; }
+    .hint { opacity: 0.75; margin-bottom: 12px; }
+
+    /* 공통 박스 디자인 */
+    .box {
+      background: #2563eb;
+      color: white;
+      padding: 10px 12px;
+      border-radius: 10px;
+      margin: 6px;
+      font-weight: 700;
+    }
+
+    /* 비교용 */
+    .block-demo .box { display: block; }         /* 기본: 한 줄 전체 차지 */
+    .inline-demo .box { display: inline;}       /* 인라인: 줄바꿈 안 함, width/height 거의 무시 */
+    .inlineblock-demo .box { display: inline-block; width: 140px; height: 50px; } /* 인라인처럼 배치 + 크기 지정 가능 */
+
+    /* 시각적으로 폭 차이를 보여주기 위한 배경 */
+    .line {
+      background: rgb(216, 235, 179);
+      border-radius: 10px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap block-demo">
+    <div class="title">1) div 기본 동작: 블록(block)</div>
+    <div class="hint">각 박스가 한 줄을 전부 차지해서 자동 줄바꿈됨</div>
+
+    <div class="line">
+      <div class="box">BOX 1</div>
+      <div class="box">BOX 2</div>
+      <div class="box">BOX 3</div>
+    </div>
+  </div>
+
+  <div class="wrap inline-demo">
+    <div class="title">2) div를 display: inline 으로 변경</div>
+    <div class="hint">줄바꿈 없이 옆으로 붙음. (width/height 지정이 거의 의미 없음)</div>
+
+    <div class="line">
+      <div class="box">BOX 1</div>
+      <div class="box">BOX 2</div>
+      <div class="box">BOX 3</div>
+    </div>
+  </div>
+
+  <div class="wrap inlineblock-demo">
+    <div class="title">3) div를 display: inline-block 으로 변경</div>
+    <div class="hint">옆으로 붙지만 width/height 지정 가능(블록+인라인 중간 느낌)</div>
+
+    <div class="line">
+      <div class="box">BOX 1</div>
+      <div class="box">BOX 2</div>
+      <div class="box">BOX 3</div>
+    </div>
+  </div>
+
+</body>
+</html>

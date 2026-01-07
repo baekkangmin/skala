@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>innerHTML vs textContent</title>
+</head>
+<body>
+  <h1>innerHTML 표시</h1>
+  <div id="html-div"></div>
+    <hr>
+  <h1>textContent 표시</h1>
+  <div id="text-div"></div>
+
+  <script>
+    const message = "<strong>안녕하세요</strong>, <em>홍길동</em>입니다.";
+
+    // HTML로 해석됨
+    document.getElementById("html-div").innerHTML = message; // 아이디가 html-div인 요소를 찾아서, 그 안의 내용을 message 값으로 바꾼다. 이때 message 안에 있는 HTML 태그는 실제 태그로 해석되어 화면에 적용된다.
+
+    // 문자열 그대로 출력됨
+    document.getElementById("text-div").textContent = message; // 아이디가 text-div인 요소를 찾아서, 그 안의 내용을 message 값으로 바꾼다. 이때 message 안에 있는 HTML 태그는 단순한 문자열로 인식되어 화면에 태그가 그대로 출력된다.
+  </script>
+</body>
+</html>

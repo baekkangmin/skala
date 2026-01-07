@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid + Semantic Responsive Layout</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #f3f4f6; }
+
+    /* 전체 페이지 그리드: 헤더 / 콘텐츠 / 푸터 */
+    .layout {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    header, footer {
+      background: #111827;
+      color: #fff;
+      padding: 18px 20px;
+    }
+
+    /* 가운데 영역(메인+사이드바) */
+    .content {
+      width: min(1100px, 92vw);
+      margin: 12px auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr; /* 기본: 2열 */
+      gap: 16px;
+      align-items: start;
+    }
+
+    main, aside {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 18px;
+      min-height: 320px;
+    }
+
+    main h2, aside h2 { margin: 0 0 10px; }
+
+    /* 반응형: 화면이 좁아지면 1열로 */
+    @media (max-width: 968px) {
+      .content {
+        grid-template-columns: 1fr; /* 메인 아래로 사이드바 */
+      }
+      main, aside {
+        min-height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="layout">
+    <header>
+      <h1 style="margin:0; font-size:20px;">Header</h1>
+    </header>
+
+    <div class="content">
+      <main>
+        <h2>Main Content</h2>
+        <p>
+          이 영역은 메인 콘텐츠입니다. 화면이 넓을 때는 사이드바와 나란히(2열),
+          좁아지면 1열로 배치되어 아래로 내려갑니다.
+        </p>
+      </main>
+
+      <aside>
+        <h2>Sidebar</h2>
+        <p>보조 메뉴/최근 글/광고 등 사이드 정보 영역</p>
+      </aside>
+    </div>
+
+    <footer>
+      <p style="margin:0;">Footer</p>
+    </footer>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 배열</title>
+</head>
+
+<body>
+    <script>
+        const originals = ["사과", "바나나", "오렌지"];
+
+        //const coppiedArray = originals;
+        const coppiedArray = [...originals]; // 스프레드 연산자 사용해서 완전 복제
+
+        console.log("원본 배열:", originals);
+        console.table("복사된 배열:", coppiedArray.join(" - "));
+
+        for (let fruit of originals) {
+            console.log("for...of 반복문 과일:", fruit);
+        }
+
+        const arr = [];
+        arr[0] = "첫번째 요소";
+        arr[5] = "여섯번쨰 요소";
+
+        console.log("배열:", arr, "길이:", arr.length);
+
+        for (const element of arr) {
+            console.log("for...of 반복문 요소:", element);
+        }
+
+        // 원하는 값을 직접 입력하여 초기화
+        const array = [
+            [0, 1, 2, 3],
+            [4, 5, 6, 7],
+            [8, 9, 10, 11]
+        ];
+        console.table(array);
+
+        // 배열 초기화
+        coppiedArray.length = 2; // 길이 변경
+        console.table("길이 수정된 복사된 배열:", coppiedArray);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 박스 모델</title>
+
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            padding: 80px; /*d 박스 안의 공간 */
+            border: 5px solid black;
+            margin: 30px; /*d 바깥과 박스 사이 공간 */
+            background-color: lightgray;
+            box-sizing: border-box; /* border-box로 설정하여 패딩과 보더를 포함한 크기 지정 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">       
+        <p>CSS 박스 모델 예제</p>
+    </div>  
+</body>
+</html>

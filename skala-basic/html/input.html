@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>여러가지 입력 유형</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 40px;
+    }
+
+    h1 {
+      margin: 0 0 30px;
+      font-size: 48px;
+      font-weight: 900;
+    }
+
+    h2 {
+      margin: 40px 0 20px;
+      font-size: 28px;
+      font-weight: 800;
+    }
+
+    label.label-col {
+      display: inline-block;
+      width: 120px;
+      font-weight: 700;
+    }
+
+    .line {
+      margin-bottom: 24px;
+    }
+
+    input {
+      padding: 4px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 260px;
+    }
+
+    input[type="number"] {
+      width: 100px;
+    }
+
+    select {
+      padding: 4px;
+      width: 160px;
+    }
+
+    button {
+      padding: 4px 10px;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>여러가지 입력 유형</h1>
+
+  <form>
+    <!-- 텍스트 입력-->
+    <div class="line">
+      <label class="label-col" for="text">텍스트 입력:</label>
+      <input type="text" id="text" name="text" required />
+    </div>
+
+    <!-- 이메일 입력-->
+    <div class="line">
+      <label class="label-col" for="email">이메일 입력:</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+
+    <!-- 비밀번호 입력-->
+    <div class="line">
+      <label class="label-col" for="password">비밀번호 입력:</label>
+      <input type="password" id="password" name="password" required />
+    </div>
+
+    <!-- 숫자 입력-->
+    <div class="line">
+      <label class="label-col" for="numberInput">숫자 입력:</label>
+      <input type="number" id="numberInput" name="numberInput" />
+    </div>
+
+    <!-- 날짜 입력-->
+    <div class="line">
+      <label class="label-col" for="date">날짜 입력:</label>
+      <input type="date" id="date" name="date" />
+    </div>
+
+    <!-- 체크박스-->
+    <div class="line">
+      <label class="label-col" for="agree">약관 동의:</label>
+      <input type="checkbox" id="agree" name="agree" />
+      <label for="agree">동의합니다</label>
+    </div>
+
+    <!-- 라디오 버튼(성별)-->
+    <div class="line">
+      <label class="label-col">성별</label>
+      <label for="male">남성</label>
+      <input type="radio" id="male" name="gender" value="male" />
+
+      <label for="female">여성</label>
+      <input type="radio" id="female" name="gender" value="female" />
+    </div>
+
+    <!-- 라디오 버튼(학년)-->
+    <div class="line">
+      <label class="label-col"></label>
+      <label for="elem">초등학생</label>
+      <input type="radio" id="elem" name="school" value="elem" />
+
+      <label for="mid">중학생</label>
+      <input type="radio" id="mid" name="school" value="mid" />
+
+      <label for="high">고등학생</label>
+      <input type="radio" id="high" name="school" value="high" checked />
+    </div>
+
+    <button type="submit">제출</button>
+  </form>
+
+  <!-- 과일 선택 영역 -->
+  <h2>좋아하는 과일을 선택하세요</h2>
+
+  <!-- 과일 선택 전용 form -->
+  <form>
+    <div class="line">
+      <label class="label-col" for="fruitSelect">과일 선택:</label>
+      <select id="fruitSelect" name="fruitSelect">
+        <option value="">-- 과일 선택 --</option>
+        <option value="사과">사과</option>
+        <option value="바나나">바나나</option>
+        <option value="포도">포도</option>
+        <option value="오렌지">오렌지</option>
+      </select>
+
+      <!-- 초기화 버튼 -->
+      <button type="reset">초기화</button>
+    </div>
+  </form>
+
+</body>
+</html>

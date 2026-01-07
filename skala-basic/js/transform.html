@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>홍길동의 변신</title>
+</head>
+<body>
+  <h2 id="output"></h2>
+
+  <script>
+    const target = prompt("무엇으로 변신할까요?: ")
+    console.log(target);
+
+    if (target == ""){
+        document.write("<h1>연기처럼 사라졌습니다.</h1>");
+    } else {
+        document.write("<h1>" + target + "(으)로 변신했습니다!</h1>");
+    }
+  </script>
+</body>
+</html>

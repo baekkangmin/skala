@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 처리</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+        }
+        #output {
+            margin-top: 20px;
+            width: 400px;
+            height: 100px;
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="input">
+        클릭 또는 더블 클릭 해보세요!
+    </div>
+    <div id="output"></div>
+
+    <script>
+        const inputDiv = document.getElementById('input');
+        const outputDiv = document.getElementById('output');
+        
+        inputDiv.addEventListener('click', handleClick);
+        inputDiv.addEventListener('dblclick', handleDblClick);
+
+        function handleClick(event) {
+            outputDiv.textContent = '클릭 이벤트가 발생했습니다!';
+            console.log('클릭!', event);
+        }
+
+        function handleDblClick(event) {
+            outputDiv.textContent = '더블 클릭 이벤트가 발생했습니다!';
+            console.log('더블 클릭!', event);
+        }
+
+        
+    
+    </script>
+
+</body>
+</html>

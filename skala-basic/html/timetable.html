@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>주간 시간표</title>
+  <style>
+    :root{
+      --border:#e6e6e6;
+      --text:#111;
+      --muted:#666;
+      --bg:#ffffff;
+      --head:#f7f7f8;
+      --lunch:#fff6cc;
+      --mon:#e8f3ff;
+      --tue:#e9fff2;
+      --wed:#fff0f0;
+      --thu:#f1f1ff;
+      --fri:#f5fff0;
+    }
+    body{
+      margin: 24px;
+      font-family: system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .wrap{ max-width: 1100px; }
+    h1{
+      margin: 0 0 6px;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.4px;
+    }
+    .sub{
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td{
+      border: 1px solid var(--border);
+      padding: 10px 10px;
+      vertical-align: top;
+      word-break: break-word;
+    }
+    thead th{
+      background: var(--head);
+      text-align: center;
+      font-weight: 900;
+    }
+    .time-col{
+      width: 110px;
+      text-align: center;
+      font-weight: 800;
+      white-space: nowrap;
+      background: #fafafa;
+    }
+
+    .day-mon{ background: var(--mon); }
+    .day-tue{ background: var(--tue); }
+    .day-wed{ background: var(--wed); }
+    .day-thu{ background: var(--thu); }
+    .day-fri{ background: var(--fri); }
+
+    .cell-title{
+      font-weight: 900;
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+    .meta{
+      font-size: 13px;
+      color: var(--muted);
+      display: grid;
+      gap: 2px;
+    }
+    .tag{
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.06);
+      color: #111;
+      font-size: 12px;
+      font-weight: 800;
+      margin-top: 8px;
+    }
+
+    .lunch-row td{
+      background: var(--lunch);
+      text-align: center;
+      font-weight: 900;
+      vertical-align: middle;
+    }
+
+    .empty{
+      color: var(--muted);
+      text-align: center;
+      vertical-align: middle;
+      font-weight: 700;
+    }
+
+    .note{
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .note b{ color:#111; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>🗓️ 주간 시간표 (2025-12-29 ~ 2026-01-02)</h1>
+    <p class="sub">⏰ 기준 시간: 09:00 시작 / 점심: 12:00~13:00</p>
+
+    <table aria-label="주간 강의 시간표">
+      <thead>
+        <tr>
+          <th class="time-col">시간</th>
+          <th>월 (12/29)</th>
+          <th>화 (12/30)</th>
+          <th>수 (12/31)</th>
+          <th>목 (01/01)</th>
+          <th>금 (01/02)</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- 09:00 -->
+        <tr>
+          <td class="time-col">09:00 ~ 10:00</td>
+
+          <!-- 월: 입과 OT (09~12, 3h) -->
+          <td class="day-mon" rowspan="3">
+            <div class="cell-title">🎓 입과 오리엔테이션</div>
+            <div class="meta">
+              <div>👨‍🏫 강사: 이상민</div>
+              <div>⏱️ 09:00 ~ 12:00 (3h)</div>
+              <div>📝 비고: 점심 후 오후 수업 시작</div>
+            </div>
+            <span class="tag">OT</span>
+          </td>
+
+          <!-- 화: HTML/CSS/JS (09~18, 8h, 점심 제외) -->
+          <td class="day-tue" rowspan="8">
+            <div class="cell-title">💻 HTML · CSS · JavaScript</div>
+            <div class="meta">
+              <div>👨‍🏫 강사: 이상민</div>
+              <div>⏱️ 09:00 ~ 18:00 (8h)</div>
+              <div>🧩 내용: 웹 기초 다지기</div>
+            </div>
+            <span class="tag">WEB</span>
+          </td>
+
+          <!-- 수: 재직자 특강 (09~14, 4h) + 중식제공(점심 포함) -->
+          <td class="day-wed" rowspan="5">
+            <div class="cell-title">🤝 재직자 특강 (팀빌딩 · 목표수립)</div>
+            <div class="meta">
+              <div>👩‍🏫 강사: 이예슬</div>
+              <div>⏱️ 09:00 ~ 14:00 (4h)</div>
+              <div>🍱 비고: 중식 제공</div>
+            </div>
+            <span class="tag">특강</span>
+          </td>
+
+          <!-- 목: 공휴일 -->
+          <td class="day-thu empty" rowspan="8">🎌 공휴일</td>
+
+          <!-- 금: HTML/CSS/JS (09~18, 8h) -->
+          <td class="day-fri" rowspan="8">
+            <div class="cell-title">💻 HTML · CSS · JavaScript</div>
+            <div class="meta">
+              <div>👨‍🏫 강사: 이상민</div>
+              <div>⏱️ 09:00 ~ 18:00 (8h)</div>
+              <div>🧩 내용: 웹 기초 다지기</div>
+            </div>
+            <span class="tag">WEB</span>
+          </td>
+        </tr>
+
+        <!-- 10:00 -->
+        <tr>
+          <td class="time-col">10:00 ~ 11:00</td>
+          <!-- 나머지 요일은 rowspan으로 이미 채워짐 -->
+        </tr>
+
+        <!-- 11:00 -->
+        <tr>
+          <td class="time-col">11:00 ~ 12:00</td>
+        </tr>
+
+        <!-- 점심 12:00~13:00 (모든 요일 열 합치기) -->
+        <tr class="lunch-row">
+          <td class="time-col">12:00 ~ 13:00</td>
+          <td colspan="5">🍚 점심시간</td>
+        </tr>
+
+        <!-- 13:00 -->
+        <tr>
+          <td class="time-col">13:00 ~ 14:00</td>
+
+          <!-- 월: 오후 Git 수업 (13~18, 5h) -->
+          <td class="day-mon" rowspan="5">
+            <div class="cell-title">🧰 Git 환경설정 · 기본 용어 이해</div>
+            <div class="meta">
+              <div>👨‍🏫 강사: 이상민</div>
+              <div>⏱️ 13:00 ~ 18:00 (5h)</div>
+              <div>📝 비고: 오전 OT → 점심 → 오후 수업</div>
+            </div>
+            <span class="tag">GIT</span>
+          </td>
+
+          <!-- 화/목/금은 rowspan으로 이미 채워짐 -->
+          <!-- 수요일은 특강 rowspan(09~14)에 포함되어 이미 채워짐 -->
+        </tr>
+
+        <!-- 14:00 -->
+        <tr>
+          <td class="time-col">14:00 ~ 15:00</td>
+          <!-- 월/화/목/금은 rowspan -->
+          <!-- 수요일 특강은 14:00에 종료이므로 다음 시간부터 빈칸 처리 -->
+          <td class="day-wed empty" rowspan="4">✅ 특강 종료</td>
+        </tr>
+
+        <!-- 15:00 -->
+        <tr>
+          <td class="time-col">15:00 ~ 16:00</td>
+        </tr>
+
+        <!-- 16:00 -->
+        <tr>
+          <td class="time-col">16:00 ~ 17:00</td>
+        </tr>
+
+        <!-- 17:00 -->
+        <tr>
+          <td class="time-col">17:00 ~ 18:00</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div class="note">
+      <b>요구사항 반영</b><br/>
+      - ⛓️ 2시간 이상 강의는 <b>rowspan</b>으로 행을 합쳤습니다.<br/>
+      - 🍚 점심시간은 <b>colspan=5</b>로 모든 요일 열을 합쳤습니다.<br/>
+      - 🍱 수요일은 “중식 제공” 일정 특성상, 실제로는 점심 시간대에도 프로그램이 포함되는 것으로 표시했습니다.
+    </div>
+  </div>
+</body>
+</html>

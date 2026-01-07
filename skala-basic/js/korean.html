@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국어 이름 확인</title>
+</head>
+<body>
+    <script>
+        function isKoreanName(name) {
+            const koreanNamePattern = /^[가-힣]{2,4}$/;
+            return koreanNamePattern.test(name);
+        }
+
+        console.log(`홍길동: ${isKoreanName("홍길동")}`); // true
+        console.log(`John Doe: ${isKoreanName("John Doe")}`); // false
+        console.log(`샘킴: ${isKoreanName("샘킴")}`); // true
+        console.log(`Alice백강민: ${isKoreanName("Alice백강민")}`); // false
+    </script>
+
+</body>
+</html>

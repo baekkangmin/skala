@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Center Align</title>
+    <style>
+        /* 화면 전체를 기준으로 중앙 정렬 */
+        .container {
+            display: flex;
+            justify-content: center; /* 가로 중앙 */
+            align-items: center;     /* 세로 중앙 */
+            gap: 300px;               /* 박스 사이 간격 */
+            height: 100vh;           /* 화면 높이 기준 */
+            background: #f3f4f6;
+            flex-direction: column-reverse;    /* 정렬 기준 */
+            flex-wrap: wrap;        /* wrap */
+        }
+
+        .box {
+            width: 180px;
+            height: 180px;
+            background: palevioletred;
+            color: white;
+            border-radius: 12px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: 700;
+            font-size: 18px;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+
+        .box:hover {
+            background: #7c3aed;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">BOX 1</div>
+        <div class="box">BOX 2</div>
+        <div class="box">BOX 3</div>
+    </div>
+
+</body>
+</html>
