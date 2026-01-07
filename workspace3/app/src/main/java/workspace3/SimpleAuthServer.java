@@ -1,4 +1,4 @@
-package workplace2;
+package workspace3;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
@@ -141,7 +141,7 @@ public class SimpleAuthServer {
             }
         });
 
-        // POST /api/login 
+        // POST /api/login
         // -> 로그인 + 세션 + JWT 발급 + 8008으로 직접 리다이렉트 테스트 완료
         // -> 로그인 + 세션 + JWT 발급 + 프론트엔드로 리다이렉트 처리
         server.createContext("/api/login", exchange -> {
@@ -171,24 +171,22 @@ public class SimpleAuthServer {
                 SESSION_STORE.put(sessionId, user);
                 exchange.getResponseHeaders().add(
                         "Set-Cookie",
-                        SESSION_COOKIE_NAME + "=" + sessionId + "; Path=/; HttpOnly; SameSite=Lax"
-                );
+                        SESSION_COOKIE_NAME + "=" + sessionId + "; Path=/; HttpOnly; SameSite=Lax");
 
                 // 2) JWT 생성 후 쿠키로 설정 (8008/8010 서버가 이 쿠키를 보고 검증)
                 String jwt = JwtUtil.createToken(user);
                 exchange.getResponseHeaders().add(
                         "Set-Cookie",
-                        JWT_COOKIE_NAME + "=" + jwt + "; Path=/; HttpOnly; SameSite=Lax"
-                );
+                        JWT_COOKIE_NAME + "=" + jwt + "; Path=/; HttpOnly; SameSite=Lax");
 
                 // 3) Vue 프론트에서 "로그인 여부"를 판단하기 위한 일반 쿠키 (JS에서 읽기 가능)
-                //    - HttpOnly 를 붙이지 않는다
-                //    - Vue 의 authStore.checkAuthFromCookie() 에서 APP_AUTH 존재 여부로 로그인 여부를 판단
+                // - HttpOnly 를 붙이지 않는다
+                // - Vue 의 authStore.checkAuthFromCookie() 에서 APP_AUTH 존재 여부로 로그인 여부를 판단
                 exchange.getResponseHeaders().add(
                         "Set-Cookie",
                         "APP_AUTH=1; Path=/; SameSite=Lax"
-                        // 필요하면 Max-Age 도 추가 가능:
-                        // "APP_AUTH=1; Path=/; Max-Age=3600; SameSite=Lax"
+                // 필요하면 Max-Age 도 추가 가능:
+                // "APP_AUTH=1; Path=/; Max-Age=3600; SameSite=Lax"
                 );
 
                 // 로그인 후, 직접 백엔드로 포워딩 테스트 완료
@@ -250,14 +248,12 @@ public class SimpleAuthServer {
                 SESSION_STORE.remove(sessionId);
                 exchange.getResponseHeaders().add(
                         "Set-Cookie",
-                        SESSION_COOKIE_NAME + "=; Path=/; Max-Age=0; Path=/"
-                );
+                        SESSION_COOKIE_NAME + "=; Path=/; Max-Age=0; Path=/");
             }
             // JWT 쿠키도 같이 제거 (선택)
             exchange.getResponseHeaders().add(
                     "Set-Cookie",
-                    JWT_COOKIE_NAME + "=; Path=/; Max-Age=0;"
-            );
+                    JWT_COOKIE_NAME + "=; Path=/; Max-Age=0;");
 
             redirect(exchange, "/login");
         });
@@ -268,7 +264,8 @@ public class SimpleAuthServer {
 
     // ========= 리소스/응답 헬퍼 =========
 
-    private static void serveResource(HttpExchange exchange, String resourcePath, String contentType) throws IOException {
+    private static void serveResource(HttpExchange exchange, String resourcePath, String contentType)
+            throws IOException {
         InputStream is = SimpleAuthServer.class.getClassLoader().getResourceAsStream(resourcePath);
         if (is == null) {
             notFound(exchange);
@@ -309,7 +306,8 @@ public class SimpleAuthServer {
         String body = new String(exchange.getRequestBody().readAllBytes(), StandardCharsets.UTF_8);
         Map<String, String> params = new HashMap<>();
         for (String pair : body.split("&")) {
-            if (pair.isEmpty()) continue;
+            if (pair.isEmpty())
+                continue;
             String[] kv = pair.split("=", 2);
             String key = urlDecode(kv[0]);
             String value = kv.length > 1 ? urlDecode(kv[1]) : "";
@@ -328,7 +326,8 @@ public class SimpleAuthServer {
 
     private static String resolveSessionId(HttpExchange exchange) {
         List<String> cookies = exchange.getRequestHeaders().get("Cookie");
-        if (cookies == null) return null;
+        if (cookies == null)
+            return null;
         for (String header : cookies) {
             String[] parts = header.split(";\\s*");
             for (String part : parts) {
@@ -343,12 +342,14 @@ public class SimpleAuthServer {
 
     private static User resolveUser(HttpExchange exchange) {
         String sessionId = resolveSessionId(exchange);
-        if (sessionId == null) return null;
+        if (sessionId == null)
+            return null;
         return SESSION_STORE.get(sessionId);
     }
 
     private static String escapeHtml(String s) {
-        if (s == null) return "";
+        if (s == null)
+            return "";
         return s.replace("&", "&amp;")
                 .replace("<", "&lt;")
                 .replace(">", "&gt;")
@@ -363,18 +364,34 @@ public class SimpleAuthServer {
         private String username;
         private String password;
 
-        public Long getId() { return id; }
-        public void setId(Long id) { this.id = id; }
+        public Long getId() {
+            return id;
+        }
 
-        public String getUsername() { return username; }
-        public void setUsername(String username) { this.username = username; }
+        public void setId(Long id) {
+            this.id = id;
+        }
 
-        public String getPassword() { return password; }
-        public void setPassword(String password) { this.password = password; }
+        public String getUsername() {
+            return username;
+        }
+
+        public void setUsername(String username) {
+            this.username = username;
+        }
+
+        public String getPassword() {
+            return password;
+        }
+
+        public void setPassword(String password) {
+            this.password = password;
+        }
     }
 
     public interface UserRepository {
         void save(User user) throws Exception;
+
         User findByUsername(String username) throws Exception;
     }
 
@@ -397,7 +414,7 @@ public class SimpleAuthServer {
         public void save(User u) throws Exception {
             String sql = "INSERT INTO users(username, password) VALUES(?, ?)";
             try (Connection conn = getConnection();
-                 PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+                    PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
                 ps.setString(1, u.getUsername());
                 ps.setString(2, u.getPassword());
                 ps.executeUpdate();
@@ -413,7 +430,7 @@ public class SimpleAuthServer {
         public User findByUsername(String username) throws Exception {
             String sql = "SELECT id, username, password FROM users WHERE username = ?";
             try (Connection conn = getConnection();
-                 PreparedStatement ps = conn.prepareStatement(sql)) {
+                    PreparedStatement ps = conn.prepareStatement(sql)) {
                 ps.setString(1, username);
                 try (ResultSet rs = ps.executeQuery()) {
                     if (rs.next()) {
@@ -435,6 +452,7 @@ public class SimpleAuthServer {
         public AuthService(UserRepository userRepository) {
             this.userRepository = userRepository;
         }
+
         // 회원가입
         public void signUp(String username, String rawPassword) throws Exception {
             User existing = userRepository.findByUsername(username);
@@ -456,12 +474,12 @@ public class SimpleAuthServer {
             if (u == null) {
                 return null; // 사용자 없음
             }
-    
+
             // 해시 검증: rawPassword(입력값) vs u.getPassword()(DB 해시)
             if (!BCrypt.checkpw(rawPassword, u.getPassword())) {
                 return null; // 비밀번호 불일치
             }
-    
+
             return u; // 로그인 성공
         }
     }
@@ -470,7 +488,7 @@ public class SimpleAuthServer {
 
     public static class JwtUtil {
         // 실제 서비스에서는 ENV나 설정 파일로 분리
-        private static final String SECRET = "RANDOM_SECRET_KEY"; 
+        private static final String SECRET = "RANDOM_SECRET_KEY";
         // 임의의 비밀 문자열(시크릿 키)이며, 현재 코드에서는 HMAC256(대칭키 방식)에 쓰이는 공유 비밀키
         private static final Algorithm ALG = Algorithm.HMAC256(SECRET);
         private static final String ISSUER = "simple-auth-server";
@@ -488,5 +506,6 @@ public class SimpleAuthServer {
     }
 }
 
-// 프로젝트 루트(app)에서 ./gradlew build 후 ./gradlew run 실행하여 JAVA를 이용하여 웹서버 및 인증 기능 빌드 배포 실행
+// 프로젝트 루트(app)에서 ./gradlew build 후 ./gradlew run 실행하여 JAVA를 이용하여 웹서버 및 인증 기능 빌드
+// 배포 실행
 // http://localhost:8080/login 브라우저에서 접속, 회원가입 → 로그인(인증) → /home 접근 확인
