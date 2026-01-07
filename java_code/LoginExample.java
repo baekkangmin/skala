@@ -25,7 +25,7 @@ public class LoginExample {
 // 사용자 정의 예외
 class LoginException extends Exception {
     public LoginException(String message) {
-        super(message);
+        super(message); // super(message) → 부모(Exception) 생성자 호출 -> getMessage()로 메시지 꺼낼 수 있게 됨
     }
 }
 
