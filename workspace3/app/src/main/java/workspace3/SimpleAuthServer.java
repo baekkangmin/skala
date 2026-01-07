@@ -42,7 +42,7 @@ import java.util.concurrent.Executors;
 public class SimpleAuthServer {
 
     // ==== DB CONFIG (환경에 맞게 수정) ==== //
-    private static final String DB_URL = "jdbc:mariadb://localhost:53301/sql_db";
+    private static final String DB_URL = "jdbc:mariadb://localhost:3379/sql_db";
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "SqlDba-1";
 
