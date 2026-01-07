@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class DbExample {
     public static void main(String[] args) {
-        String url = "jdbc:mariadb://localhost:53301/sql_db";
+        String url = "jdbc:mariadb://localhost:3379/sql_db";
         String user = "root";
         String pw = "SqlDba-1";
 
