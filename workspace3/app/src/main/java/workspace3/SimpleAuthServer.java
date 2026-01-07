@@ -484,7 +484,8 @@ public class SimpleAuthServer {
         }
     }
 
-    // ========= JWT 유틸 =========
+    // ========= JWT 유틸 ========= // JWT(JSON Web Token)는“로그인했다는 사실을 서버가 증명해 주는 전자
+    // 신분증”
 
     public static class JwtUtil {
         // 실제 서비스에서는 ENV나 설정 파일로 분리
