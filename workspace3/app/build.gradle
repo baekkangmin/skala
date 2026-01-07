@@ -3,7 +3,7 @@ plugins {
     id 'application'
 }
 
-group = 'worksplace3'
+group = 'workspace3'
 version = '0.0.1-SNAPSHOT'
 
 java {
@@ -26,12 +26,12 @@ dependencies {
 
 application {
     // main() 이 들어 있는 클래스 경로
-    mainClass = 'worksplace3.SimpleAuthServer'
+    mainClass = 'workspace3.SimpleAuthServer'
 }
 
 // DbExample.java 예제 개별 실행을 위한 추가 설정
 
 tasks.register('runDbExample', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
-    mainClass = 'worksplace3.DbExample'
+    mainClass = 'workspace3.DbExample'
 }
