@@ -60,6 +60,7 @@ public class SimpleAuthServer {
         UserRepository userRepository = new JdbcUserRepository(DB_URL, DB_USER, DB_PASSWORD);
         AuthService authService = new AuthService(userRepository);
 
+        // 순수 java로 HttpServer 생성
         HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
         server.setExecutor(Executors.newFixedThreadPool(10));
 
