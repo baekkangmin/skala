@@ -1,138 +1,1368 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RAG Pipeline API App</title>
-  <style>
-    :root{
-      --bg:#05080c; --panel:#0b0f15; --line:#1a2635;
-      --ink:#e6edf3; --muted:#9fb0c0;
-      --brand:#3ca3ff; --brand-glow:#6ec8ff;
-    }
-    *{box-sizing:border-box;}
-    html,body{height:100%;margin:0;padding:0;font-family:ui-sans-serif,system-ui,AppleSDGothicNeo,Segoe UI,Roboto,Helvetica,Arial;}
-    body{
-      background:radial-gradient(circle at 30% 20%, #07101a 0%, #02060a 100%);
-      color:var(--ink);
-      display:flex; flex-direction:column; align-items:center; justify-content:center;
-      text-align:center;
-    }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    h1{
-      font-size:36px; /* 기존 28px → 약 130% 확대 */
-      font-weight:700;
-      letter-spacing:1px;
-      margin-bottom:30px;
-      color:var(--brand);
-      text-shadow:0 0 16px rgba(108,195,255,0.3);
-    }
+    <!-- Pretendard -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+    />
 
-    .dock{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:40px;
-      margin-bottom:60px;
-    }
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-    .card{
-      width:260px;
-      background:var(--panel);
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:24px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.35);
-      transition:transform 0.2s ease, box-shadow 0.3s ease;
-      text-decoration:none;
-      color:var(--ink);
-      min-height:140px;
-    }
-    .card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 10px 28px rgba(61,142,255,0.35);
-    }
-    .card:active{ transform:translateY(0); }
+    <title>AICC</title>
 
-    .card h2{
-      font-size:18px;
-      font-weight:700;
-      margin-bottom:8px;
-      color:var(--brand-glow);
-    }
+    <style>
+      :root {
+        --primary: rgb(17, 183, 165);
+        --secondary: rgb(179, 229, 223);
+        --white: #ffffff;
+        --red: #ef4444;
+        --lightred: #fae5e3;
+        --lightyellow: #faefd2;
+        --lightgreen: #e4f2eb;
+        --lightblue: #d9eafa;
+        --lightpurple: #f0e6f7;
+        --lightpink: #fae6ef;
+        --darkred: #f26d68;
+        --darkyellow: #fa9923;
+        --darkgreen: #3cb580;
+        --darkblue: #2a70bf;
+        --darkpurple: #b666e8;
+        --darkpink: #f569b1;
+        --border: #e8e8ee;
+        --text: #111318;
+        --muted: #6b7280;
+        --shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        --r: 16px;
+        --gap: 14px;
+        --font: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+          "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif;
+      }
 
-    .card p{
-      font-size:13px;
-      color:var(--muted);
-      line-height:1.5;
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    footer{
-      position:fixed;
-      bottom:20px;
-      text-align:center;
-      width:100%;
-      color:var(--muted);
-      font-size:12px;
-      letter-spacing:.4px;
-      padding:0 10px;
-    }
+      body {
+        margin: 0;
+        font-family: var(--font);
+        color: var(--text);
+        background: #f7f8fa;
+      }
 
-    footer .slogan{
-      font-style:italic;
-      color:var(--brand-glow);
-      font-size:13px;
-    }
+      .wrap {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 16px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
 
-    /* -------- 반응형 패치 영역 -------- */
-    @media (max-width: 900px){
-      h1{ font-size:30px; }
-      .card{ width:320px; }
-    }
-    @media (max-width: 720px){
-      .dock{ gap:28px; margin-bottom:44px; }
-      .card{ width:92%; padding:22px; }
-      .card h2{ font-size:17px; }
-      .card p{ font-size:14px; line-height:1.6; }
-    }
-    @media (max-width: 420px){
-      body{ padding:18px 10px 72px; }   /* 화면 테두리 여백 확보 */
-      h1{ font-size:26px; margin-bottom:20px; }
-      .dock{ gap:20px; }
-      .card{ width:100%; padding:20px; border-radius:12px; }
-      .card h2{ font-size:16px; }
-      .card p{ font-size:13px; }
-      footer{ bottom:12px; padding:0 10px; }
-    }
+      header,
+      footer {
+        background-color: var(--primary);
+        color: var(--white);
+        padding: 14px 16px;
+        box-shadow: var(--shadow);
+      }
 
-    /* iPhone 노치 등 안전 영역 고려 */
-    @supports(padding:max(env(safe-area-inset-bottom), 0px)){
-      body{ padding-bottom:calc(40px + env(safe-area-inset-bottom)); }
-      footer{ bottom:calc(12px + env(safe-area-inset-bottom)); }
-    }
-  </style>
-</head>
-<body>
-  <h1>RAG Pipeline API App</h1>
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 70px;
+      }
 
-  <div class="dock">
-    <a href="external_index.html" class="card">
-      <h2>Closed-Source LLM Console</h2>
-      <p>외부 벡터 정보와 결합된<br>클로즈드 소스 LLM 기반 RAG 파이프라인을 실행합니다.</p>
-    </a>
-    <a href="internal_index.html" class="card">
-      <h2>Open-Weight LLM Console</h2>
-      <p>오픈 웨이트 LLM을 활용한<br>내부 벡터/DB 기반 RAG 시스템을 관리합니다.</p>
-    </a>
-  </div>
+      .company {
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+      }
 
-  <footer>
-    <div class="slogan">RAG Sense, Spirit Beyond. The RAG spirit is understood, not spoken.</div>
-  </footer>
-</body>
+      footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      footer > div {
+        font-size: 12px;
+      }
+
+      main {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 320px 1fr 320px;
+        gap: var(--gap);
+        align-items: stretch;
+      }
+
+      .col {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: var(--gap);
+        min-width: 0;
+      }
+
+      .card {
+        border: 1px solid var(--border);
+        border-radius: var(--r);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        background: var(--white);
+      }
+
+      .card .hd {
+        padding: 14px 16px 10px;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        background-color: var(--primary);
+      }
+
+      .card .hd h2 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -0.2px;
+        color: var(--white);
+      }
+
+      .card .bd {
+        padding: 14px 16px 16px;
+      }
+
+      /* Pills */
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        font-size: 12px;
+        white-space: nowrap;
+        background-color: var(--white);
+      }
+
+      .pill2 {
+        background-color: var(--secondary);
+      }
+
+      .chat {
+        background-color: var(--lightblue);
+        color: var(--darkblue);
+      }
+
+      .img {
+        background-color: var(--lightgreen);
+        color: var(--darkgreen);
+      }
+
+      .call {
+        background-color: var(--lightred);
+        color: var(--darkred);
+      }
+
+      .small-icon {
+        margin-right: 5px;
+        font-size: 16px;
+        transform: translateY(1px);
+      }
+
+      /* Left: agent */
+      .agent {
+        display: grid;
+        grid-template-columns: 44px 1fr;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 25px;
+        background-color: var(--primary);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+      }
+
+      .agent .name {
+        font-weight: 600;
+        letter-spacing: -0.2px;
+      }
+
+      .agent .sub {
+        margin-top: 4px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .kv {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .kv .box {
+        border: 2px solid var(--secondary);
+        border-radius: 14px;
+        padding: 10px 12px;
+      }
+
+      .kv .k {
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .kv .v {
+        margin-top: 6px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+      }
+
+      /* Left: waiting list */
+      .list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .item {
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 12px;
+        background: var(--white);
+      }
+
+      .graph-box {
+        background: var(--secondary);
+      }
+
+      .item .top {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 6px;
+      }
+
+      .item .title {
+        margin: 0;
+        font-weight: 800;
+        letter-spacing: -0.2px;
+      }
+
+      .item .desc {
+        margin-top: 6px;
+        font-size: 12px;
+        line-height: 1.4;
+        color: var(--muted);
+      }
+
+      /* Center: chat */
+      .chatbox {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        min-height: 640px;
+      }
+
+      .chat-meta {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .chat-area {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-top: 10px;
+      }
+
+      .msg {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .msg.ai {
+        flex-direction: row-reverse;
+      }
+
+      .role {
+        width: 40px;
+        height: 40px;
+        border-radius: 25px;
+        border: 1px solid var(--border);
+        background-color: var(--secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        flex: 0 0 auto;
+      }
+
+      .mng {
+        border: 2px solid var(--primary);
+      }
+
+      .bubble {
+        border-radius: 16px;
+        padding: 12px 12px;
+        line-height: 1.45;
+        background-color: #eef2f7;
+        max-width: 92%;
+      }
+
+      /* Recommendations */
+      .section {
+        margin-top: 6px;
+        border-top: 1px dashed var(--border);
+        padding-top: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .rec {
+        border-radius: 16px;
+        padding: 12px;
+        border: 1px solid var(--primary);
+        background: #ffffff;
+        transition: transform 160ms ease, box-shadow 160ms ease;
+        cursor: pointer;
+      }
+
+      .rec:hover {
+        transform: scale(1.02);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      }
+
+      .rec .rt {
+        margin: 0;
+        font-weight: 500;
+        letter-spacing: -0.2px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .rec .chev {
+        font-size: 18px;
+        color: var(--primary);
+        transition: transform 160ms ease;
+      }
+
+      .rec.open .chev {
+        transform: rotate(180deg);
+      }
+
+      .rec-details {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 220ms ease;
+      }
+
+      .rec.open .rec-details {
+        max-height: 360px; /* 펼침 최대 높이 */
+      }
+
+      .rec-details .inner {
+        max-height: 300px;
+        overflow-y: auto;
+        padding-right: 4px;
+        margin-top: 10px;
+        border-top: 1px solid var(--border);
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      /* rec 펼침 내부 섹션 스타일 */
+      .rec-details .group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .rec-details .gt {
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: -0.2px;
+        color: var(--primary);
+        margin-bottom: 4px;
+      }
+
+      .rec-details .rows {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .rec-details .r {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .rec-details .r .k {
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      .rec-details .r .v {
+        font-weight: 600;
+        text-align: right;
+      }
+
+      .btn-row {
+        position: sticky;
+        bottom: 0;
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        padding-top: 10px;
+      }
+
+      .btn {
+        border: 1px solid var(--border);
+        background: #fff;
+        padding: 8px 10px;
+        border-radius: 12px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      .btn.primary {
+        border-color: var(--primary);
+        background: rgba(17, 183, 165, 0.1);
+        color: #0b3a35;
+        font-weight: 600;
+      }
+
+      .end-btn-container {
+        margin: 10px;
+        bottom: 16px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .end-btn {
+        background: var(--red);
+        color: white;
+        border: none;
+        border-radius: 999px;
+        padding: 10px 10px;
+        font-weight: 500;
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        z-index: 50;
+      }
+
+      /* Right: info/report */
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 10px 12px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: #fff;
+      }
+
+      .row .k {
+        color: var(--muted);
+      }
+      .row .v {
+        font-weight: 800;
+        letter-spacing: -0.2px;
+      }
+
+      .report {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .report .block {
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: #fff;
+        padding: 12px;
+      }
+
+      .report .block .t {
+        font-weight: 800;
+        letter-spacing: -0.2px;
+        margin: 0 0 6px 0;
+      }
+
+      .report .block .c {
+        margin: 0;
+        line-height: 1.45;
+        color: var(--muted);
+      }
+
+      .modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+      }
+
+      .modal.hidden {
+        display: none;
+      }
+
+      .modal-box {
+        background: var(--white);
+        width: 520px;
+        max-width: 90%;
+        height: 50%;
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .modal-box h3 {
+        margin: 0;
+      }
+
+      .modal-box textarea {
+        width: 100%;
+        height: 100%;
+        resize: vertical;
+        padding: 10px;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        font-family: var(--font);
+        line-height: 1.6;
+        white-space: pre-wrap;
+      }
+
+      .modal-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+      }
+
+      .white-box {
+        background-color: var(--white);
+      }
+
+      /* .cancle {
+        background-color: var(--darkred);
+      } */
+
+      /* Responsive */
+      @media (max-width: 1100px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+        .chatbox {
+          min-height: 520px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="company">SK 커머스 고객센터</div>
+      </header>
+
+      <main>
+        <!-- Left column -->
+        <section class="col" aria-label="좌측 패널">
+          <div class="card">
+            <div class="hd">
+              <h2>상담원 정보</h2>
+              <span class="pill">온라인</span>
+            </div>
+            <div class="bd">
+              <div class="agent">
+                <div class="avatar">상</div>
+                <div>
+                  <div class="name">홍길동 상담원</div>
+                  <div class="sub">팀: A팀 · 역할: 일반 상담</div>
+                </div>
+              </div>
+
+              <div class="kv">
+                <div class="box">
+                  <div class="k">오늘 처리</div>
+                  <div class="v">18건</div>
+                </div>
+                <div class="box">
+                  <div class="k">평균 응답</div>
+                  <div class="v">2m 10s</div>
+                </div>
+                <div class="box">
+                  <div class="k">처리 중</div>
+                  <div class="v">1건</div>
+                </div>
+                <div class="box">
+                  <div class="k">대기</div>
+                  <div class="v">6건</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="hd">
+              <h2>대기 고객 / 업무 현황</h2>
+            </div>
+            <div class="bd">
+              <div class="list">
+                <div class="item">
+                  <div class="top">
+                    <span class="pill chat"
+                      ><i class="bx bx-chat small-icon"></i>채팅</span
+                    >
+                    <span class="pill pill2">대기 6분</span>
+                  </div>
+                  <p class="title">배송/주문</p>
+                  <div class="desc">
+                    배송 지연 문의 · 도착 예정일/보상 확인 요청
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="top">
+                    <span class="pill img"
+                      ><i class="bx bx-image small-icon"></i>이미지</span
+                    >
+                    <span class="pill pill2">대기 3분</span>
+                  </div>
+                  <p class="title">결제오류</p>
+                  <div class="desc">결제 실패 화면 첨부 · 재시도 방법 문의</div>
+                </div>
+
+                <div class="item">
+                  <div class="top">
+                    <span class="pill call"
+                      ><i class="bx bx-phone small-icon"></i>전화</span
+                    >
+                    <span class="pill pill2">처리중</span>
+                  </div>
+                  <p class="title">계정</p>
+                  <div class="desc">
+                    로그인 불가 · 비밀번호 재설정 이후에도 실패
+                  </div>
+                </div>
+              </div>
+
+              <div style="height: 12px"></div>
+
+              <div class="item graph-box">
+                <div class="top">
+                  <span class="pill white-box"
+                    ><i class="bx bx-bar-chart-alt-2 small-icon"></i>업무
+                    처리율</span
+                  >
+                  <span class="pill white-box">오늘</span>
+                </div>
+                <p class="title">93% (목표 95%)</p>
+                <div class="desc">SLA 내 처리 비율 · 피크 시간대 유입 증가</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Center column -->
+        <section class="card chatbox" aria-label="중앙 챗봇 창">
+          <div class="hd">
+            <h2>챗봇/상담 창</h2>
+            <div class="chat-meta">
+              <span class="pill">상담 ID: T-1042</span>
+              <span class="pill">유형: 배송/주문</span>
+              <span class="pill">상태: 대기</span>
+            </div>
+          </div>
+
+          <div class="bd chat-area" id="chatArea">
+            <div class="msg customer">
+              <div class="role">고객</div>
+              <div class="bubble">
+                안녕하세요. 주문했는데 아직도 배송이 안 왔어요. 언제 오나요?
+              </div>
+            </div>
+
+            <div class="msg customer">
+              <div class="role">고객</div>
+              <div class="bubble">
+                어제 도착이라더니 또 지연이면 어떻게 하라는 거죠?
+              </div>
+            </div>
+
+            <div class="msg customer">
+              <div class="role">고객</div>
+              <div class="bubble">보상이나 환불도 가능한가요?</div>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="section" id="recSection" aria-label="AI 추천">
+              <div class="msg ai">
+                <div class="role mng">AI</div>
+                <div class="bubble">아래 추천 내용을 참고해 응답하세요.</div>
+              </div>
+
+              <!-- Rec 1 -->
+              <div
+                class="rec"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                data-message="불편을 드려 죄송합니다. 주문번호를 확인해 배송 현황과 도착 예정일을 안내드리겠습니다. 지연 사유에 따라 보상 정책도 함께 확인해 드릴게요."
+              >
+                <p class="rt">
+                  1) 고객 주문/배송 현황 확인
+                  <i class="bx bx-chevron-down chev" aria-hidden="true"></i>
+                </p>
+
+                <div class="rec-details" aria-hidden="true">
+                  <div class="inner">
+                    <div class="group">
+                      <div class="gt">주문 기본 정보</div>
+                      <div class="rows">
+                        <div class="r">
+                          <span class="k">주문번호</span
+                          ><span class="v">ORD-238194</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">주문일시</span
+                          ><span class="v">2026-03-18 14:32</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">결제수단</span
+                          ><span class="v">신용카드 (일시불)</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">주문금액</span
+                          ><span class="v">89,000원</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">배송지</span
+                          ><span class="v">서울시 강남구 ****</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="group">
+                      <div class="gt">상품 정보</div>
+                      <div class="rows">
+                        <div class="r">
+                          <span class="k">상품명</span
+                          ><span class="v">무선 이어폰 X200</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">옵션</span
+                          ><span class="v">블랙 / 단품</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">수량</span><span class="v">1개</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">교환/환불</span
+                          ><span class="v">가능 (수령 전)</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="group">
+                      <div class="gt">배송 트래킹</div>
+                      <div class="rows">
+                        <div class="r">
+                          <span class="k">택배사</span
+                          ><span class="v">CJ대한통운</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">송장번호</span
+                          ><span class="v">1234-5678-9012</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">현재 상태</span
+                          ><span class="v">배송 지연</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">마지막 처리</span
+                          ><span class="v"
+                            >물류센터 출고 대기 (03/20 09:10)</span
+                          >
+                        </div>
+                        <div class="r">
+                          <span class="k">도착 예정</span
+                          ><span class="v">03/23 (지연)</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="group">
+                      <div class="gt">고객 성향 요약</div>
+                      <div class="rows">
+                        <div class="r">
+                          <span class="k">고객 등급</span
+                          ><span class="v">VIP</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">최근 CS</span
+                          ><span class="v">2건 / 30일</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">주요 문의</span
+                          ><span class="v">배송, 결제</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">응대 선호</span
+                          ><span class="v">빠른 처리</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">감정 경향</span
+                          ><span class="v">불만 표출 빈도 높음</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rec 2 -->
+              <div
+                class="rec"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                data-message="확인해 보니 배송이 지연되고 있습니다. 도착 예정일은 ○○이며, 원하시면 재배송/취소 가능 여부도 함께 확인해 드릴게요."
+              >
+                <p class="rt">
+                  2) 배송 지연 정책 및 보상 기준 확인
+                  <i class="bx bx-chevron-down chev" aria-hidden="true"></i>
+                </p>
+
+                <div class="rec-details" aria-hidden="true">
+                  <div class="inner">
+                    <div class="group">
+                      <div class="gt">적용 가능 정책</div>
+                      <div class="rows">
+                        <div class="r">
+                          <span class="k">배송 지연 보상</span
+                          ><span class="v">적용 가능</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">지연 기준</span
+                          ><span class="v">예정일 +2일 초과</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">현재 지연</span
+                          ><span class="v">2일</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="group">
+                      <div class="gt">보상 옵션</div>
+                      <div class="rows">
+                        <div class="r">
+                          <span class="k">배송비 환급</span
+                          ><span class="v">가능</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">포인트</span
+                          ><span class="v">3,000P</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">쿠폰</span
+                          ><span class="v">5,000원 (대체 가능)</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">부분 환불</span
+                          ><span class="v">불가</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">전체 환불</span
+                          ><span class="v">미수령 시 가능</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="group">
+                      <div class="gt">제한 / 예외 사항</div>
+                      <div class="rows">
+                        <div class="r">
+                          <span class="k">도서산간</span
+                          ><span class="v">해당 없음</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">예약 상품</span
+                          ><span class="v">아님</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">고객 귀책</span
+                          ><span class="v">없음</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="group">
+                      <div class="gt">처리 권한</div>
+                      <div class="rows">
+                        <div class="r">
+                          <span class="k">상담원 단독</span
+                          ><span class="v">가능</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">상급자 승인</span
+                          ><span class="v">불필요</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rec 3 -->
+              <div
+                class="rec"
+                role="button"
+                tabindex="0"
+                aria-expanded="false"
+                data-message="불편을 드려 죄송합니다. 정확한 확인을 위해 담당자(상급 상담원)에게 연결해드리겠습니다. 잠시만 기다려주세요."
+              >
+                <p class="rt">
+                  3) 고객 응대 / 리스크 프로파일
+                  <i class="bx bx-chevron-down chev" aria-hidden="true"></i>
+                </p>
+
+                <div class="rec-details" aria-hidden="true">
+                  <div class="inner">
+                    <div class="group">
+                      <div class="gt">현재 상태 분석</div>
+                      <div class="rows">
+                        <div class="r">
+                          <span class="k">감정</span
+                          ><span class="v">불만 → 분노(상승)</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">동일 문의 반복</span
+                          ><span class="v">있음 (2회)</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">분쟁 전환</span
+                          ><span class="v">중간</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="group">
+                      <div class="gt">응대 가이드</div>
+                      <div class="rows">
+                        <div class="r">
+                          <span class="k">권장 톤</span
+                          ><span class="v">공감 + 간결</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">주의 표현</span
+                          ><span class="v">책임 회피/정책만 고지</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">효과적 응대</span
+                          ><span class="v">즉시 일정 제시 + 보상 안내</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="group">
+                      <div class="gt">에스컬레이션 기준</div>
+                      <div class="rows">
+                        <div class="r">
+                          <span class="k">환불 강요</span
+                          ><span class="v">상급 연결</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">불만 반복</span
+                          ><span class="v">관리자 알림</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="group">
+                      <div class="gt">기록 포인트</div>
+                      <div class="rows">
+                        <div class="r">
+                          <span class="k">지연 사유 안내</span
+                          ><span class="v">여부 체크</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">보상 옵션 제시</span
+                          ><span class="v">여부 체크</span>
+                        </div>
+                        <div class="r">
+                          <span class="k">고객 선택 결과</span
+                          ><span class="v">기록</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="end-btn-container">
+            <button class="end-btn" id="endChatBtn">상담 종료</button>
+          </div>
+        </section>
+
+        <!-- Right column -->
+        <section class="col" aria-label="우측 패널">
+          <div class="card">
+            <div class="hd">
+              <h2>고객 정보</h2>
+              <span class="pill">VIP</span>
+            </div>
+            <div class="bd">
+              <div class="info-grid">
+                <div class="row">
+                  <div class="k">고객명</div>
+                  <div class="v">김고객</div>
+                </div>
+                <div class="row">
+                  <div class="k">연락처</div>
+                  <div class="v">010-****-1234</div>
+                </div>
+                <div class="row">
+                  <div class="k">최근 주문</div>
+                  <div class="v">ORD-238194</div>
+                </div>
+                <div class="row">
+                  <div class="k">가입일</div>
+                  <div class="v">2023-05-12</div>
+                </div>
+                <div class="row">
+                  <div class="k">최근 CS</div>
+                  <div class="v">2건 (30일)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="hd">
+              <h2>상담 리포트</h2>
+              <span class="pill">자동 생성</span>
+            </div>
+            <div class="bd">
+              <div class="report">
+                <div class="block">
+                  <p class="t">요약</p>
+                  <p class="c">
+                    배송 지연으로 고객 불만 발생. 도착 예정일 확인 및 보상/환불
+                    가능 여부 문의.
+                  </p>
+                </div>
+
+                <div class="block">
+                  <p class="t">분류 결과</p>
+                  <p class="c">
+                    유형: 배송/주문 · 긴급도: 중 · 감정: 불만 → 분노(상승)
+                  </p>
+                </div>
+
+                <div class="block">
+                  <p class="t">권장 처리</p>
+                  <p class="c">
+                    공감형 응답 후 주문번호 확인 → 도착 예정일 안내 → 보상 정책
+                    안내(가능 시).
+                  </p>
+                </div>
+
+                <div class="block">
+                  <p class="t">주의 사항</p>
+                  <p class="c">
+                    환불 요구로 전환될 가능성. 반복 강한 표현 시 에스컬레이션
+                    고려.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div>© 2026 Customer Support</div>
+        <div>v1.0</div>
+      </footer>
+    </div>
+
+    <div id="sendModal" class="modal hidden">
+      <div class="modal-box">
+        <h3>고객 안내 발송</h3>
+
+        <label>고객에게 전달될 안내 내용</label>
+        <textarea id="notifyText">
+안녕하세요 고객님,
+
+먼저 배송 지연으로 불편을 드려 진심으로 사과드립니다.
+현재 주문하신 상품은 물류센터 출고 지연으로 인해 배송이 늦어지고 있으며,
+도착 예정일은 2026년 3월 23일로 확인되었습니다.
+
+이번 배송 지연에 대한 보상으로
+- 배송비 환급 또는
+- 3,000 포인트 지급 중 선택이 가능합니다.
+
+또한 상품 수령 전까지는 주문 취소 및 전액 환불도 가능하며,
+자세한 환불/보상 정책은 아래 링크에서 확인하실 수 있습니다.
+
+▶ 환불 정책 안내: https://company.example.com/refund
+▶ 배송 정책 안내: https://company.example.com/delivery
+
+추가로 궁금하신 사항이 있으시면 언제든지 문의해 주세요.
+감사합니다.
+    </textarea
+        >
+
+        <div class="modal-actions">
+          <button id="closeModal" class="btn cancle">취소</button>
+          <button id="closeModal" class="btn primary">보내기</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const AUTH_SERVER = "http://localhost:8080";
+        const LOGIN_URL = AUTH_SERVER + "/login";
+
+        // 깜빡 노출 방지
+        document.documentElement.classList.add("auth-guard");
+
+        function goLogin() {
+          window.location.replace(LOGIN_URL);
+        }
+
+        function getCookie(name) {
+          // document.cookie는 "HttpOnly" 쿠키를 못 읽음
+          // APP_AUTH는 HttpOnly가 아니므로 읽을 수 있음
+          const m = document.cookie.match(
+            new RegExp("(^|;\\s*)" + name + "=([^;]*)")
+          );
+          return m ? decodeURIComponent(m[2]) : null;
+        }
+
+        // 1) APP_AUTH 쿠키로 최소 판단
+        const appAuth = getCookie("APP_AUTH");
+        if (!appAuth) {
+          goLogin();
+          return;
+        }
+
+        // 2) 통과면 표시
+        document.documentElement.classList.remove("auth-guard");
+      })();
+
+      const chatArea = document.getElementById("chatArea");
+      const recSection = document.getElementById("recSection");
+      let rec3Responded = false;
+
+      function closeAllRecs(exceptEl) {
+        const recs = recSection.querySelectorAll(".rec");
+        recs.forEach((rec) => {
+          if (rec !== exceptEl) {
+            rec.classList.remove("open");
+            rec.setAttribute("aria-expanded", "false");
+            const details = rec.querySelector(".rec-details");
+            if (details) details.setAttribute("aria-hidden", "true");
+          }
+        });
+      }
+
+      function toggleRec(rec) {
+        const isOpen = rec.classList.contains("open");
+        closeAllRecs(rec);
+
+        // :fire: Rec 3 최초 닫힘 시 자동 응답
+        if (
+          isOpen &&
+          rec
+            .querySelector(".rt")
+            ?.textContent.includes("고객 응대 / 리스크") &&
+          !rec3Responded
+        ) {
+          rec3Responded = true;
+          typeMessage(
+            "불편을 드려 정말 죄송합니다. 현재 배송 지연이 확인되었고, 도착 예정일은 내일로 안내받았습니다. 불편을 최소화하기 위해 보상 옵션도 함께 안내드리겠습니다."
+          );
+        }
+
+        if (isOpen) {
+          rec.classList.remove("open");
+          rec.setAttribute("aria-expanded", "false");
+          rec
+            .querySelector(".rec-details")
+            ?.setAttribute("aria-hidden", "true");
+        } else {
+          rec.classList.add("open");
+          rec.setAttribute("aria-expanded", "true");
+          rec
+            .querySelector(".rec-details")
+            ?.setAttribute("aria-hidden", "false");
+        }
+      }
+
+      function typeMessage(text) {
+        const msg = document.createElement("div");
+        msg.className = "msg ai";
+
+        const bubble = document.createElement("div");
+        bubble.className = "bubble";
+        bubble.textContent = "";
+
+        msg.innerHTML = `<div class="role">상담</div>`;
+        msg.appendChild(bubble);
+        chatArea.appendChild(msg);
+
+        const words = text.split(" ");
+        let i = 0;
+
+        const interval = setInterval(() => {
+          bubble.textContent += (i === 0 ? "" : " ") + words[i];
+          chatArea.scrollTop = chatArea.scrollHeight;
+          i++;
+          if (i >= words.length) clearInterval(interval);
+        }, 120);
+      }
+
+      function appendSentMessage(text) {
+        const msg = document.createElement("div");
+        msg.className = "msg ai";
+        msg.innerHTML = `
+          <div class="role">상담</div>
+          <div class="bubble">${escapeHtml(text)}</div>
+        `;
+        chatArea.appendChild(msg);
+
+        // 화면 아래로 스크롤(선택)
+        chatArea.scrollTop = chatArea.scrollHeight;
+      }
+
+      function escapeHtml(str) {
+        return String(str)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+      // 클릭/키보드 이벤트: 추천 열고 닫기 + 전송
+      recSection.addEventListener("click", (e) => {
+        const actionBtn = e.target.closest("button[data-action]");
+        if (actionBtn) {
+          const rec = actionBtn.closest(".rec");
+          const action = actionBtn.dataset.action;
+
+          if (action === "close") {
+            rec.classList.remove("open");
+            rec.setAttribute("aria-expanded", "false");
+            rec
+              .querySelector(".rec-details")
+              ?.setAttribute("aria-hidden", "true");
+            return;
+          }
+
+          if (action === "send") {
+            const message = rec.dataset.message || "";
+            if (message.trim()) appendSentMessage(message.trim());
+
+            // :white_check_mark: 전송 후: 모든 rec 삭제
+            recSection.querySelectorAll(".rec").forEach((el) => el.remove());
+
+            // 전송 완료 안내(선택)
+            const done = document.createElement("div");
+            done.className = "bubble";
+            done.style.background = "#ffffff";
+            done.style.border = "1px solid var(--border)";
+            done.style.color = "var(--muted)";
+            done.style.marginTop = "8px";
+            done.textContent = "전송 완료: AI 추천 목록이 정리되었습니다.";
+            recSection.appendChild(done);
+
+            return;
+          }
+        }
+
+        const rec = e.target.closest(".rec");
+        if (!rec) return;
+        toggleRec(rec);
+      });
+
+      recSection.addEventListener("keydown", (e) => {
+        const rec = e.target.closest(".rec");
+        if (!rec) return;
+
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleRec(rec);
+        }
+      });
+
+      const endChatBtn = document.getElementById("endChatBtn");
+      const sendModal = document.getElementById("sendModal");
+      const closeModal = document.getElementById("closeModal");
+
+      endChatBtn.addEventListener("click", () => {
+        sendModal.classList.remove("hidden");
+      });
+
+      closeModal.addEventListener("click", () => {
+        sendModal.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
+
 <!--
 #### 실습 코드는 학습 목적으로만 사용 바랍니다. audit@korea.ac.kr 임성열 Ph.D.
 python -m http.server 5174
-# → http://localhost:5174/internal_index.html 접속
+# → http://localhost:5174/intro_main.html 접속
 -->
-</html>
