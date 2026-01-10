@@ -8,6 +8,12 @@ Java는 언어 특성상
 싱글턴, 팩토리, 빌더 패턴 3가만 알아도 체급이 달라짐 (=코드를 ‘쓸 수 있다’ 수준을 넘어, ‘의도를 설계하며 쓴다’는 단계로 올라감)
 */
 
+// 전체 동작 흐름
+// Builder 객체에 값을 차곡차곡 저장한 뒤,
+// build()를 호출하면 User 생성자가 실행되고,
+// 그 생성자 안에서 Builder의 값이 User 객체 필드로 복사되면서
+// 최종 User 객체가 완성된다.
+
 public class BuilderPatternExample {
 
     public static void main(String[] args) {
@@ -29,16 +35,15 @@ public class BuilderPatternExample {
         System.out.println(" - ACTIVE    : " + user.isActive());
 
         System.out.println(
-            "\n============================================\n" +
-            "[User Object Created]\n" +
-            " - 빌더 패턴을 통해 객체 생성이 완료됨\n\n" +
-            "[Field Mapping]\n" +
-            " - ID / PASSWORD / ROLE / ACTIVE\n" +
-            " - 빌더에서 설정한 값들이 User 객체에 정확히 반영됨\n\n" +
-            "[Default Value]\n" +
-            " - ACTIVE : true\n" +
-            " - 명시적으로 설정하지 않았지만 기본값이 적용됨\n"
-    );
+                "\n============================================\n" +
+                        "[User Object Created]\n" +
+                        " - 빌더 패턴을 통해 객체 생성이 완료됨\n\n" +
+                        "[Field Mapping]\n" +
+                        " - ID / PASSWORD / ROLE / ACTIVE\n" +
+                        " - 빌더에서 설정한 값들이 User 객체에 정확히 반영됨\n\n" +
+                        "[Default Value]\n" +
+                        " - ACTIVE : true\n" +
+                        " - 명시적으로 설정하지 않았지만 기본값이 적용됨\n");
     }
 }
 
@@ -50,10 +55,11 @@ class User {
     private final String role;
     private final boolean active;
 
-    /* private 생성자
-    • 외부에서 new User()를 직접 못 하게 차단
-	• 빌더 패턴 사용을 강제
-    */
+    /*
+     * private 생성자
+     * • 외부에서 new User()를 직접 못 하게 차단
+     * • 빌더 패턴 사용을 강제
+     */
     private User(Builder builder) {
         this.id = builder.id;
         this.password = builder.password;
@@ -82,12 +88,14 @@ class User {
     public static class Builder {
         private String id;
         private String password;
-        private String role = "USER";   // 기본값
-        private boolean active = true;  // 기본값
-        /* 기본값 설정 의미 :
-        • 설정하지 않으면 기본값 자동 적용
-        • 생성자 오버로딩 없이도 다양한 조합 가능
+        private String role = "USER"; // 기본값
+        private boolean active = true; // 기본값
+        /*
+         * 기본값 설정 의미 :
+         * • 설정하지 않으면 기본값 자동 적용
+         * • 생성자 오버로딩 없이도 다양한 조합 가능
          */
+
         public Builder id(String id) {
             this.id = id;
             return this;
