@@ -21,6 +21,45 @@
     <title>CS AI Assistant</title>
 
     <style>
+      html.auth-guard body {
+        visibility: hidden;
+      }
+    </style>
+
+    <script>
+      (function () {
+        const AUTH_SERVER = "http://localhost:8080";
+        const LOGIN_URL = AUTH_SERVER + "/login";
+
+        // 깜빡 노출 방지
+        document.documentElement.classList.add("auth-guard");
+
+        function goLogin() {
+          window.location.replace(LOGIN_URL);
+        }
+
+        function getCookie(name) {
+          // document.cookie는 "HttpOnly" 쿠키를 못 읽음
+          // APP_AUTH는 HttpOnly가 아니므로 읽을 수 있음
+          const m = document.cookie.match(
+            new RegExp("(^|;\\s*)" + name + "=([^;]*)")
+          );
+          return m ? decodeURIComponent(m[2]) : null;
+        }
+
+        // 1) APP_AUTH 쿠키로 최소 판단
+        const appAuth = getCookie("APP_AUTH");
+        if (!appAuth) {
+          goLogin();
+          return;
+        }
+
+        // 2) 통과면 표시
+        document.documentElement.classList.remove("auth-guard");
+      })();
+    </script>
+
+    <style>
       :root {
         --primary: rgb(17, 183, 165);
         --secondary: rgb(179, 229, 223);
