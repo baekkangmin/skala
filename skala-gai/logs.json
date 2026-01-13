@@ -1,0 +1,2588 @@
+[
+  {
+    "timestamp": "2026-01-13T13:01:04.530Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_001",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 120
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.531Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_002",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 95
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.532Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_003",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 310
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.533Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_004",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 1024
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.533Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_005",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 260
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.534Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_006",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 180
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.534Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_007",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 2048
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.535Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_008",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 90
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.561Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_005",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 14480
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.566Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_003",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 29661
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.566Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_004",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 3419
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.569Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_008",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 23451
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.570Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_002",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.572Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_007",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 1820
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.572Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_001",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.579Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_006",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.586Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_005",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 117
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.587Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_009",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 75
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.593Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_004",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "TRAINING",
+    "message": "Epoch 1 completed",
+    "context": {
+      "loss": 0.572,
+      "accuracy": 0.87
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.593Z",
+    "level": "ERROR",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_007",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "TRAINING",
+    "message": "CUDA out of memory",
+    "context": {
+      "retry_count": 1
+    },
+    "exception": {
+      "type": "OutOfMemoryError",
+      "stacktrace": "trainer.py:188 -> allocate_tensor()"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.605Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_008",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 538
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.606Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_010",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 430
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.607Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_002",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.623Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_003",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 469
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.624Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_011",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 210
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.630Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_010",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 14815
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.630Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_001",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.630Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_004",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 797
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.630Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_012",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 1536
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.641Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_006",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.641Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_009",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.642Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_007",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "RETRY",
+    "message": "Retrying training with reduced batch size",
+    "context": {
+      "new_batch_size": 16
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.642Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_007",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "TRAINING",
+    "message": "Epoch 5 completed",
+    "context": {
+      "loss": 0.27,
+      "accuracy": 0.76
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.649Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_001",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.649Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_013",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 180
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.664Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_006",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.664Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_014",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 60
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.670Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_002",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.670Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_010",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 620
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.670Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_012",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 2537
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.670Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_015",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 500
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.670Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_016",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 4096
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.672Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_011",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.683Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_013",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 11381
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.683Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_007",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 219
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.684Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_017",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 140
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.687Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_015",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 24640
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.696Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_009",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.701Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_013",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 413
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.702Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_018",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 220
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.712Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_014",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.717Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_015",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 181
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.718Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_012",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "TRAINING",
+    "message": "Epoch 2 completed",
+    "context": {
+      "loss": 0.433,
+      "accuracy": 0.74
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.718Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_019",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 98
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.721Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_009",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.722Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_020",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 3072
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.724Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_016",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 1214
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.730Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_018",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 22574
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.730Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_017",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.732Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_014",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.732Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_011",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.737Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_019",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.749Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_017",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.749Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_020",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 3136
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.749Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_016",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "TRAINING",
+    "message": "Epoch 1 completed",
+    "context": {
+      "loss": 0.608,
+      "accuracy": 0.95
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.749Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_018",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 769
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.750Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_021",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 410
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.761Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_011",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.762Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_022",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 130
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.766Z",
+    "level": "ERROR",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_020",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "TRAINING",
+    "message": "CUDA out of memory",
+    "context": {
+      "retry_count": 1
+    },
+    "exception": {
+      "type": "OutOfMemoryError",
+      "stacktrace": "trainer.py:188 -> allocate_tensor()"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.769Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_017",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.769Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_023",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 275
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.773Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_012",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 355
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.774Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_016",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 442
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.774Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_024",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 5120
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.775Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_025",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 155
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.784Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_014",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.785Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_026",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 340
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.790Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_023",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 10821
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.790Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_019",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.790Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_021",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 14090
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.794Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_022",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.805Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_025",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.811Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_024",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 1916
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.816Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_020",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "RETRY",
+    "message": "Retrying training with reduced batch size",
+    "context": {
+      "new_batch_size": 16
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.816Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_020",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "TRAINING",
+    "message": "Epoch 2 completed",
+    "context": {
+      "loss": 0.876,
+      "accuracy": 0.7
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.820Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_026",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 29402
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.826Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_019",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.827Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_027",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 88
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.830Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_022",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.830Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_020",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 144
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.830Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_028",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 1024
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.836Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_021",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 169
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.836Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_029",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 190
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.843Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_026",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 290
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.843Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_025",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.844Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_030",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 220
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.846Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_023",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 112
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.847Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_031",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 2048
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.850Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_027",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.857Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_024",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "TRAINING",
+    "message": "Epoch 1 completed",
+    "context": {
+      "loss": 0.258,
+      "accuracy": 0.93
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.860Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_022",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.861Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_032",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 360
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.871Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_025",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.871Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_030",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.871Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_028",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 3172
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.872Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_033",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 110
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.885Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_032",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 26732
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.885Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_030",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.889Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_029",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 26135
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.895Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_027",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.897Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_031",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 1460
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.898Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_033",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.905Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_028",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "TRAINING",
+    "message": "Epoch 2 completed",
+    "context": {
+      "loss": 0.682,
+      "accuracy": 0.9
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.905Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_024",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 430
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.906Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_034",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 480
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.914Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_029",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 251
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.915Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_035",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 4096
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.923Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_030",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.924Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_036",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 92
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.926Z",
+    "level": "WARN",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_031",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "TRAINING",
+    "message": "GPU contention detected",
+    "context": {
+      "gpu_id": 0,
+      "lock_wait_ms": 166
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.941Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_033",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.941Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_028",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 282
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.942Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_037",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 210
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.945Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_032",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 527
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.946Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_038",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 1536
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.947Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_035",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 607
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.950Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_034",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 15553
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.954Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_027",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.955Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_033",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.955Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_039",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 175
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.955Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_040",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 290
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.968Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_036",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.973Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_031",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "TRAINING",
+    "message": "Epoch 4 completed",
+    "context": {
+      "loss": 0.625,
+      "accuracy": 0.98
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.974Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_037",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 27468
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.975Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_040",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 21690
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.975Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_035",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "TRAINING",
+    "message": "Epoch 2 completed",
+    "context": {
+      "loss": 0.798,
+      "accuracy": 0.75
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.988Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_039",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.989Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_038",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 3351
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.996Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_031",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 787
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.996Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_041",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 2048
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.998Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_037",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 281
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:04.999Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_042",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 130
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.005Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_036",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.005Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_034",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 78
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.006Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_043",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 350
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.010Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_035",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 586
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.011Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_044",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 1024
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.016Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_040",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 583
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.017Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_045",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 165
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.021Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_043",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 22929
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.024Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_039",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.036Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_041",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 2319
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.038Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_038",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "TRAINING",
+    "message": "Epoch 5 completed",
+    "context": {
+      "loss": 0.792,
+      "accuracy": 0.96
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.042Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_039",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.043Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_046",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 410
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.045Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_044",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 3299
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.049Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_042",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.058Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_036",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.059Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_043",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 597
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.059Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_045",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.059Z",
+    "level": "WARN",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_044",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "TRAINING",
+    "message": "GPU contention detected",
+    "context": {
+      "gpu_id": 0,
+      "lock_wait_ms": 421
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.063Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_047",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 3072
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.063Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_048",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 200
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.065Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_041",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "TRAINING",
+    "message": "Epoch 5 completed",
+    "context": {
+      "loss": 0.373,
+      "accuracy": 0.75
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.076Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_042",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.084Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_045",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.085Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_046",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 16202
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.086Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_044",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "TRAINING",
+    "message": "Epoch 3 completed",
+    "context": {
+      "loss": 0.225,
+      "accuracy": 0.74
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.093Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_038",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 706
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.095Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_042",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.097Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_048",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.097Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_049",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 260
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.099Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_050",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 4096
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.108Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_045",
+    "process_id": 31368,
+    "thread_id": "worker-9",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.109Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_047",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 3926
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.110Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_046",
+    "process_id": 31362,
+    "thread_id": "worker-3",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 430
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.122Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_041",
+    "process_id": 31366,
+    "thread_id": "worker-7",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 217
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.124Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_044",
+    "process_id": 31363,
+    "thread_id": "worker-4",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 331
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.139Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_050",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 2307
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.139Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_049",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 17028
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.146Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_047",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "TRAINING",
+    "message": "Epoch 2 completed",
+    "context": {
+      "loss": 0.581,
+      "accuracy": 0.94
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.149Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_048",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.163Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_049",
+    "process_id": 31364,
+    "thread_id": "worker-5",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 531
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.169Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_047",
+    "process_id": 31367,
+    "thread_id": "worker-8",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 637
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.172Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_050",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "TRAINING",
+    "message": "Epoch 3 completed",
+    "context": {
+      "loss": 0.609,
+      "accuracy": 0.97
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.183Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_048",
+    "process_id": 31361,
+    "thread_id": "worker-2",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": "2026-01-13T13:01:05.206Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_050",
+    "process_id": 31365,
+    "thread_id": "worker-6",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 804
+    }
+  }
+]

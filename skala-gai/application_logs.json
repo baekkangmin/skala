@@ -1,0 +1,129 @@
+[
+  {
+    "timestamp": "2026-01-01T09:01:01.101Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_004",
+    "process_id": 4102,
+    "thread_id": "worker-1",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 1024
+    }
+  },
+  {
+    "timestamp": "2026-01-01T09:01:03.452Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_004",
+    "process_id": 4102,
+    "thread_id": "worker-1",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 2341
+    }
+  },
+  {
+    "timestamp": "2026-01-01T09:01:07.912Z",
+    "level": "WARN",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_004",
+    "process_id": 4103,
+    "thread_id": "worker-3",
+    "stage": "TRAINING",
+    "message": "GPU contention detected",
+    "context": {
+      "gpu_id": 0,
+      "lock_wait_ms": 412
+    }
+  },
+  {
+    "timestamp": "2026-01-01T09:01:09.334Z",
+    "level": "ERROR",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_004",
+    "process_id": 4103,
+    "thread_id": "worker-3",
+    "stage": "TRAINING",
+    "message": "CUDA out of memory",
+    "exception": {
+      "type": "OutOfMemoryError",
+      "stacktrace": "trainer.py:188 -> allocate_tensor()"
+    },
+    "context": {
+      "retry_count": 1
+    }
+  },
+  {
+    "timestamp": "2026-01-01T09:01:12.887Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_004",
+    "process_id": 4104,
+    "thread_id": "worker-4",
+    "stage": "RETRY",
+    "message": "Retrying training with reduced batch size",
+    "context": {
+      "new_batch_size": 16
+    }
+  },
+
+  {
+    "timestamp": "2026-01-01T09:02:01.112Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_010",
+    "process_id": 4110,
+    "thread_id": "worker-2",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 18234
+    }
+  },
+  {
+    "timestamp": "2026-01-01T09:02:05.551Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_010",
+    "process_id": 4110,
+    "thread_id": "worker-2",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 413
+    }
+  },
+
+  {
+    "timestamp": "2026-01-01T09:03:11.772Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_016",
+    "process_id": 4120,
+    "thread_id": "worker-5",
+    "stage": "TRAINING",
+    "message": "Epoch 3 completed",
+    "context": {
+      "loss": 0.213,
+      "accuracy": 0.91
+    }
+  },
+  {
+    "timestamp": "2026-01-01T09:03:18.945Z",
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_016",
+    "process_id": 4120,
+    "thread_id": "worker-5",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 512
+    }
+  }
+]
