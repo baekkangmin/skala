@@ -2,12 +2,14 @@
 # 작성자 : 백강민
 # 작성목적 : SKALA Python Day2 - 멀티프로세싱 성능 최적화 및 구조적 로깅
 # 변경사항 내역 :
-#   2025-01-13 - 최초 작성
+#   2026-01-13 - 최초 작성
+#   2026-01-14 - 파일명 고정 제거(--file 필수) + jsonl/csv 모두 지원
 # -------------------------------------------------------------
 
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import os
 import re
@@ -44,14 +46,51 @@ def process_text(text: str) -> str:
 
 
 # -------------------------
-# JSONL read
+# Reader: JSONL / CSV (단일 파일, 확장자 기반 자동)
 # -------------------------
+def infer_format(path: Path) -> str:
+    ext = path.suffix.lower()
+    if ext == ".jsonl":
+        return "jsonl"
+    if ext == ".csv":
+        return "csv"
+    raise ValueError(f"unsupported file extension: {ext} (supported: .jsonl, .csv)")
+
+
 def iter_jsonl(path: Path) -> Iterator[dict]:
     with path.open("r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
             if line:
                 yield json.loads(line)
+
+
+def iter_csv(path: Path) -> Iterator[dict]:
+    """
+    CSV 기본 지원(원본에 최소 추가):
+    - DictReader로 row를 dict로 반환
+    - 키/값 strip + 빈 문자열은 그대로 두고 싶으면 None 처리 제거 가능
+    """
+    with path.open("r", encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            cleaned: Dict[str, object] = {}
+            for k, v in row.items():
+                key = (k or "").strip()
+                if isinstance(v, str):
+                    val = v.strip()
+                    cleaned[key] = val  # 필요하면: None if val == "" else val
+                else:
+                    cleaned[key] = v
+            yield cleaned
+
+
+def iter_records(path: Path) -> Iterator[dict]:
+    fmt = infer_format(path)
+    if fmt == "jsonl":
+        yield from iter_jsonl(path)
+    else:
+        yield from iter_csv(path)
 
 
 def take_n(it: Iterable[dict], n: int) -> List[dict]:
@@ -73,7 +112,7 @@ def process_chunk(chunk: List[dict], text_key: str) -> int:
     processed = 0
     for r in chunk:
         t = r.get(text_key)
-        if isinstance(t, str):
+        if isinstance(t, str) and t.strip():
             r[text_key] = process_text(t)
             processed += 1
     return processed
@@ -115,13 +154,19 @@ def fmt(n: float) -> str:
 
 def main() -> None:
     p = argparse.ArgumentParser()
-    p.add_argument("--file", default="reviews_100k.jsonl")
+
+    # 파일명 고정 제거: --file로 파일 지정
+    p.add_argument(
+        "--file",
+        required=True,
+        help="입력 파일(.jsonl 또는 .csv). 예) reviews_100k.jsonl, reviews_500k.csv",
+    )
     p.add_argument("--text-key", default="review_text")
     p.add_argument("--records", type=int, default=5_000_000)
     p.add_argument("--base-read", type=int, default=100_000)
     p.add_argument("--processes", type=int, default=(os.cpu_count() or 4))
     p.add_argument(
-        "--start-method", default="fork", choices=["fork", "spawn", "forkserver"]
+        "--start-method", default="spawn", choices=["fork", "spawn", "forkserver"]
     )
     p.add_argument("--chunk-sizes", default="1000,10000,100000")
     p.add_argument("--ipc-small", type=int, default=100)
@@ -129,13 +174,25 @@ def main() -> None:
     args = p.parse_args()
 
     path = Path(args.file)
-    if not path.exists():
+    if not path.exists() or not path.is_file():
         raise FileNotFoundError(f"input file not found: {path.resolve()}")
 
-    base = take_n(iter_jsonl(path), args.base_read)
+    base = take_n(iter_records(path), args.base_read)
+    if not base:
+        print("입력에서 레코드를 읽지 못했습니다. (빈 파일이거나 파싱 실패)")
+        return
+
+    # text_key 존재 체크(특히 csv 헤더 실수 방지)
+    if args.text_key not in base[0]:
+        sample_keys = sorted(list(base[0].keys()))[:30]
+        raise KeyError(
+            f"text-key '{args.text_key}' not found in input records.\n"
+            f"- example keys (first record): {sample_keys}"
+        )
+
     all_records = expand_to_n(base, args.records)
 
-    # 1) 배치 프로세서: "바뀐 문장"만 출력
+    # 1) 배치 프로세서
     print("\n[수정된 문장]")
     shown = 0
     for r in base:
@@ -144,8 +201,7 @@ def main() -> None:
             continue
         after = process_text(t)
         if after != t:
-            print(f"- {t[:140]}")
-            print(f"  → {after[:140]}")
+            print(f"- {after[:140]}")
             shown += 1
             if shown >= args.show_samples:
                 break
@@ -168,7 +224,7 @@ def main() -> None:
     # multi 요소: (processed, secs, rps, tasks, cs)
 
     best = max(multi, key=lambda x: x[2])  # rps 기준
-    best_processed, best_secs, best_rps, best_tasks, best_cs = best
+    _best_processed, best_secs, best_rps, best_tasks, best_cs = best
 
     speedup = s_secs / best_secs if best_secs > 0 else 0.0
 

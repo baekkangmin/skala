@@ -3,6 +3,7 @@
 # 작성목적 : SKALA Python Day2 - 구조적 로깅 및 컨텍스트 추적 (Contextual Logging)
 # 변경사항 내역 :
 #   2025-01-13 - 최초 작성
+#   2025-01-14 - 유틸: ISO8601 삭제
 # -------------------------------------------------------------
 
 from __future__ import annotations
@@ -15,7 +16,6 @@ import random
 import re
 import time
 from dataclasses import dataclass
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -45,17 +45,6 @@ class Task:
 
 
 # -----------------------------
-# 유틸: ISO8601 with milliseconds + Z
-# -----------------------------
-def iso_utc_now_ms() -> str:
-    return (
-        datetime.now(timezone.utc)
-        .isoformat(timespec="milliseconds")
-        .replace("+00:00", "Z")
-    )
-
-
-# -----------------------------
 # 프로세스 이름을 worker-1로 표준화
 # -----------------------------
 _WORKER_NAME_RE = re.compile(r"(?:SpawnPoolWorker|ForkPoolWorker)-(\d+)$")
@@ -78,7 +67,7 @@ def make_log(
     exception: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     payload: Dict[str, Any] = {
-        "timestamp": iso_utc_now_ms(),
+        "timestamp": time.time(),
         "level": level,
         "batch_id": task.batch_id,
         "task_id": task.task_id,
@@ -113,7 +102,7 @@ def drain_queue(log_q: mp.Queue, out: List[Dict[str, Any]]) -> None:
 
 
 def write_logs(logs: List[Dict[str, Any]], out_path: Path) -> None:
-    logs.sort(key=lambda x: x.get("timestamp", ""))
+    logs.sort(key=lambda x: x.get("timestamp", 0))
     with out_path.open("w", encoding="utf-8") as f:
         json.dump(logs, f, ensure_ascii=False, indent=2)
 
