@@ -1,0 +1,996 @@
+﻿review_id,product_id,category,review_text,review_length,num_words,sentiment_score,rating,is_length_outlier
+R0001,P158,home,Amazing quality and fast shipping.,34,27,-0.6,3,False
+R0002,P117,fashion,"Just okay, nothing special.",27,28,-0.1,5,False
+R0003,P160,fashion,Not worth the money.,20,32,0.2,5,False
+R0004,P127,fashion,"Just okay, nothing special.",27,32,0.22,4,False
+R0005,P151,home,"Just okay, nothing special.",27,15,-0.03,4,False
+R0006,P182,home,"Just okay, nothing special.",27,18,0.51,4,False
+R0007,P195,home,"Excellent product, I loved it!",30,28,-0.33,3,False
+R0008,P154,fashion,Amazing quality and fast shipping.,34,28,0.13,3,False
+R0009,P144,sports,"Excellent product, I loved it!",30,28,0.26,2,False
+R0010,P144,sports,"Terrible experience, would not buy again.",41,51,0.46,5,True
+R0011,P128,fashion,"Just okay, nothing special.",27,28,0.56,4,False
+R0012,P151,electronics,Amazing quality and fast shipping.,34,32,-0.36,4,False
+R0013,P152,electronics,Not worth the money.,20,31,-0.57,4,False
+R0014,P189,home,"Excellent product, I loved it!",30,29,0.84,5,False
+R0015,P179,home,Not worth the money.,20,22,0.37,2,False
+R0016,P136,home,"Terrible experience, would not buy again.",41,30,-0.17,4,True
+R0017,P153,electronics,"Terrible experience, would not buy again.",41,19,0.98,4,True
+R0018,P153,fashion,Not worth the money.,20,23,0.26,4,False
+R0019,P132,electronics,Amazing quality and fast shipping.,34,21,0.79,1,False
+R0020,P192,sports,Not worth the money.,20,25,0.23,5,False
+R0022,P133,sports,"Excellent product, I loved it!",30,11,1.0,4,False
+R0023,P137,fashion,Amazing quality and fast shipping.,34,29,0.08,4,False
+R0024,P182,electronics,Amazing quality and fast shipping.,34,13,0.69,5,False
+R0025,P125,home,Not worth the money.,20,21,0.52,5,False
+R0026,P170,sports,Amazing quality and fast shipping.,34,32,0.88,2,False
+R0028,P170,fashion,"Terrible experience, would not buy again.",41,17,0.54,4,True
+R0029,P189,home,"Just okay, nothing special.",27,19,0.73,4,False
+R0030,P102,home,"Terrible experience, would not buy again.",41,29,-0.68,5,True
+R0031,P100,home,Amazing quality and fast shipping.,34,19,-0.39,5,False
+R0032,P195,home,Amazing quality and fast shipping.,34,26,-0.82,5,False
+R0033,P177,fashion,"Terrible experience, would not buy again.",41,25,0.07,4,True
+R0034,P126,home,Not worth the money.,20,20,0.56,2,False
+R0035,P152,fashion,"Terrible experience, would not buy again.",41,40,0.95,5,True
+R0036,P129,electronics,Not worth the money.,20,29,0.24,5,False
+R0037,P135,fashion,"Just okay, nothing special.",27,10,1.0,2,False
+R0038,P150,home,"Just okay, nothing special.",27,26,-0.49,5,False
+R0039,P100,home,"Terrible experience, would not buy again.",41,20,-0.65,5,True
+R0040,P184,electronics,"Excellent product, I loved it!",30,30,0.17,4,False
+R0041,P135,electronics,Not worth the money.,20,19,0.39,4,False
+R0042,P165,fashion,Amazing quality and fast shipping.,34,24,0.18,3,False
+R0043,P122,home,"Excellent product, I loved it!",30,28,-0.83,1,False
+R0044,P101,fashion,"Terrible experience, would not buy again.",41,31,0.16,3,True
+R0045,P154,home,"Terrible experience, would not buy again.",41,16,-0.45,5,True
+R0046,P109,home,"Terrible experience, would not buy again.",41,22,0.53,1,True
+R0047,P192,sports,"Excellent product, I loved it!",30,21,0.38,3,False
+R0048,P141,fashion,"Just okay, nothing special.",27,20,-0.27,3,False
+R0049,P176,sports,Amazing quality and fast shipping.,34,37,-0.06,4,False
+R0050,P150,sports,"Just okay, nothing special.",27,27,-0.33,5,False
+R0052,P197,fashion,"Terrible experience, would not buy again.",41,31,0.68,3,True
+R0053,P151,home,"Just okay, nothing special.",27,39,-0.29,5,False
+R0054,P122,sports,"Excellent product, I loved it!",30,32,0.45,4,False
+R0055,P174,sports,Amazing quality and fast shipping.,34,14,-0.07,3,False
+R0056,P102,fashion,Amazing quality and fast shipping.,34,21,-0.2,4,False
+R0057,P197,electronics,"Excellent product, I loved it!",30,33,0.15,2,False
+R0058,P168,home,"Excellent product, I loved it!",30,20,-0.32,2,False
+R0059,P144,electronics,"Excellent product, I loved it!",30,28,-0.08,4,False
+R0060,P101,electronics,"Excellent product, I loved it!",30,30,-0.4,4,False
+R0061,P132,sports,"Terrible experience, would not buy again.",41,18,1.0,5,True
+R0062,P166,sports,"Just okay, nothing special.",27,24,0.22,3,False
+R0063,P168,sports,"Excellent product, I loved it!",30,2,-0.15,4,False
+R0064,P199,fashion,Not worth the money.,20,17,0.31,4,False
+R0065,P184,electronics,Amazing quality and fast shipping.,34,23,0.14,1,False
+R0066,P165,home,"Just okay, nothing special.",27,16,0.09,4,False
+R0067,P188,electronics,Amazing quality and fast shipping.,34,36,0.51,2,False
+R0068,P103,electronics,Amazing quality and fast shipping.,34,14,0.58,5,False
+R0069,P106,electronics,"Just okay, nothing special.",27,21,-0.07,2,False
+R0070,P142,home,Amazing quality and fast shipping.,34,25,-0.09,4,False
+R0071,P164,fashion,"Just okay, nothing special.",27,35,0.06,1,False
+R0072,P167,electronics,Not worth the money.,20,14,-0.95,5,False
+R0073,P124,fashion,"Terrible experience, would not buy again.",41,33,-0.56,4,True
+R0074,P146,sports,Not worth the money.,20,25,0.88,4,False
+R0075,P151,electronics,Not worth the money.,20,18,1.0,1,False
+R0076,P136,fashion,"Terrible experience, would not buy again.",41,28,0.08,5,True
+R0077,P173,sports,"Just okay, nothing special.",27,26,0.49,3,False
+R0078,P121,home,"Excellent product, I loved it!",30,20,0.36,5,False
+R0079,P156,fashion,"Just okay, nothing special.",27,25,1.0,3,False
+R0080,P155,sports,"Excellent product, I loved it!",30,22,0.76,2,False
+R0081,P189,sports,Not worth the money.,20,25,0.14,1,False
+R0082,P120,fashion,"Just okay, nothing special.",27,29,-0.28,4,False
+R0083,P146,fashion,"Just okay, nothing special.",27,36,-0.6,4,False
+R0084,P136,home,"Just okay, nothing special.",27,16,0.3,1,False
+R0085,P105,fashion,"Excellent product, I loved it!",30,39,-0.18,5,False
+R0086,P125,fashion,Not worth the money.,20,11,-0.51,4,False
+R0087,P175,fashion,Not worth the money.,20,23,-0.12,4,False
+R0088,P130,electronics,"Excellent product, I loved it!",30,29,-0.34,4,False
+R0089,P181,home,Amazing quality and fast shipping.,34,26,1.0,4,False
+R0090,P173,fashion,"Excellent product, I loved it!",30,20,0.64,4,False
+R0091,P124,fashion,"Excellent product, I loved it!",30,23,0.2,2,False
+R0092,P168,electronics,Amazing quality and fast shipping.,34,21,0.94,2,False
+R0093,P179,sports,Not worth the money.,20,20,0.24,5,False
+R0094,P151,electronics,"Terrible experience, would not buy again.",41,30,-0.23,5,True
+R0095,P111,sports,Not worth the money.,20,27,0.96,3,False
+R0096,P177,fashion,"Just okay, nothing special.",27,20,0.47,3,False
+R0097,P118,electronics,"Just okay, nothing special.",27,31,-0.32,4,False
+R0098,P175,electronics,"Terrible experience, would not buy again.",41,27,0.1,4,True
+R0099,P137,home,Not worth the money.,20,30,-0.24,1,False
+R0100,P133,home,Amazing quality and fast shipping.,34,29,-0.49,2,False
+R0101,P103,sports,"Terrible experience, would not buy again.",41,19,0.66,5,True
+R0102,P114,home,"Excellent product, I loved it!",30,21,1.0,4,False
+R0103,P199,electronics,"Just okay, nothing special.",27,30,0.03,1,False
+R0104,P179,home,"Excellent product, I loved it!",30,29,0.48,3,False
+R0105,P102,fashion,"Terrible experience, would not buy again.",41,24,-0.13,3,True
+R0106,P144,electronics,"Terrible experience, would not buy again.",41,25,-0.04,4,True
+R0107,P149,sports,Amazing quality and fast shipping.,34,33,-0.1,1,False
+R0108,P190,sports,Not worth the money.,20,20,-0.23,2,False
+R0109,P167,electronics,"Excellent product, I loved it!",30,28,0.22,5,False
+R0110,P162,home,Amazing quality and fast shipping.,34,23,-0.22,2,False
+R0111,P129,electronics,Not worth the money.,20,23,0.34,4,False
+R0112,P163,sports,"Excellent product, I loved it!",30,32,0.17,3,False
+R0113,P149,electronics,Amazing quality and fast shipping.,34,30,0.08,1,False
+R0114,P140,sports,"Excellent product, I loved it!",30,30,-0.25,3,False
+R0115,P112,electronics,"Just okay, nothing special.",27,34,-0.09,5,False
+R0116,P119,sports,Not worth the money.,20,25,0.58,5,False
+R0117,P106,electronics,"Excellent product, I loved it!",30,29,0.45,5,False
+R0118,P103,home,"Terrible experience, would not buy again.",41,22,-0.29,3,True
+R0119,P151,electronics,Amazing quality and fast shipping.,34,27,0.25,4,False
+R0120,P128,electronics,"Just okay, nothing special.",27,24,0.58,3,False
+R0121,P195,electronics,"Just okay, nothing special.",27,25,-0.63,3,False
+R0122,P149,electronics,"Excellent product, I loved it!",30,29,0.47,5,False
+R0123,P132,fashion,"Terrible experience, would not buy again.",41,19,-0.13,1,True
+R0125,P134,electronics,Not worth the money.,20,17,-0.18,3,False
+R0126,P144,home,"Excellent product, I loved it!",30,16,-0.7,1,False
+R0127,P194,sports,Not worth the money.,20,33,-0.61,2,False
+R0128,P189,sports,Not worth the money.,20,30,0.22,4,False
+R0129,P139,sports,"Excellent product, I loved it!",30,29,0.33,4,False
+R0130,P171,home,"Terrible experience, would not buy again.",41,29,-0.25,5,True
+R0131,P129,home,"Terrible experience, would not buy again.",41,24,0.52,5,True
+R0132,P143,sports,"Terrible experience, would not buy again.",41,18,0.03,3,True
+R0133,P154,fashion,Amazing quality and fast shipping.,34,25,0.17,3,False
+R0134,P102,fashion,"Terrible experience, would not buy again.",41,20,-0.41,3,True
+R0135,P106,fashion,Not worth the money.,20,31,0.03,4,False
+R0136,P116,sports,Amazing quality and fast shipping.,34,23,0.22,3,False
+R0137,P163,electronics,Amazing quality and fast shipping.,34,19,-0.23,4,False
+R0138,P193,home,"Just okay, nothing special.",27,22,0.01,4,False
+R0139,P188,electronics,"Excellent product, I loved it!",30,27,0.7,4,False
+R0140,P162,electronics,"Excellent product, I loved it!",30,21,-0.09,4,False
+R0141,P131,electronics,"Terrible experience, would not buy again.",41,19,0.62,3,True
+R0142,P178,electronics,"Excellent product, I loved it!",30,26,-0.36,5,False
+R0143,P146,fashion,"Just okay, nothing special.",27,26,0.46,5,False
+R0144,P151,sports,Amazing quality and fast shipping.,34,21,0.92,2,False
+R0145,P185,home,"Just okay, nothing special.",27,21,-1.0,5,False
+R0146,P115,sports,"Excellent product, I loved it!",30,26,-0.2,4,False
+R0147,P167,electronics,"Just okay, nothing special.",27,14,0.49,5,False
+R0148,P171,electronics,Not worth the money.,20,15,0.1,5,False
+R0149,P111,sports,"Terrible experience, would not buy again.",41,19,0.39,4,True
+R0150,P180,sports,"Excellent product, I loved it!",30,23,-0.1,1,False
+R0151,P158,home,"Just okay, nothing special.",27,27,0.24,3,False
+R0152,P101,electronics,Not worth the money.,20,35,0.12,4,False
+R0153,P118,fashion,"Just okay, nothing special.",27,31,0.78,4,False
+R0154,P173,fashion,Amazing quality and fast shipping.,34,23,0.33,3,False
+R0155,P172,home,"Just okay, nothing special.",27,24,0.37,2,False
+R0156,P153,fashion,"Just okay, nothing special.",27,17,0.03,5,False
+R0157,P144,fashion,"Terrible experience, would not buy again.",41,24,-0.04,5,True
+R0158,P102,electronics,Not worth the money.,20,22,-0.02,4,False
+R0159,P193,fashion,"Excellent product, I loved it!",30,27,0.4,2,False
+R0160,P146,fashion,"Just okay, nothing special.",27,19,-0.01,3,False
+R0161,P104,electronics,"Excellent product, I loved it!",30,28,0.34,1,False
+R0162,P192,fashion,"Excellent product, I loved it!",30,35,1.0,5,False
+R0163,P198,electronics,"Terrible experience, would not buy again.",41,24,0.03,2,True
+R0164,P120,home,"Excellent product, I loved it!",30,27,0.04,4,False
+R0165,P175,fashion,"Excellent product, I loved it!",30,29,0.8,3,False
+R0166,P111,home,"Excellent product, I loved it!",30,22,0.0,4,False
+R0167,P184,electronics,"Terrible experience, would not buy again.",41,26,-0.82,4,True
+R0168,P146,electronics,"Terrible experience, would not buy again.",41,25,-0.3,5,True
+R0169,P138,fashion,"Excellent product, I loved it!",30,25,-0.74,3,False
+R0170,P103,fashion,"Just okay, nothing special.",27,19,0.02,1,False
+R0171,P199,home,Not worth the money.,20,25,0.21,2,False
+R0172,P138,electronics,Not worth the money.,20,28,1.0,5,False
+R0173,P170,sports,"Excellent product, I loved it!",30,35,0.36,5,False
+R0174,P130,sports,"Just okay, nothing special.",27,31,0.09,4,False
+R0176,P180,electronics,Not worth the money.,20,19,-0.91,4,False
+R0177,P181,home,Amazing quality and fast shipping.,34,31,0.32,2,False
+R0178,P172,home,Not worth the money.,20,26,0.59,5,False
+R0179,P189,sports,"Just okay, nothing special.",27,40,-0.54,4,False
+R0180,P194,fashion,"Just okay, nothing special.",27,19,0.77,3,False
+R0181,P127,fashion,Amazing quality and fast shipping.,34,19,0.37,4,False
+R0182,P191,sports,Amazing quality and fast shipping.,34,20,-0.01,1,False
+R0183,P109,home,Amazing quality and fast shipping.,34,10,0.52,2,False
+R0184,P190,home,Not worth the money.,20,21,1.0,5,False
+R0185,P145,sports,"Excellent product, I loved it!",30,19,0.29,1,False
+R0186,P146,sports,"Excellent product, I loved it!",30,26,0.32,4,False
+R0187,P106,fashion,Amazing quality and fast shipping.,34,27,-0.03,3,False
+R0188,P157,fashion,Amazing quality and fast shipping.,34,38,-0.22,3,False
+R0189,P103,electronics,"Terrible experience, would not buy again.",41,31,0.62,3,True
+R0190,P146,fashion,Not worth the money.,20,20,-0.23,3,False
+R0191,P101,electronics,"Excellent product, I loved it!",30,18,0.24,5,False
+R0192,P109,fashion,"Excellent product, I loved it!",30,28,-0.04,3,False
+R0193,P154,home,Not worth the money.,20,15,0.44,4,False
+R0194,P135,electronics,Not worth the money.,20,37,0.37,4,False
+R0195,P126,home,Not worth the money.,20,33,0.72,4,False
+R0196,P193,electronics,Amazing quality and fast shipping.,34,21,-0.06,5,False
+R0197,P153,sports,Not worth the money.,20,13,0.07,5,False
+R0198,P169,sports,"Excellent product, I loved it!",30,34,-0.29,3,False
+R0199,P156,sports,"Just okay, nothing special.",27,24,-0.02,1,False
+R0200,P194,home,Not worth the money.,20,33,0.39,3,False
+R0201,P131,sports,정말 별로예요. 다른 제품을 찾아보세요.,22,32,-0.98,1,False
+R0202,P165,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,47,-0.54,1,False
+R0203,P149,sports,좋지도 나쁘지도 않아요.,13,37,-0.44,4,False
+R0204,P159,sports,별로입니다. 추천하지 않습니다.,17,47,-0.68,1,False
+R0205,P171,fashion,기대 이상으로 좋았습니다. 강력 추천해요.,23,36,0.77,4,False
+R0206,P183,sports,정말 별로예요. 다른 제품을 찾아보세요.,22,40,-0.88,1,False
+R0207,P102,fashion,무난합니다. 그냥 쓸 만해요.,16,34,0.27,4,False
+R0208,P140,electronics,정말 별로예요. 다른 제품을 찾아보세요.,22,42,-0.63,1,False
+R0209,P119,home,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,45,-0.88,2,False
+R0210,P117,sports,다시 구매할 의향이 있습니다. 아주 만족해요.,25,46,0.85,5,False
+R0211,P130,sports,좋지도 나쁘지도 않아요.,13,18,-0.34,4,False
+R0212,P192,sports,정말 별로예요. 다른 제품을 찾아보세요.,22,17,-0.7,2,False
+R0213,P104,sports,아주 좋은 제품이에요. 만족스럽습니다!,21,15,0.86,4,False
+R0214,P191,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,49,-0.52,1,False
+R0215,P103,home,돈 낭비였어요. 비추천합니다.,16,43,-0.62,1,False
+R0216,P126,electronics,별로입니다. 추천하지 않습니다.,17,31,-0.68,2,False
+R0217,P197,home,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,42,-0.68,1,False
+R0218,P118,fashion,별로입니다. 추천하지 않습니다.,17,32,-0.75,2,False
+R0219,P105,sports,기대 이상으로 좋았습니다. 강력 추천해요.,23,25,0.88,4,False
+R0220,P149,sports,정말 별로예요. 다른 제품을 찾아보세요.,22,35,-0.66,1,False
+R0221,P142,electronics,기대 이상으로 좋았습니다. 강력 추천해요.,23,39,0.82,4,False
+R0222,P137,sports,그냥 괜찮아요. 특별한 점은 없네요.,20,19,0.19,3,False
+R0223,P167,electronics,별로입니다. 추천하지 않습니다.,17,49,-0.64,1,False
+R0224,P193,home,다시 구매할 의향이 있습니다. 아주 만족해요.,25,18,0.67,5,False
+R0225,P110,fashion,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,19,-0.83,2,False
+R0226,P126,electronics,좋지도 나쁘지도 않아요.,13,38,-0.12,4,False
+R0227,P140,fashion,아주 좋은 제품이에요. 만족스럽습니다!,21,22,0.9,4,False
+R0228,P104,home,아주 좋은 제품이에요. 만족스럽습니다!,21,43,0.85,5,False
+R0229,P142,home,무난합니다. 그냥 쓸 만해요.,16,27,0.27,4,False
+R0230,P175,sports,돈 낭비였어요. 비추천합니다.,16,34,-0.79,1,False
+R0231,P196,electronics,별로입니다. 추천하지 않습니다.,17,45,-0.56,2,False
+R0232,P141,fashion,훌륭한 품질에 배송도 빨랐어요.,17,34,0.64,5,False
+R0233,P184,electronics,훌륭한 품질에 배송도 빨랐어요.,17,26,0.85,4,False
+R0234,P184,electronics,평범한 제품이에요. 예상했던 그대로입니다.,23,11,0.13,3,False
+R0235,P103,sports,이 제품 정말 최고예요!,13,25,0.81,4,False
+R0236,P198,home,기대 이상으로 좋았습니다. 강력 추천해요.,23,28,0.78,5,False
+R0237,P119,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,37,0.13,3,False
+R0238,P100,fashion,훌륭한 품질에 배송도 빨랐어요.,17,35,0.88,5,False
+R0239,P104,home,다시 구매할 의향이 있습니다. 아주 만족해요.,25,35,0.69,4,False
+R0240,P128,home,무난합니다. 그냥 쓸 만해요.,16,32,0.26,3,False
+R0241,P125,electronics,훌륭한 품질에 배송도 빨랐어요.,17,45,0.71,5,False
+R0242,P163,sports,기대 이상으로 좋았습니다. 강력 추천해요.,23,32,0.83,4,False
+R0243,P151,home,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,21,-0.63,2,False
+R0244,P185,electronics,이 제품 정말 최고예요!,13,42,0.58,4,False
+R0245,P134,home,돈 낭비였어요. 비추천합니다.,16,46,-0.93,2,False
+R0246,P103,electronics,좋지도 나쁘지도 않아요.,13,11,-0.17,3,False
+R0247,P157,fashion,기대했던 것보다 별로네요.,14,10,-0.6,1,False
+R0248,P165,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,25,-0.04,4,False
+R0249,P132,fashion,아주 좋은 제품이에요. 만족스럽습니다!,21,44,0.93,4,False
+R0250,P118,home,훌륭한 품질에 배송도 빨랐어요.,17,41,0.56,4,False
+R0251,P132,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,11,-0.82,2,False
+R0252,P106,electronics,정말 별로예요. 다른 제품을 찾아보세요.,22,43,-0.68,1,False
+R0253,P129,fashion,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,42,-0.82,2,False
+R0254,P137,sports,기대 이상으로 좋았습니다. 강력 추천해요.,23,26,0.74,5,False
+R0255,P159,electronics,기대했던 것보다 별로네요.,14,48,-0.56,2,False
+R0256,P154,sports,다시 구매할 의향이 있습니다. 아주 만족해요.,25,27,0.78,5,False
+R0257,P133,fashion,평범한 제품이에요. 예상했던 그대로입니다.,23,27,0.4,3,False
+R0258,P175,home,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,31,-0.79,2,False
+R0259,P107,home,정말 별로예요. 다른 제품을 찾아보세요.,22,33,-0.91,1,False
+R0260,P137,electronics,이 제품 정말 최고예요!,13,48,0.74,5,False
+R0261,P126,electronics,아주 좋은 제품이에요. 만족스럽습니다!,21,32,0.99,4,False
+R0262,P193,fashion,훌륭한 품질에 배송도 빨랐어요.,17,11,0.85,5,False
+R0263,P196,sports,돈 낭비였어요. 비추천합니다.,16,13,-0.76,2,False
+R0264,P122,home,훌륭한 품질에 배송도 빨랐어요.,17,23,0.85,4,False
+R0265,P149,sports,정말 별로예요. 다른 제품을 찾아보세요.,22,13,-0.73,2,False
+R0266,P167,electronics,그럭저럭입니다.,8,17,0.32,4,False
+R0267,P183,home,별로입니다. 추천하지 않습니다.,17,30,-0.69,2,False
+R0268,P133,sports,이 제품 정말 최고예요!,13,37,0.84,5,False
+R0269,P189,electronics,평범한 제품이에요. 예상했던 그대로입니다.,23,22,0.28,3,False
+R0270,P134,electronics,평범한 제품이에요. 예상했던 그대로입니다.,23,25,0.01,3,False
+R0271,P134,home,별로입니다. 추천하지 않습니다.,17,37,-0.76,2,False
+R0272,P115,electronics,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,29,-0.64,1,False
+R0273,P108,fashion,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,34,-0.88,1,False
+R0274,P129,electronics,그럭저럭입니다.,8,19,-0.07,3,False
+R0275,P179,sports,그럭저럭입니다.,8,44,0.03,3,False
+R0276,P148,fashion,정말 별로예요. 다른 제품을 찾아보세요.,22,28,-0.99,2,False
+R0277,P124,electronics,평범한 제품이에요. 예상했던 그대로입니다.,23,22,-0.01,4,False
+R0278,P187,fashion,정말 별로예요. 다른 제품을 찾아보세요.,22,41,-0.66,2,False
+R0279,P190,sports,좋지도 나쁘지도 않아요.,13,19,-0.3,4,False
+R0280,P169,electronics,돈 낭비였어요. 비추천합니다.,16,18,-0.55,1,False
+R0281,P123,electronics,다시 구매할 의향이 있습니다. 아주 만족해요.,25,23,0.66,4,False
+R0282,P153,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,31,-0.7,1,False
+R0283,P196,home,무난합니다. 그냥 쓸 만해요.,16,33,0.41,3,False
+R0284,P110,home,평범한 제품이에요. 예상했던 그대로입니다.,23,47,-0.49,4,False
+R0285,P153,sports,돈 낭비였어요. 비추천합니다.,16,27,-0.75,1,False
+R0286,P173,home,기대했던 것보다 별로네요.,14,24,-0.71,1,False
+R0287,P141,fashion,이 제품 정말 최고예요!,13,17,0.88,4,False
+R0288,P120,home,평범한 제품이에요. 예상했던 그대로입니다.,23,48,-0.02,3,False
+R0289,P150,home,무난합니다. 그냥 쓸 만해요.,16,13,0.42,3,False
+R0290,P177,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,27,-0.63,1,False
+R0291,P132,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,39,0.1,4,False
+R0292,P139,electronics,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,34,-0.73,1,False
+R0293,P122,electronics,기대했던 것보다 별로네요.,14,43,-0.94,2,False
+R0294,P190,fashion,기대 이상으로 좋았습니다. 강력 추천해요.,23,17,0.89,4,False
+R0295,P167,fashion,훌륭한 품질에 배송도 빨랐어요.,17,45,0.51,5,False
+R0296,P168,fashion,아주 좋은 제품이에요. 만족스럽습니다!,21,28,0.52,4,False
+R0297,P100,home,평범한 제품이에요. 예상했던 그대로입니다.,23,50,0.47,3,False
+R0298,P191,electronics,훌륭한 품질에 배송도 빨랐어요.,17,25,0.94,4,False
+R0299,P159,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,26,0.26,4,False
+R0300,P136,electronics,정말 별로예요. 다른 제품을 찾아보세요.,22,18,-0.89,2,False
+R0301,P107,home,다시 구매할 의향이 있습니다. 아주 만족해요.,25,14,0.88,5,False
+R0302,P131,sports,정말 별로예요. 다른 제품을 찾아보세요.,22,33,-0.59,2,False
+R0303,P119,home,별로입니다. 추천하지 않습니다.,17,37,-0.56,2,False
+R0304,P126,electronics,별로입니다. 추천하지 않습니다.,17,23,-0.88,2,False
+R0305,P130,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,20,0.26,3,False
+R0306,P199,electronics,그럭저럭입니다.,8,14,-0.16,3,False
+R0307,P198,fashion,아주 좋은 제품이에요. 만족스럽습니다!,21,31,0.71,4,False
+R0308,P156,electronics,별로입니다. 추천하지 않습니다.,17,14,-0.59,1,False
+R0309,P130,electronics,훌륭한 품질에 배송도 빨랐어요.,17,48,0.6,4,False
+R0310,P191,electronics,이 제품 정말 최고예요!,13,16,0.87,4,False
+R0311,P147,sports,별로입니다. 추천하지 않습니다.,17,45,-0.97,1,False
+R0312,P148,home,별로입니다. 추천하지 않습니다.,17,12,-0.83,1,False
+R0313,P142,fashion,무난합니다. 그냥 쓸 만해요.,16,46,-0.38,3,False
+R0314,P200,electronics,정말 별로예요. 다른 제품을 찾아보세요.,22,25,-0.83,1,False
+R0315,P116,fashion,돈 낭비였어요. 비추천합니다.,16,44,-0.86,2,False
+R0316,P127,home,돈 낭비였어요. 비추천합니다.,16,47,-0.66,2,False
+R0317,P111,electronics,정말 별로예요. 다른 제품을 찾아보세요.,22,19,-0.83,1,False
+R0318,P144,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,36,0.35,4,False
+R0319,P129,fashion,정말 별로예요. 다른 제품을 찾아보세요.,22,41,-0.77,2,False
+R0320,P105,sports,이 제품 정말 최고예요!,13,32,0.52,5,False
+R0321,P181,electronics,별로입니다. 추천하지 않습니다.,17,20,-0.69,2,False
+R0322,P120,electronics,기대했던 것보다 별로네요.,14,50,-0.86,2,False
+R0323,P156,electronics,돈 낭비였어요. 비추천합니다.,16,40,-0.65,2,False
+R0324,P188,fashion,기대 이상으로 좋았습니다. 강력 추천해요.,23,23,0.69,5,False
+R0325,P165,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,27,0.47,4,False
+R0326,P149,sports,다시 구매할 의향이 있습니다. 아주 만족해요.,25,30,0.92,5,False
+R0327,P151,electronics,다시 구매할 의향이 있습니다. 아주 만족해요.,25,11,0.82,4,False
+R0328,P173,sports,다시 구매할 의향이 있습니다. 아주 만족해요.,25,41,0.86,4,False
+R0329,P161,home,아주 좋은 제품이에요. 만족스럽습니다!,21,18,0.73,4,False
+R0330,P187,home,그냥 괜찮아요. 특별한 점은 없네요.,20,32,-0.4,3,False
+R0331,P176,sports,정말 별로예요. 다른 제품을 찾아보세요.,22,43,-0.8,2,False
+R0332,P164,home,다시 구매할 의향이 있습니다. 아주 만족해요.,25,12,0.64,4,False
+R0333,P122,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,43,-0.79,1,False
+R0334,P145,home,다시 구매할 의향이 있습니다. 아주 만족해요.,25,29,0.62,4,False
+R0335,P183,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,50,-0.83,2,False
+R0336,P156,sports,그냥 괜찮아요. 특별한 점은 없네요.,20,21,-0.26,3,False
+R0337,P162,fashion,무난합니다. 그냥 쓸 만해요.,16,16,0.42,4,False
+R0338,P119,fashion,그럭저럭입니다.,8,11,-0.39,4,False
+R0339,P179,home,평범한 제품이에요. 예상했던 그대로입니다.,23,11,0.37,3,False
+R0340,P141,fashion,정말 별로예요. 다른 제품을 찾아보세요.,22,27,-0.6,2,False
+R0341,P168,electronics,돈 낭비였어요. 비추천합니다.,16,18,-0.54,1,False
+R0342,P199,fashion,평범한 제품이에요. 예상했던 그대로입니다.,23,27,-0.12,4,False
+R0343,P117,sports,돈 낭비였어요. 비추천합니다.,16,14,-0.62,1,False
+R0344,P128,electronics,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,32,-0.94,2,False
+R0345,P197,home,그냥 괜찮아요. 특별한 점은 없네요.,20,22,0.3,3,False
+R0346,P195,electronics,아주 좋은 제품이에요. 만족스럽습니다!,21,15,0.84,4,False
+R0347,P177,home,무난합니다. 그냥 쓸 만해요.,16,33,-0.08,4,False
+R0348,P184,home,이 제품 정말 최고예요!,13,12,0.78,5,False
+R0349,P110,electronics,그냥 괜찮아요. 특별한 점은 없네요.,20,31,-0.37,4,False
+R0350,P167,sports,이 제품 정말 최고예요!,13,42,0.63,4,False
+R0351,P136,electronics,다시 구매할 의향이 있습니다. 아주 만족해요.,25,30,0.62,5,False
+R0352,P149,electronics,좋지도 나쁘지도 않아요.,13,47,-0.33,3,False
+R0353,P114,home,훌륭한 품질에 배송도 빨랐어요.,17,39,0.57,5,False
+R0354,P192,sports,훌륭한 품질에 배송도 빨랐어요.,17,21,0.85,4,False
+R0355,P112,sports,기대했던 것보다 별로네요.,14,29,-0.68,1,False
+R0356,P162,home,다시 구매할 의향이 있습니다. 아주 만족해요.,25,12,0.54,5,False
+R0357,P128,home,그럭저럭입니다.,8,49,0.2,3,False
+R0358,P174,fashion,돈 낭비였어요. 비추천합니다.,16,18,-0.88,2,False
+R0359,P179,sports,무난합니다. 그냥 쓸 만해요.,16,43,-0.29,3,False
+R0360,P123,sports,그럭저럭입니다.,8,15,0.47,3,False
+R0361,P118,fashion,별로입니다. 추천하지 않습니다.,17,12,-0.94,2,False
+R0362,P141,fashion,평범한 제품이에요. 예상했던 그대로입니다.,23,26,-0.07,4,False
+R0363,P199,sports,좋지도 나쁘지도 않아요.,13,20,-0.12,4,False
+R0364,P197,sports,그냥 괜찮아요. 특별한 점은 없네요.,20,47,-0.46,3,False
+R0365,P104,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,44,-0.86,1,False
+R0366,P186,sports,그럭저럭입니다.,8,18,-0.21,4,False
+R0367,P130,fashion,다시 구매할 의향이 있습니다. 아주 만족해요.,25,38,0.66,4,False
+R0368,P139,home,이 제품 정말 최고예요!,13,28,0.9,5,False
+R0369,P180,electronics,이 제품 정말 최고예요!,13,33,0.63,4,False
+R0370,P131,fashion,돈 낭비였어요. 비추천합니다.,16,18,-0.97,2,False
+R0371,P138,electronics,좋지도 나쁘지도 않아요.,13,34,0.37,3,False
+R0372,P164,home,돈 낭비였어요. 비추천합니다.,16,32,-0.66,2,False
+R0373,P165,sports,평범한 제품이에요. 예상했던 그대로입니다.,23,50,0.44,3,False
+R0374,P117,fashion,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,38,-0.63,2,False
+R0375,P122,home,그럭저럭입니다.,8,38,-0.06,3,False
+R0376,P164,sports,별로입니다. 추천하지 않습니다.,17,31,-0.9,2,False
+R0377,P112,sports,그럭저럭입니다.,8,34,0.12,4,False
+R0378,P157,fashion,평범한 제품이에요. 예상했던 그대로입니다.,23,42,0.45,4,False
+R0379,P167,home,이 제품 정말 최고예요!,13,26,0.94,5,False
+R0380,P113,electronics,그냥 괜찮아요. 특별한 점은 없네요.,20,16,0.42,3,False
+R0381,P107,fashion,좋지도 나쁘지도 않아요.,13,48,-0.13,3,False
+R0382,P104,electronics,그럭저럭입니다.,8,13,0.07,3,False
+R0383,P129,home,별로입니다. 추천하지 않습니다.,17,26,-0.68,1,False
+R0384,P175,fashion,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,22,-0.64,1,False
+R0385,P106,fashion,다시 구매할 의향이 있습니다. 아주 만족해요.,25,15,0.8,5,False
+R0386,P140,home,아주 좋은 제품이에요. 만족스럽습니다!,21,24,0.57,4,False
+R0387,P182,electronics,기대 이상으로 좋았습니다. 강력 추천해요.,23,48,0.66,4,False
+R0388,P105,sports,무난합니다. 그냥 쓸 만해요.,16,42,-0.04,4,False
+R0389,P166,electronics,돈 낭비였어요. 비추천합니다.,16,33,-0.6,1,False
+R0390,P132,sports,무난합니다. 그냥 쓸 만해요.,16,46,-0.44,4,False
+R0391,P129,electronics,좋지도 나쁘지도 않아요.,13,49,-0.26,4,False
+R0392,P126,electronics,돈 낭비였어요. 비추천합니다.,16,28,-0.93,1,False
+R0393,P116,fashion,이 제품 정말 최고예요!,13,32,0.52,5,False
+R0394,P101,home,무난합니다. 그냥 쓸 만해요.,16,48,0.44,3,False
+R0395,P117,sports,평범한 제품이에요. 예상했던 그대로입니다.,23,13,-0.13,3,False
+R0396,P160,electronics,돈 낭비였어요. 비추천합니다.,16,12,-0.6,1,False
+R0397,P131,electronics,좋지도 나쁘지도 않아요.,13,19,-0.42,4,False
+R0398,P100,sports,돈 낭비였어요. 비추천합니다.,16,19,-0.53,2,False
+R0399,P107,fashion,돈 낭비였어요. 비추천합니다.,16,10,-0.9,2,False
+R0400,P131,fashion,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,49,-0.71,1,False
+R0401,P174,fashion,그럭저럭입니다.,8,46,0.04,3,False
+R0402,P116,home,정말 별로예요. 다른 제품을 찾아보세요.,22,23,-0.59,1,False
+R0403,P114,home,평범한 제품이에요. 예상했던 그대로입니다.,23,20,-0.44,4,False
+R0404,P133,home,평범한 제품이에요. 예상했던 그대로입니다.,23,19,-0.18,3,False
+R0405,P147,home,그냥 괜찮아요. 특별한 점은 없네요.,20,25,-0.26,3,False
+R0406,P154,home,훌륭한 품질에 배송도 빨랐어요.,17,28,0.56,4,False
+R0407,P156,electronics,다시 구매할 의향이 있습니다. 아주 만족해요.,25,22,0.84,5,False
+R0408,P118,sports,돈 낭비였어요. 비추천합니다.,16,36,-0.69,1,False
+R0409,P107,fashion,기대했던 것보다 별로네요.,14,12,-0.63,1,False
+R0410,P164,sports,이 제품 정말 최고예요!,13,35,0.52,5,False
+R0411,P120,home,좋지도 나쁘지도 않아요.,13,18,-0.41,4,False
+R0412,P179,home,훌륭한 품질에 배송도 빨랐어요.,17,23,0.95,5,False
+R0413,P125,fashion,아주 좋은 제품이에요. 만족스럽습니다!,21,33,0.81,5,False
+R0414,P159,sports,훌륭한 품질에 배송도 빨랐어요.,17,43,0.73,5,False
+R0415,P165,sports,다시 구매할 의향이 있습니다. 아주 만족해요.,25,34,0.82,5,False
+R0416,P107,sports,기대했던 것보다 별로네요.,14,13,-0.61,1,False
+R0417,P101,home,정말 별로예요. 다른 제품을 찾아보세요.,22,35,-0.57,1,False
+R0418,P128,sports,별로입니다. 추천하지 않습니다.,17,26,-0.82,2,False
+R0419,P133,sports,좋지도 나쁘지도 않아요.,13,26,-0.27,4,False
+R0420,P150,fashion,기대 이상으로 좋았습니다. 강력 추천해요.,23,38,0.9,5,False
+R0421,P149,home,훌륭한 품질에 배송도 빨랐어요.,17,20,0.95,5,False
+R0422,P133,fashion,기대했던 것보다 별로네요.,14,33,-0.65,2,False
+R0423,P136,sports,무난합니다. 그냥 쓸 만해요.,16,18,-0.01,3,False
+R0424,P114,home,기대 이상으로 좋았습니다. 강력 추천해요.,23,11,0.92,5,False
+R0425,P192,home,기대했던 것보다 별로네요.,14,10,-0.84,1,False
+R0426,P158,home,훌륭한 품질에 배송도 빨랐어요.,17,27,0.93,5,False
+R0427,P144,home,이 제품 정말 최고예요!,13,20,0.64,5,False
+R0428,P119,electronics,기대했던 것보다 별로네요.,14,50,-0.67,1,False
+R0429,P161,fashion,기대했던 것보다 별로네요.,14,47,-0.69,2,False
+R0430,P175,sports,이 제품 정말 최고예요!,13,25,0.82,5,False
+R0431,P113,electronics,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,34,-0.78,2,False
+R0432,P112,home,별로입니다. 추천하지 않습니다.,17,28,-0.61,2,False
+R0433,P106,home,이 제품 정말 최고예요!,13,21,0.9,5,False
+R0434,P181,electronics,그냥 괜찮아요. 특별한 점은 없네요.,20,22,0.08,3,False
+R0435,P111,sports,좋지도 나쁘지도 않아요.,13,44,-0.4,3,False
+R0436,P135,home,기대 이상으로 좋았습니다. 강력 추천해요.,23,15,0.65,5,False
+R0437,P145,sports,훌륭한 품질에 배송도 빨랐어요.,17,34,0.92,4,False
+R0438,P107,sports,그럭저럭입니다.,8,10,-0.43,3,False
+R0439,P177,home,그럭저럭입니다.,8,41,-0.38,4,False
+R0440,P150,home,훌륭한 품질에 배송도 빨랐어요.,17,35,0.89,4,False
+R0441,P128,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,16,0.04,3,False
+R0442,P162,electronics,돈 낭비였어요. 비추천합니다.,16,39,-0.7,1,False
+R0443,P130,electronics,별로입니다. 추천하지 않습니다.,17,16,-0.61,2,False
+R0444,P116,home,좋지도 나쁘지도 않아요.,13,46,0.42,3,False
+R0445,P136,electronics,기대 이상으로 좋았습니다. 강력 추천해요.,23,28,0.83,4,False
+R0446,P121,electronics,돈 낭비였어요. 비추천합니다.,16,41,-0.85,1,False
+R0447,P138,home,좋지도 나쁘지도 않아요.,13,36,0.17,4,False
+R0448,P102,sports,다시 구매할 의향이 있습니다. 아주 만족해요.,25,25,0.9,4,False
+R0449,P134,electronics,평범한 제품이에요. 예상했던 그대로입니다.,23,40,0.36,3,False
+R0450,P106,electronics,돈 낭비였어요. 비추천합니다.,16,29,-0.6,2,False
+R0451,P116,fashion,이 제품 정말 최고예요!,13,42,0.93,4,False
+R0452,P140,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,25,-0.25,4,False
+R0453,P139,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,39,0.35,3,False
+R0454,P184,home,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,12,-0.56,2,False
+R0455,P168,electronics,좋지도 나쁘지도 않아요.,13,28,0.44,3,False
+R0456,P173,fashion,이 제품 정말 최고예요!,13,20,0.76,5,False
+R0457,P150,home,정말 별로예요. 다른 제품을 찾아보세요.,22,39,-0.61,1,False
+R0458,P154,sports,평범한 제품이에요. 예상했던 그대로입니다.,23,17,0.05,3,False
+R0459,P177,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,45,-0.71,1,False
+R0460,P140,fashion,기대했던 것보다 별로네요.,14,34,-0.67,2,False
+R0461,P138,fashion,별로입니다. 추천하지 않습니다.,17,15,-0.66,1,False
+R0462,P143,electronics,돈 낭비였어요. 비추천합니다.,16,14,-0.51,1,False
+R0463,P143,electronics,별로입니다. 추천하지 않습니다.,17,31,-0.57,2,False
+R0464,P176,home,평범한 제품이에요. 예상했던 그대로입니다.,23,23,0.42,4,False
+R0465,P164,home,아주 좋은 제품이에요. 만족스럽습니다!,21,50,0.97,4,False
+R0466,P135,home,아주 좋은 제품이에요. 만족스럽습니다!,21,50,0.57,5,False
+R0467,P188,electronics,별로입니다. 추천하지 않습니다.,17,33,-0.93,2,False
+R0468,P191,home,정말 별로예요. 다른 제품을 찾아보세요.,22,38,-0.54,2,False
+R0469,P138,sports,기대했던 것보다 별로네요.,14,36,-0.99,1,False
+R0470,P154,electronics,평범한 제품이에요. 예상했던 그대로입니다.,23,27,-0.38,4,False
+R0471,P145,electronics,다시 구매할 의향이 있습니다. 아주 만족해요.,25,30,0.83,4,False
+R0472,P148,sports,이 제품 정말 최고예요!,13,38,0.8,4,False
+R0473,P105,electronics,평범한 제품이에요. 예상했던 그대로입니다.,23,11,-0.2,3,False
+R0474,P186,sports,훌륭한 품질에 배송도 빨랐어요.,17,22,0.73,4,False
+R0475,P100,electronics,이 제품 정말 최고예요!,13,19,0.64,5,False
+R0476,P132,home,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,40,-0.73,1,False
+R0477,P174,electronics,그럭저럭입니다.,8,48,-0.23,3,False
+R0478,P132,home,좋지도 나쁘지도 않아요.,13,28,-0.24,4,False
+R0479,P133,electronics,별로입니다. 추천하지 않습니다.,17,25,-0.85,2,False
+R0480,P200,fashion,기대 이상으로 좋았습니다. 강력 추천해요.,23,18,0.77,4,False
+R0481,P159,electronics,좋지도 나쁘지도 않아요.,13,14,0.38,3,False
+R0482,P138,electronics,이 제품 정말 최고예요!,13,50,0.53,4,False
+R0483,P173,home,좋지도 나쁘지도 않아요.,13,31,0.47,3,False
+R0484,P197,home,이 제품 정말 최고예요!,13,11,0.83,4,False
+R0485,P130,sports,아주 좋은 제품이에요. 만족스럽습니다!,21,21,0.6,4,False
+R0486,P161,sports,별로입니다. 추천하지 않습니다.,17,25,-0.69,1,False
+R0487,P187,home,아주 좋은 제품이에요. 만족스럽습니다!,21,44,0.66,5,False
+R0488,P122,electronics,별로입니다. 추천하지 않습니다.,17,44,-0.89,1,False
+R0489,P191,electronics,정말 별로예요. 다른 제품을 찾아보세요.,22,45,-0.82,2,False
+R0490,P141,electronics,돈 낭비였어요. 비추천합니다.,16,26,-0.83,2,False
+R0491,P156,fashion,이 제품 정말 최고예요!,13,12,1.0,4,False
+R0492,P104,sports,좋지도 나쁘지도 않아요.,13,17,-0.32,3,False
+R0493,P200,home,돈 낭비였어요. 비추천합니다.,16,38,-0.87,1,False
+R0494,P116,home,정말 별로예요. 다른 제품을 찾아보세요.,22,15,-0.81,1,False
+R0495,P115,home,정말 별로예요. 다른 제품을 찾아보세요.,22,10,-0.61,2,False
+R0496,P148,sports,기대 이상으로 좋았습니다. 강력 추천해요.,23,28,0.93,4,False
+R0497,P175,home,기대 이상으로 좋았습니다. 강력 추천해요.,23,32,0.57,4,False
+R0498,P121,sports,다시 구매할 의향이 있습니다. 아주 만족해요.,25,39,0.53,5,False
+R0499,P181,sports,그럭저럭입니다.,8,43,0.49,3,False
+R0500,P140,home,평범한 제품이에요. 예상했던 그대로입니다.,23,22,0.21,4,False
+R0501,P102,fashion,다시 구매할 의향이 있습니다. 아주 만족해요.,25,12,0.54,4,False
+R0502,P118,home,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,40,-0.99,2,False
+R0503,P185,fashion,평범한 제품이에요. 예상했던 그대로입니다.,23,30,0.41,3,False
+R0504,P151,fashion,정말 별로예요. 다른 제품을 찾아보세요.,22,33,-0.53,1,False
+R0505,P180,fashion,무난합니다. 그냥 쓸 만해요.,16,22,-0.44,4,False
+R0506,P172,fashion,기대 이상으로 좋았습니다. 강력 추천해요.,23,47,0.8,4,False
+R0507,P118,electronics,그냥 괜찮아요. 특별한 점은 없네요.,20,16,0.14,4,False
+R0508,P197,home,무난합니다. 그냥 쓸 만해요.,16,49,0.36,3,False
+R0509,P165,electronics,훌륭한 품질에 배송도 빨랐어요.,17,16,0.75,5,False
+R0510,P133,home,무난합니다. 그냥 쓸 만해요.,16,26,0.3,3,False
+R0511,P130,sports,그럭저럭입니다.,8,31,0.03,3,False
+R0512,P185,fashion,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,40,-0.78,1,False
+R0513,P195,electronics,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,39,-0.56,2,False
+R0514,P105,home,그냥 괜찮아요. 특별한 점은 없네요.,20,41,0.17,3,False
+R0515,P143,electronics,훌륭한 품질에 배송도 빨랐어요.,17,13,0.53,4,False
+R0516,P116,fashion,다시 구매할 의향이 있습니다. 아주 만족해요.,25,47,0.57,5,False
+R0517,P169,fashion,아주 좋은 제품이에요. 만족스럽습니다!,21,14,0.88,4,False
+R0518,P151,fashion,돈 낭비였어요. 비추천합니다.,16,28,-0.91,1,False
+R0519,P158,home,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,29,-0.71,1,False
+R0520,P185,fashion,그럭저럭입니다.,8,40,-0.3,3,False
+R0521,P156,fashion,돈 낭비였어요. 비추천합니다.,16,42,-0.87,2,False
+R0522,P171,electronics,아주 좋은 제품이에요. 만족스럽습니다!,21,13,0.77,4,False
+R0523,P131,electronics,무난합니다. 그냥 쓸 만해요.,16,31,-0.29,4,False
+R0524,P137,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,25,0.16,3,False
+R0525,P170,sports,무난합니다. 그냥 쓸 만해요.,16,26,0.36,3,False
+R0526,P195,fashion,기대했던 것보다 별로네요.,14,11,-0.79,1,False
+R0527,P143,home,돈 낭비였어요. 비추천합니다.,16,32,-0.85,1,False
+R0528,P142,electronics,기대 이상으로 좋았습니다. 강력 추천해요.,23,38,0.76,4,False
+R0529,P108,electronics,훌륭한 품질에 배송도 빨랐어요.,17,49,0.65,4,False
+R0530,P192,electronics,별로입니다. 추천하지 않습니다.,17,30,-0.8,2,False
+R0531,P163,electronics,그럭저럭입니다.,8,38,-0.08,4,False
+R0532,P120,fashion,별로입니다. 추천하지 않습니다.,17,23,-0.64,2,False
+R0533,P162,home,그럭저럭입니다.,8,14,0.23,3,False
+R0534,P115,fashion,그럭저럭입니다.,8,22,-0.2,3,False
+R0535,P126,home,평범한 제품이에요. 예상했던 그대로입니다.,23,18,0.04,3,False
+R0536,P151,home,아주 좋은 제품이에요. 만족스럽습니다!,21,48,0.76,5,False
+R0537,P181,home,별로입니다. 추천하지 않습니다.,17,49,-0.54,1,False
+R0538,P118,electronics,훌륭한 품질에 배송도 빨랐어요.,17,25,0.61,4,False
+R0539,P180,fashion,기대했던 것보다 별로네요.,14,18,-0.71,2,False
+R0540,P111,sports,좋지도 나쁘지도 않아요.,13,26,0.23,3,False
+R0541,P179,electronics,좋지도 나쁘지도 않아요.,13,16,-0.37,4,False
+R0542,P108,fashion,평범한 제품이에요. 예상했던 그대로입니다.,23,36,-0.4,3,False
+R0543,P187,sports,그럭저럭입니다.,8,42,-0.0,4,False
+R0544,P139,electronics,좋지도 나쁘지도 않아요.,13,42,0.48,4,False
+R0545,P154,fashion,무난합니다. 그냥 쓸 만해요.,16,14,-0.2,3,False
+R0546,P102,sports,이 제품 정말 최고예요!,13,22,0.53,5,False
+R0547,P123,home,정말 별로예요. 다른 제품을 찾아보세요.,22,21,-0.61,1,False
+R0548,P158,fashion,훌륭한 품질에 배송도 빨랐어요.,17,31,0.73,4,False
+R0549,P126,electronics,정말 별로예요. 다른 제품을 찾아보세요.,22,43,-0.53,1,False
+R0550,P108,electronics,그럭저럭입니다.,8,45,0.43,3,False
+R0551,P100,sports,그냥 괜찮아요. 특별한 점은 없네요.,20,40,-0.11,3,False
+R0552,P172,home,평범한 제품이에요. 예상했던 그대로입니다.,23,26,-0.08,3,False
+R0553,P198,fashion,훌륭한 품질에 배송도 빨랐어요.,17,22,0.53,5,False
+R0554,P144,home,그럭저럭입니다.,8,48,0.49,3,False
+R0555,P192,electronics,평범한 제품이에요. 예상했던 그대로입니다.,23,16,-0.34,4,False
+R0556,P177,fashion,좋지도 나쁘지도 않아요.,13,26,-0.09,4,False
+R0557,P139,home,아주 좋은 제품이에요. 만족스럽습니다!,21,50,0.55,4,False
+R0558,P146,fashion,돈 낭비였어요. 비추천합니다.,16,38,-0.6,1,False
+R0559,P150,electronics,그냥 괜찮아요. 특별한 점은 없네요.,20,28,0.45,4,False
+R0560,P151,electronics,기대했던 것보다 별로네요.,14,34,-0.81,2,False
+R0561,P167,electronics,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,27,-0.88,2,False
+R0562,P196,electronics,좋지도 나쁘지도 않아요.,13,41,0.14,4,False
+R0563,P151,fashion,기대했던 것보다 별로네요.,14,11,-0.97,2,False
+R0564,P187,fashion,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,30,-0.51,1,False
+R0565,P153,electronics,별로입니다. 추천하지 않습니다.,17,35,-0.56,1,False
+R0566,P185,fashion,다시 구매할 의향이 있습니다. 아주 만족해요.,25,33,0.94,5,False
+R0567,P110,home,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,45,-0.98,1,False
+R0568,P178,electronics,이 제품 정말 최고예요!,13,50,0.69,5,False
+R0569,P146,home,별로입니다. 추천하지 않습니다.,17,37,-0.55,2,False
+R0570,P178,home,그럭저럭입니다.,8,30,-0.23,4,False
+R0571,P195,fashion,무난합니다. 그냥 쓸 만해요.,16,40,0.25,3,False
+R0572,P185,electronics,다시 구매할 의향이 있습니다. 아주 만족해요.,25,41,0.64,4,False
+R0573,P104,home,무난합니다. 그냥 쓸 만해요.,16,11,0.01,4,False
+R0574,P163,home,기대했던 것보다 별로네요.,14,24,-0.74,2,False
+R0575,P139,fashion,기대 이상으로 좋았습니다. 강력 추천해요.,23,49,0.79,5,False
+R0576,P107,fashion,다시 구매할 의향이 있습니다. 아주 만족해요.,25,37,0.61,5,False
+R0577,P145,home,돈 낭비였어요. 비추천합니다.,16,39,-0.95,2,False
+R0578,P167,home,돈 낭비였어요. 비추천합니다.,16,48,-0.74,2,False
+R0579,P158,fashion,돈 낭비였어요. 비추천합니다.,16,25,-0.97,2,False
+R0580,P163,home,다시 구매할 의향이 있습니다. 아주 만족해요.,25,12,0.59,5,False
+R0581,P143,home,다시 구매할 의향이 있습니다. 아주 만족해요.,25,42,0.95,5,False
+R0582,P183,sports,평범한 제품이에요. 예상했던 그대로입니다.,23,28,0.02,3,False
+R0583,P137,electronics,다시 구매할 의향이 있습니다. 아주 만족해요.,25,13,0.67,5,False
+R0584,P126,fashion,별로입니다. 추천하지 않습니다.,17,16,-0.94,2,False
+R0585,P125,sports,이 제품 정말 최고예요!,13,28,0.58,4,False
+R0586,P178,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,14,-0.54,2,False
+R0587,P158,home,기대 이상으로 좋았습니다. 강력 추천해요.,23,11,0.8,5,False
+R0588,P183,electronics,그럭저럭입니다.,8,11,-0.19,4,False
+R0589,P119,electronics,이 제품 정말 최고예요!,13,50,0.77,5,False
+R0590,P123,electronics,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,12,-0.56,1,False
+R0591,P176,sports,무난합니다. 그냥 쓸 만해요.,16,35,-0.43,3,False
+R0592,P130,home,그럭저럭입니다.,8,19,-0.09,4,False
+R0593,P120,home,평범한 제품이에요. 예상했던 그대로입니다.,23,22,0.18,4,False
+R0594,P107,home,별로입니다. 추천하지 않습니다.,17,47,-0.93,2,False
+R0595,P172,electronics,아주 좋은 제품이에요. 만족스럽습니다!,21,48,0.64,4,False
+R0596,P137,sports,별로입니다. 추천하지 않습니다.,17,10,-0.65,1,False
+R0597,P121,fashion,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,27,-0.89,2,False
+R0598,P170,home,돈 낭비였어요. 비추천합니다.,16,12,-0.67,1,False
+R0599,P194,home,평범한 제품이에요. 예상했던 그대로입니다.,23,22,0.17,3,False
+R0600,P100,sports,그냥 괜찮아요. 특별한 점은 없네요.,20,46,-0.34,3,False
+R0601,P110,home,그럭저럭입니다.,8,25,-0.07,3,False
+R0602,P131,sports,정말 별로예요. 다른 제품을 찾아보세요.,22,25,-0.96,1,False
+R0603,P137,fashion,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,45,-0.66,1,False
+R0604,P105,sports,정말 별로예요. 다른 제품을 찾아보세요.,22,21,-0.97,1,False
+R0605,P200,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,25,0.45,4,False
+R0606,P130,sports,그럭저럭입니다.,8,25,-0.0,3,False
+R0607,P129,electronics,기대 이상으로 좋았습니다. 강력 추천해요.,23,37,0.93,5,False
+R0608,P199,home,평범한 제품이에요. 예상했던 그대로입니다.,23,12,-0.37,4,False
+R0609,P164,home,그럭저럭입니다.,8,36,-0.21,4,False
+R0610,P156,electronics,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,13,-0.61,2,False
+R0611,P179,home,평범한 제품이에요. 예상했던 그대로입니다.,23,49,0.16,4,False
+R0612,P162,electronics,별로입니다. 추천하지 않습니다.,17,24,-0.99,2,False
+R0613,P109,fashion,훌륭한 품질에 배송도 빨랐어요.,17,34,0.7,5,False
+R0614,P141,electronics,정말 별로예요. 다른 제품을 찾아보세요.,22,48,-0.88,2,False
+R0615,P173,home,그냥 괜찮아요. 특별한 점은 없네요.,20,38,0.42,3,False
+R0616,P110,electronics,기대했던 것보다 별로네요.,14,19,-0.58,1,False
+R0617,P123,fashion,별로입니다. 추천하지 않습니다.,17,45,-0.86,1,False
+R0618,P194,sports,아주 좋은 제품이에요. 만족스럽습니다!,21,33,0.71,5,False
+R0619,P127,sports,돈 낭비였어요. 비추천합니다.,16,46,-0.95,1,False
+R0620,P183,fashion,별로입니다. 추천하지 않습니다.,17,50,-0.51,2,False
+R0621,P133,electronics,기대했던 것보다 별로네요.,14,44,-0.84,2,False
+R0622,P193,electronics,정말 별로예요. 다른 제품을 찾아보세요.,22,50,-0.95,1,False
+R0623,P186,home,다시 구매할 의향이 있습니다. 아주 만족해요.,25,48,0.57,4,False
+R0624,P100,home,별로입니다. 추천하지 않습니다.,17,12,-0.88,2,False
+R0625,P155,home,다시 구매할 의향이 있습니다. 아주 만족해요.,25,23,0.75,4,False
+R0626,P121,fashion,아주 좋은 제품이에요. 만족스럽습니다!,21,37,0.99,5,False
+R0627,P172,sports,기대했던 것보다 별로네요.,14,18,-0.52,1,False
+R0628,P132,home,아주 좋은 제품이에요. 만족스럽습니다!,21,29,0.89,4,False
+R0629,P147,sports,그냥 괜찮아요. 특별한 점은 없네요.,20,50,0.09,4,False
+R0630,P122,fashion,그럭저럭입니다.,8,50,-0.33,3,False
+R0631,P130,sports,이 제품 정말 최고예요!,13,16,0.58,5,False
+R0632,P177,sports,다시 구매할 의향이 있습니다. 아주 만족해요.,25,39,0.96,4,False
+R0633,P128,fashion,별로입니다. 추천하지 않습니다.,17,36,-0.61,2,False
+R0634,P140,fashion,정말 별로예요. 다른 제품을 찾아보세요.,22,31,-0.73,2,False
+R0635,P179,electronics,정말 별로예요. 다른 제품을 찾아보세요.,22,32,-0.65,1,False
+R0636,P151,fashion,정말 별로예요. 다른 제품을 찾아보세요.,22,47,-0.93,2,False
+R0637,P169,fashion,그럭저럭입니다.,8,12,-0.04,3,False
+R0638,P185,electronics,좋지도 나쁘지도 않아요.,13,46,0.25,4,False
+R0639,P100,home,기대 이상으로 좋았습니다. 강력 추천해요.,23,12,0.88,4,False
+R0640,P111,electronics,정말 별로예요. 다른 제품을 찾아보세요.,22,33,-0.69,1,False
+R0641,P198,fashion,다시 구매할 의향이 있습니다. 아주 만족해요.,25,24,0.93,4,False
+R0642,P147,home,돈 낭비였어요. 비추천합니다.,16,44,-0.81,1,False
+R0643,P127,fashion,다시 구매할 의향이 있습니다. 아주 만족해요.,25,37,0.67,5,False
+R0644,P128,sports,그냥 괜찮아요. 특별한 점은 없네요.,20,10,-0.29,4,False
+R0645,P198,fashion,무난합니다. 그냥 쓸 만해요.,16,15,-0.05,3,False
+R0646,P164,fashion,이 제품 정말 최고예요!,13,14,0.59,4,False
+R0647,P124,sports,다시 구매할 의향이 있습니다. 아주 만족해요.,25,28,0.65,5,False
+R0648,P133,sports,그럭저럭입니다.,8,13,0.19,4,False
+R0649,P196,electronics,별로입니다. 추천하지 않습니다.,17,10,-0.65,2,False
+R0650,P166,sports,아주 좋은 제품이에요. 만족스럽습니다!,21,45,0.85,4,False
+R0651,P122,electronics,아주 좋은 제품이에요. 만족스럽습니다!,21,40,0.67,5,False
+R0652,P103,sports,다시 구매할 의향이 있습니다. 아주 만족해요.,25,30,0.77,5,False
+R0653,P102,sports,무난합니다. 그냥 쓸 만해요.,16,32,-0.49,3,False
+R0654,P173,home,정말 별로예요. 다른 제품을 찾아보세요.,22,41,-0.82,2,False
+R0655,P112,fashion,정말 별로예요. 다른 제품을 찾아보세요.,22,34,-0.52,1,False
+R0656,P159,home,별로입니다. 추천하지 않습니다.,17,28,-0.51,2,False
+R0657,P119,home,아주 좋은 제품이에요. 만족스럽습니다!,21,19,0.63,4,False
+R0658,P193,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,23,-0.1,4,False
+R0659,P143,home,다시 구매할 의향이 있습니다. 아주 만족해요.,25,14,0.77,5,False
+R0660,P185,fashion,무난합니다. 그냥 쓸 만해요.,16,11,-0.29,4,False
+R0661,P151,home,이 제품 정말 최고예요!,13,32,0.78,5,False
+R0662,P140,sports,그냥 괜찮아요. 특별한 점은 없네요.,20,20,0.32,3,False
+R0663,P166,electronics,그냥 괜찮아요. 특별한 점은 없네요.,20,37,-0.21,3,False
+R0664,P131,electronics,돈 낭비였어요. 비추천합니다.,16,44,-0.72,2,False
+R0665,P101,sports,그냥 괜찮아요. 특별한 점은 없네요.,20,28,0.09,4,False
+R0666,P111,electronics,돈 낭비였어요. 비추천합니다.,16,12,-0.73,1,False
+R0667,P162,fashion,돈 낭비였어요. 비추천합니다.,16,21,-0.62,1,False
+R0668,P111,fashion,기대했던 것보다 별로네요.,14,30,-0.9,2,False
+R0669,P146,home,기대했던 것보다 별로네요.,14,26,-0.54,1,False
+R0670,P192,fashion,훌륭한 품질에 배송도 빨랐어요.,17,10,0.89,5,False
+R0671,P112,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,28,-0.97,2,False
+R0672,P155,home,그냥 괜찮아요. 특별한 점은 없네요.,20,21,0.08,4,False
+R0673,P132,sports,아주 좋은 제품이에요. 만족스럽습니다!,21,28,1.0,4,False
+R0674,P178,home,기대했던 것보다 별로네요.,14,34,-0.99,1,False
+R0675,P140,home,이 제품 정말 최고예요!,13,49,0.97,4,False
+R0676,P104,home,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,14,-0.62,1,False
+R0677,P189,sports,아주 좋은 제품이에요. 만족스럽습니다!,21,47,0.85,5,False
+R0678,P150,fashion,이 제품 정말 최고예요!,13,24,0.52,5,False
+R0679,P149,fashion,다시 구매할 의향이 있습니다. 아주 만족해요.,25,49,0.92,4,False
+R0680,P157,fashion,이 제품 정말 최고예요!,13,34,0.62,4,False
+R0681,P180,sports,기대했던 것보다 별로네요.,14,19,-0.57,1,False
+R0682,P134,electronics,다시 구매할 의향이 있습니다. 아주 만족해요.,25,21,0.72,5,False
+R0683,P162,fashion,무난합니다. 그냥 쓸 만해요.,16,18,-0.09,3,False
+R0684,P155,home,기대 이상으로 좋았습니다. 강력 추천해요.,23,32,0.67,5,False
+R0685,P106,electronics,다시 구매할 의향이 있습니다. 아주 만족해요.,25,11,0.54,4,False
+R0686,P169,home,돈 낭비였어요. 비추천합니다.,16,42,-0.97,1,False
+R0687,P126,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,15,0.16,4,False
+R0688,P199,sports,그냥 괜찮아요. 특별한 점은 없네요.,20,30,0.0,4,False
+R0689,P150,fashion,정말 별로예요. 다른 제품을 찾아보세요.,22,17,-0.66,1,False
+R0690,P175,electronics,기대 이상으로 좋았습니다. 강력 추천해요.,23,36,0.87,5,False
+R0691,P167,fashion,평범한 제품이에요. 예상했던 그대로입니다.,23,10,-0.13,3,False
+R0692,P177,home,아주 좋은 제품이에요. 만족스럽습니다!,21,22,0.55,5,False
+R0693,P152,home,다시 구매할 의향이 있습니다. 아주 만족해요.,25,30,0.61,5,False
+R0694,P111,sports,돈 낭비였어요. 비추천합니다.,16,43,-0.95,2,False
+R0695,P167,fashion,다시 구매할 의향이 있습니다. 아주 만족해요.,25,10,0.72,5,False
+R0696,P139,home,다시 구매할 의향이 있습니다. 아주 만족해요.,25,44,0.6,5,False
+R0697,P168,home,별로입니다. 추천하지 않습니다.,17,47,-0.95,1,False
+R0698,P121,electronics,훌륭한 품질에 배송도 빨랐어요.,17,20,0.74,5,False
+R0699,P119,fashion,무난합니다. 그냥 쓸 만해요.,16,45,-0.21,4,False
+R0700,P185,home,아주 좋은 제품이에요. 만족스럽습니다!,21,21,0.71,5,False
+R0701,P104,fashion,다시 구매할 의향이 있습니다. 아주 만족해요.,25,29,0.61,5,False
+R0702,P150,electronics,무난합니다. 그냥 쓸 만해요.,16,28,-0.35,3,False
+R0703,P143,sports,기대 이상으로 좋았습니다. 강력 추천해요.,23,46,0.54,5,False
+R0704,P110,electronics,훌륭한 품질에 배송도 빨랐어요.,17,36,0.56,5,False
+R0705,P134,sports,그냥 괜찮아요. 특별한 점은 없네요.,20,27,-0.09,4,False
+R0706,P101,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,15,-0.85,2,False
+R0707,P176,electronics,이 제품 정말 최고예요!,13,19,0.51,4,False
+R0708,P166,fashion,그럭저럭입니다.,8,38,-0.45,3,False
+R0709,P146,home,기대 이상으로 좋았습니다. 강력 추천해요.,23,36,0.76,5,False
+R0710,P147,home,아주 좋은 제품이에요. 만족스럽습니다!,21,10,0.96,4,False
+R0711,P106,fashion,훌륭한 품질에 배송도 빨랐어요.,17,50,0.83,5,False
+R0712,P117,electronics,좋지도 나쁘지도 않아요.,13,43,0.38,3,False
+R0713,P188,electronics,좋지도 나쁘지도 않아요.,13,17,0.45,3,False
+R0714,P158,fashion,무난합니다. 그냥 쓸 만해요.,16,47,0.15,4,False
+R0715,P148,sports,다시 구매할 의향이 있습니다. 아주 만족해요.,25,20,0.68,5,False
+R0716,P158,home,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,28,-0.78,1,False
+R0717,P187,electronics,다시 구매할 의향이 있습니다. 아주 만족해요.,25,37,0.6,5,False
+R0718,P161,electronics,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,38,-0.87,1,False
+R0719,P113,electronics,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,42,-0.61,2,False
+R0720,P170,sports,이 제품 정말 최고예요!,13,41,0.7,4,False
+R0721,P163,electronics,아주 좋은 제품이에요. 만족스럽습니다!,21,33,0.51,4,False
+R0722,P143,electronics,이 제품 정말 최고예요!,13,36,0.93,4,False
+R0723,P153,electronics,무난합니다. 그냥 쓸 만해요.,16,49,-0.48,4,False
+R0724,P134,sports,그럭저럭입니다.,8,48,-0.06,4,False
+R0725,P168,sports,정말 별로예요. 다른 제품을 찾아보세요.,22,40,-0.53,1,False
+R0726,P178,fashion,무난합니다. 그냥 쓸 만해요.,16,31,0.44,3,False
+R0727,P152,home,그냥 괜찮아요. 특별한 점은 없네요.,20,22,0.03,4,False
+R0728,P100,sports,그냥 괜찮아요. 특별한 점은 없네요.,20,35,0.27,4,False
+R0729,P182,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,37,0.46,3,False
+R0730,P146,fashion,기대했던 것보다 별로네요.,14,16,-0.54,2,False
+R0731,P142,fashion,무난합니다. 그냥 쓸 만해요.,16,48,-0.27,3,False
+R0732,P144,fashion,좋지도 나쁘지도 않아요.,13,30,-0.43,3,False
+R0733,P116,home,그럭저럭입니다.,8,44,0.18,3,False
+R0734,P117,home,돈 낭비였어요. 비추천합니다.,16,43,-0.62,2,False
+R0735,P124,fashion,아주 좋은 제품이에요. 만족스럽습니다!,21,31,0.66,4,False
+R0736,P184,fashion,무난합니다. 그냥 쓸 만해요.,16,11,-0.5,4,False
+R0737,P105,sports,훌륭한 품질에 배송도 빨랐어요.,17,19,0.97,5,False
+R0738,P116,home,기대 이상으로 좋았습니다. 강력 추천해요.,23,48,0.81,5,False
+R0739,P154,home,훌륭한 품질에 배송도 빨랐어요.,17,15,0.5,5,False
+R0740,P174,home,정말 별로예요. 다른 제품을 찾아보세요.,22,48,-0.8,2,False
+R0741,P185,electronics,그럭저럭입니다.,8,48,0.26,3,False
+R0742,P143,electronics,돈 낭비였어요. 비추천합니다.,16,38,-0.85,2,False
+R0743,P121,fashion,별로입니다. 추천하지 않습니다.,17,20,-0.64,1,False
+R0744,P155,fashion,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,10,-0.65,1,False
+R0745,P149,sports,돈 낭비였어요. 비추천합니다.,16,33,-0.5,2,False
+R0746,P191,home,아주 좋은 제품이에요. 만족스럽습니다!,21,32,0.88,4,False
+R0747,P149,home,돈 낭비였어요. 비추천합니다.,16,31,-0.78,2,False
+R0748,P172,electronics,좋지도 나쁘지도 않아요.,13,47,0.37,3,False
+R0749,P169,fashion,평범한 제품이에요. 예상했던 그대로입니다.,23,14,0.42,3,False
+R0750,P100,home,기대했던 것보다 별로네요.,14,20,-0.84,2,False
+R0751,P106,sports,별로입니다. 추천하지 않습니다.,17,50,-0.65,1,False
+R0752,P134,fashion,훌륭한 품질에 배송도 빨랐어요.,17,42,0.67,5,False
+R0753,P173,home,다시 구매할 의향이 있습니다. 아주 만족해요.,25,47,0.89,5,False
+R0754,P195,electronics,기대 이상으로 좋았습니다. 강력 추천해요.,23,18,0.54,5,False
+R0755,P107,fashion,그럭저럭입니다.,8,35,0.41,3,False
+R0756,P141,electronics,기대했던 것보다 별로네요.,14,26,-0.81,1,False
+R0757,P127,sports,기대했던 것보다 별로네요.,14,25,-0.93,2,False
+R0758,P160,electronics,그냥 괜찮아요. 특별한 점은 없네요.,20,24,0.08,4,False
+R0759,P199,sports,돈 낭비였어요. 비추천합니다.,16,36,-0.71,2,False
+R0760,P143,electronics,평범한 제품이에요. 예상했던 그대로입니다.,23,14,-0.07,4,False
+R0761,P158,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,22,0.47,3,False
+R0762,P182,sports,정말 별로예요. 다른 제품을 찾아보세요.,22,47,-0.53,1,False
+R0763,P188,sports,다시 구매할 의향이 있습니다. 아주 만족해요.,25,40,0.78,4,False
+R0764,P200,sports,기대 이상으로 좋았습니다. 강력 추천해요.,23,44,0.96,5,False
+R0765,P109,fashion,좋지도 나쁘지도 않아요.,13,31,-0.15,4,False
+R0766,P154,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,20,0.33,3,False
+R0767,P110,fashion,다시 구매할 의향이 있습니다. 아주 만족해요.,25,22,0.73,4,False
+R0768,P152,sports,좋지도 나쁘지도 않아요.,13,25,-0.35,4,False
+R0769,P133,fashion,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,46,-0.88,2,False
+R0770,P113,electronics,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,24,-0.66,1,False
+R0771,P126,sports,기대 이상으로 좋았습니다. 강력 추천해요.,23,39,0.64,4,False
+R0772,P200,electronics,다시 구매할 의향이 있습니다. 아주 만족해요.,25,38,0.76,4,False
+R0773,P174,home,기대했던 것보다 별로네요.,14,18,-0.96,2,False
+R0774,P191,fashion,좋지도 나쁘지도 않아요.,13,16,-0.31,3,False
+R0775,P115,sports,돈 낭비였어요. 비추천합니다.,16,37,-0.59,2,False
+R0776,P139,fashion,아주 좋은 제품이에요. 만족스럽습니다!,21,38,0.9,5,False
+R0777,P184,electronics,기대 이상으로 좋았습니다. 강력 추천해요.,23,22,0.86,4,False
+R0778,P137,fashion,무난합니다. 그냥 쓸 만해요.,16,11,0.21,4,False
+R0779,P179,fashion,좋지도 나쁘지도 않아요.,13,25,-0.03,4,False
+R0780,P175,electronics,정말 별로예요. 다른 제품을 찾아보세요.,22,44,-0.52,1,False
+R0781,P195,sports,아주 좋은 제품이에요. 만족스럽습니다!,21,12,0.89,5,False
+R0782,P178,electronics,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,15,-0.7,2,False
+R0783,P190,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,32,-0.62,2,False
+R0784,P200,fashion,정말 별로예요. 다른 제품을 찾아보세요.,22,50,-0.6,2,False
+R0785,P196,sports,훌륭한 품질에 배송도 빨랐어요.,17,20,0.64,4,False
+R0786,P166,home,정말 별로예요. 다른 제품을 찾아보세요.,22,19,-0.94,2,False
+R0787,P183,home,별로입니다. 추천하지 않습니다.,17,20,-0.55,2,False
+R0788,P151,fashion,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,33,-0.77,1,False
+R0789,P160,sports,기대 이상으로 좋았습니다. 강력 추천해요.,23,23,0.74,5,False
+R0790,P121,electronics,다시 구매할 의향이 있습니다. 아주 만족해요.,25,14,0.83,5,False
+R0791,P189,sports,별로입니다. 추천하지 않습니다.,17,22,-0.75,1,False
+R0792,P125,electronics,다시 구매할 의향이 있습니다. 아주 만족해요.,25,45,0.88,5,False
+R0793,P187,sports,훌륭한 품질에 배송도 빨랐어요.,17,46,0.58,4,False
+R0794,P149,home,기대했던 것보다 별로네요.,14,49,-0.65,1,False
+R0795,P145,home,무난합니다. 그냥 쓸 만해요.,16,24,0.15,4,False
+R0796,P110,fashion,좋지도 나쁘지도 않아요.,13,34,0.09,4,False
+R0797,P143,fashion,다시 구매할 의향이 있습니다. 아주 만족해요.,25,42,0.73,5,False
+R0798,P147,fashion,기대했던 것보다 별로네요.,14,15,-0.84,2,False
+R0799,P109,sports,아주 좋은 제품이에요. 만족스럽습니다!,21,37,0.85,5,False
+R0800,P155,sports,기대 이상으로 좋았습니다. 강력 추천해요.,23,48,0.92,4,False
+R0801,P141,sports,돈 낭비였어요. 비추천합니다.,16,35,-0.51,2,False
+R0802,P141,fashion,기대 이상으로 좋았습니다. 강력 추천해요.,23,35,0.62,5,False
+R0803,P128,fashion,기대했던 것보다 별로네요.,14,38,-0.73,1,False
+R0804,P119,electronics,돈 낭비였어요. 비추천합니다.,16,38,-0.71,1,False
+R0805,P137,fashion,기대했던 것보다 별로네요.,14,17,-0.59,1,False
+R0806,P140,fashion,훌륭한 품질에 배송도 빨랐어요.,17,46,0.72,4,False
+R0807,P105,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,32,0.31,4,False
+R0808,P176,sports,무난합니다. 그냥 쓸 만해요.,16,48,-0.39,3,False
+R0809,P169,electronics,그냥 괜찮아요. 특별한 점은 없네요.,20,39,0.17,3,False
+R0810,P180,home,다시 구매할 의향이 있습니다. 아주 만족해요.,25,46,0.96,5,False
+R0811,P144,fashion,돈 낭비였어요. 비추천합니다.,16,40,-0.95,2,False
+R0812,P128,sports,평범한 제품이에요. 예상했던 그대로입니다.,23,42,-0.32,4,False
+R0813,P155,electronics,다시 구매할 의향이 있습니다. 아주 만족해요.,25,27,0.69,5,False
+R0814,P142,electronics,좋지도 나쁘지도 않아요.,13,32,0.03,4,False
+R0815,P193,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,46,-0.32,3,False
+R0816,P170,fashion,좋지도 나쁘지도 않아요.,13,20,0.36,3,False
+R0817,P173,home,훌륭한 품질에 배송도 빨랐어요.,17,24,0.66,4,False
+R0818,P113,sports,그럭저럭입니다.,8,38,0.34,3,False
+R0819,P132,electronics,돈 낭비였어요. 비추천합니다.,16,42,-0.68,2,False
+R0820,P113,home,그럭저럭입니다.,8,46,0.03,3,False
+R0821,P183,sports,무난합니다. 그냥 쓸 만해요.,16,18,-0.08,4,False
+R0822,P145,fashion,그럭저럭입니다.,8,39,-0.45,3,False
+R0823,P190,fashion,평범한 제품이에요. 예상했던 그대로입니다.,23,32,0.49,4,False
+R0824,P140,home,훌륭한 품질에 배송도 빨랐어요.,17,22,0.91,4,False
+R0825,P138,fashion,돈 낭비였어요. 비추천합니다.,16,27,-0.96,2,False
+R0826,P153,home,돈 낭비였어요. 비추천합니다.,16,37,-0.67,2,False
+R0827,P168,fashion,기대 이상으로 좋았습니다. 강력 추천해요.,23,19,0.68,4,False
+R0828,P151,fashion,무난합니다. 그냥 쓸 만해요.,16,17,0.35,4,False
+R0829,P198,electronics,다시 구매할 의향이 있습니다. 아주 만족해요.,25,48,0.58,4,False
+R0830,P107,fashion,무난합니다. 그냥 쓸 만해요.,16,44,0.37,3,False
+R0831,P178,home,이 제품 정말 최고예요!,13,13,0.72,5,False
+R0832,P133,home,훌륭한 품질에 배송도 빨랐어요.,17,12,0.64,5,False
+R0833,P191,sports,그럭저럭입니다.,8,48,0.18,3,False
+R0834,P185,electronics,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,29,-0.78,2,False
+R0835,P173,home,평범한 제품이에요. 예상했던 그대로입니다.,23,17,0.13,3,False
+R0836,P146,electronics,기대 이상으로 좋았습니다. 강력 추천해요.,23,35,0.61,5,False
+R0837,P116,electronics,이 제품 정말 최고예요!,13,33,0.57,5,False
+R0838,P123,fashion,다시 구매할 의향이 있습니다. 아주 만족해요.,25,35,0.53,5,False
+R0839,P123,home,아주 좋은 제품이에요. 만족스럽습니다!,21,16,0.95,5,False
+R0840,P187,home,돈 낭비였어요. 비추천합니다.,16,15,-0.79,1,False
+R0841,P156,sports,그냥 괜찮아요. 특별한 점은 없네요.,20,28,0.4,3,False
+R0842,P158,home,그냥 괜찮아요. 특별한 점은 없네요.,20,12,-0.45,4,False
+R0843,P194,electronics,그럭저럭입니다.,8,28,0.25,4,False
+R0844,P180,electronics,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,34,-0.51,2,False
+R0845,P103,home,아주 좋은 제품이에요. 만족스럽습니다!,21,39,0.93,4,False
+R0846,P147,fashion,다시 구매할 의향이 있습니다. 아주 만족해요.,25,24,0.85,4,False
+R0847,P117,fashion,정말 별로예요. 다른 제품을 찾아보세요.,22,44,-0.6,1,False
+R0848,P162,electronics,그럭저럭입니다.,8,30,-0.03,3,False
+R0849,P126,home,돈 낭비였어요. 비추천합니다.,16,39,-0.94,1,False
+R0850,P177,sports,별로입니다. 추천하지 않습니다.,17,47,-0.81,1,False
+R0851,P165,sports,정말 별로예요. 다른 제품을 찾아보세요.,22,46,-0.97,1,False
+R0852,P135,home,기대했던 것보다 별로네요.,14,19,-0.57,2,False
+R0853,P117,home,이 제품 정말 최고예요!,13,40,0.61,4,False
+R0854,P157,home,별로입니다. 추천하지 않습니다.,17,14,-0.64,2,False
+R0855,P127,electronics,기대했던 것보다 별로네요.,14,34,-0.8,1,False
+R0856,P138,fashion,좋지도 나쁘지도 않아요.,13,39,-0.08,3,False
+R0857,P184,fashion,아주 좋은 제품이에요. 만족스럽습니다!,21,38,0.85,5,False
+R0858,P147,sports,무난합니다. 그냥 쓸 만해요.,16,20,-0.49,3,False
+R0859,P168,fashion,이 제품 정말 최고예요!,13,47,0.7,4,False
+R0860,P168,home,이 제품 정말 최고예요!,13,18,0.67,5,False
+R0861,P165,home,정말 별로예요. 다른 제품을 찾아보세요.,22,22,-0.55,2,False
+R0862,P118,home,좋지도 나쁘지도 않아요.,13,23,-0.27,3,False
+R0863,P148,sports,별로입니다. 추천하지 않습니다.,17,38,-0.91,2,False
+R0864,P147,sports,무난합니다. 그냥 쓸 만해요.,16,27,-0.31,4,False
+R0865,P173,home,평범한 제품이에요. 예상했던 그대로입니다.,23,45,-0.1,4,False
+R0866,P192,sports,그럭저럭입니다.,8,34,-0.06,3,False
+R0867,P157,home,이 제품 정말 최고예요!,13,27,0.82,5,False
+R0868,P186,fashion,그럭저럭입니다.,8,16,0.02,4,False
+R0869,P167,home,훌륭한 품질에 배송도 빨랐어요.,17,31,0.95,5,False
+R0870,P111,fashion,별로입니다. 추천하지 않습니다.,17,37,-0.67,1,False
+R0871,P136,home,좋지도 나쁘지도 않아요.,13,27,0.27,4,False
+R0872,P139,sports,그럭저럭입니다.,8,39,0.33,4,False
+R0873,P135,home,아주 좋은 제품이에요. 만족스럽습니다!,21,10,0.57,5,False
+R0874,P166,home,정말 별로예요. 다른 제품을 찾아보세요.,22,30,-0.63,2,False
+R0875,P167,home,기대했던 것보다 별로네요.,14,37,-0.88,1,False
+R0876,P104,fashion,평범한 제품이에요. 예상했던 그대로입니다.,23,34,0.36,3,False
+R0877,P156,sports,기대 이상으로 좋았습니다. 강력 추천해요.,23,41,0.87,5,False
+R0878,P107,home,기대 이상으로 좋았습니다. 강력 추천해요.,23,10,0.81,5,False
+R0879,P131,fashion,훌륭한 품질에 배송도 빨랐어요.,17,24,0.61,4,False
+R0880,P120,sports,돈 낭비였어요. 비추천합니다.,16,14,-0.87,1,False
+R0881,P175,home,이 제품 정말 최고예요!,13,21,0.55,5,False
+R0882,P200,sports,평범한 제품이에요. 예상했던 그대로입니다.,23,50,-0.15,3,False
+R0883,P108,sports,그냥 괜찮아요. 특별한 점은 없네요.,20,38,-0.49,4,False
+R0884,P185,sports,돈 낭비였어요. 비추천합니다.,16,36,-0.65,2,False
+R0885,P189,home,무난합니다. 그냥 쓸 만해요.,16,35,-0.47,4,False
+R0886,P113,electronics,기대 이상으로 좋았습니다. 강력 추천해요.,23,10,0.81,5,False
+R0887,P189,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,10,-0.02,4,False
+R0888,P101,sports,다시 구매할 의향이 있습니다. 아주 만족해요.,25,49,0.64,4,False
+R0889,P154,sports,아주 좋은 제품이에요. 만족스럽습니다!,21,13,0.81,5,False
+R0890,P110,electronics,별로입니다. 추천하지 않습니다.,17,49,-0.79,2,False
+R0891,P118,electronics,이 제품 정말 최고예요!,13,23,0.97,4,False
+R0892,P152,home,평범한 제품이에요. 예상했던 그대로입니다.,23,44,0.43,3,False
+R0893,P109,sports,다시 구매할 의향이 있습니다. 아주 만족해요.,25,47,0.9,5,False
+R0894,P149,electronics,아주 좋은 제품이에요. 만족스럽습니다!,21,28,0.87,5,False
+R0895,P197,sports,평범한 제품이에요. 예상했던 그대로입니다.,23,43,0.14,4,False
+R0896,P153,electronics,정말 별로예요. 다른 제품을 찾아보세요.,22,15,-0.92,1,False
+R0897,P196,fashion,평범한 제품이에요. 예상했던 그대로입니다.,23,40,-0.4,3,False
+R0898,P144,home,정말 별로예요. 다른 제품을 찾아보세요.,22,12,-0.91,2,False
+R0899,P198,home,그럭저럭입니다.,8,22,0.12,4,False
+R0900,P187,electronics,정말 별로예요. 다른 제품을 찾아보세요.,22,22,-0.57,2,False
+R0901,P180,fashion,기대 이상으로 좋았습니다. 강력 추천해요.,23,39,0.78,5,False
+R0902,P179,home,정말 별로예요. 다른 제품을 찾아보세요.,22,16,-0.71,1,False
+R0903,P178,electronics,무난합니다. 그냥 쓸 만해요.,16,19,-0.28,4,False
+R0904,P153,fashion,별로입니다. 추천하지 않습니다.,17,37,-0.69,2,False
+R0905,P195,home,기대했던 것보다 별로네요.,14,33,-0.67,2,False
+R0906,P170,fashion,기대했던 것보다 별로네요.,14,17,-0.87,2,False
+R0907,P135,fashion,기대 이상으로 좋았습니다. 강력 추천해요.,23,29,0.89,5,False
+R0908,P106,sports,훌륭한 품질에 배송도 빨랐어요.,17,21,0.76,4,False
+R0909,P124,electronics,훌륭한 품질에 배송도 빨랐어요.,17,36,0.67,4,False
+R0910,P193,sports,무난합니다. 그냥 쓸 만해요.,16,13,-0.07,4,False
+R0911,P172,home,훌륭한 품질에 배송도 빨랐어요.,17,50,0.64,4,False
+R0912,P131,fashion,기대 이상으로 좋았습니다. 강력 추천해요.,23,10,0.63,5,False
+R0913,P186,electronics,정말 별로예요. 다른 제품을 찾아보세요.,22,38,-0.63,1,False
+R0914,P154,electronics,기대 이상으로 좋았습니다. 강력 추천해요.,23,50,0.82,4,False
+R0915,P101,home,기대 이상으로 좋았습니다. 강력 추천해요.,23,10,0.65,4,False
+R0916,P116,fashion,기대 이상으로 좋았습니다. 강력 추천해요.,23,37,0.85,5,False
+R0917,P182,home,이 제품 정말 최고예요!,13,45,0.72,4,False
+R0918,P172,electronics,별로입니다. 추천하지 않습니다.,17,42,-0.93,2,False
+R0919,P167,home,기대했던 것보다 별로네요.,14,22,-0.58,1,False
+R0920,P139,sports,아주 좋은 제품이에요. 만족스럽습니다!,21,15,0.92,5,False
+R0921,P193,sports,별로입니다. 추천하지 않습니다.,17,13,-0.57,1,False
+R0922,P186,fashion,좋지도 나쁘지도 않아요.,13,41,0.05,4,False
+R0923,P189,sports,그냥 괜찮아요. 특별한 점은 없네요.,20,11,-0.01,4,False
+R0924,P143,electronics,좋지도 나쁘지도 않아요.,13,30,0.47,3,False
+R0925,P150,fashion,기대했던 것보다 별로네요.,14,16,-0.79,1,False
+R0926,P189,home,아주 좋은 제품이에요. 만족스럽습니다!,21,15,0.54,5,False
+R0927,P113,home,좋지도 나쁘지도 않아요.,13,31,-0.14,3,False
+R0928,P188,fashion,돈 낭비였어요. 비추천합니다.,16,46,-0.64,2,False
+R0929,P116,sports,평범한 제품이에요. 예상했던 그대로입니다.,23,37,0.07,3,False
+R0930,P118,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,14,-0.85,2,False
+R0931,P100,electronics,그냥 괜찮아요. 특별한 점은 없네요.,20,43,-0.16,4,False
+R0932,P136,electronics,무난합니다. 그냥 쓸 만해요.,16,46,0.13,4,False
+R0933,P106,home,좋지도 나쁘지도 않아요.,13,48,0.13,4,False
+R0934,P194,fashion,그냥 괜찮아요. 특별한 점은 없네요.,20,47,-0.02,3,False
+R0935,P166,sports,정말 별로예요. 다른 제품을 찾아보세요.,22,18,-0.75,2,False
+R0936,P151,fashion,평범한 제품이에요. 예상했던 그대로입니다.,23,10,-0.31,4,False
+R0937,P175,electronics,기대했던 것보다 별로네요.,14,40,-0.52,2,False
+R0938,P145,electronics,이 제품 정말 최고예요!,13,36,0.58,4,False
+R0939,P127,sports,평범한 제품이에요. 예상했던 그대로입니다.,23,36,0.15,3,False
+R0940,P123,fashion,좋지도 나쁘지도 않아요.,13,38,0.16,4,False
+R0941,P116,home,훌륭한 품질에 배송도 빨랐어요.,17,22,0.95,5,False
+R0942,P140,sports,별로입니다. 추천하지 않습니다.,17,37,-0.93,1,False
+R0943,P104,home,기대 이상으로 좋았습니다. 강력 추천해요.,23,23,0.54,5,False
+R0944,P165,electronics,훌륭한 품질에 배송도 빨랐어요.,17,27,0.72,5,False
+R0945,P195,sports,별로입니다. 추천하지 않습니다.,17,22,-0.9,1,False
+R0946,P107,sports,기대 이상으로 좋았습니다. 강력 추천해요.,23,42,0.7,5,False
+R0947,P158,electronics,이 제품 정말 최고예요!,13,46,0.98,4,False
+R0948,P137,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,50,-0.61,1,False
+R0949,P178,home,기대 이상으로 좋았습니다. 강력 추천해요.,23,40,0.6,4,False
+R0950,P147,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,25,-0.66,1,False
+R0951,P172,fashion,기대했던 것보다 별로네요.,14,21,-0.75,1,False
+R0952,P106,electronics,기대 이상으로 좋았습니다. 강력 추천해요.,23,37,0.59,4,False
+R0953,P186,electronics,평범한 제품이에요. 예상했던 그대로입니다.,23,31,-0.24,3,False
+R0954,P171,electronics,별로입니다. 추천하지 않습니다.,17,34,-0.89,2,False
+R0955,P127,sports,무난합니다. 그냥 쓸 만해요.,16,31,-0.13,3,False
+R0956,P164,electronics,다시 구매할 의향이 있습니다. 아주 만족해요.,25,26,0.94,5,False
+R0957,P181,sports,정말 별로예요. 다른 제품을 찾아보세요.,22,14,-0.75,2,False
+R0958,P112,home,기대했던 것보다 별로네요.,14,37,-0.6,2,False
+R0959,P125,electronics,무난합니다. 그냥 쓸 만해요.,16,49,-0.17,3,False
+R0960,P153,sports,평범한 제품이에요. 예상했던 그대로입니다.,23,23,0.18,4,False
+R0961,P102,fashion,아주 좋은 제품이에요. 만족스럽습니다!,21,45,0.73,4,False
+R0962,P162,electronics,정말 별로예요. 다른 제품을 찾아보세요.,22,50,-0.63,2,False
+R0963,P146,electronics,아주 좋은 제품이에요. 만족스럽습니다!,21,22,1.0,4,False
+R0964,P186,fashion,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,50,-0.64,2,False
+R0965,P196,electronics,아주 좋은 제품이에요. 만족스럽습니다!,21,31,0.77,5,False
+R0966,P199,electronics,기대 이상으로 좋았습니다. 강력 추천해요.,23,10,0.83,4,False
+R0967,P114,fashion,돈 낭비였어요. 비추천합니다.,16,30,-0.75,1,False
+R0968,P154,fashion,무난합니다. 그냥 쓸 만해요.,16,18,-0.46,3,False
+R0969,P171,home,아주 좋은 제품이에요. 만족스럽습니다!,21,20,0.87,5,False
+R0970,P166,electronics,그냥 괜찮아요. 특별한 점은 없네요.,20,26,-0.46,3,False
+R0971,P147,fashion,평범한 제품이에요. 예상했던 그대로입니다.,23,13,0.14,3,False
+R0972,P123,sports,아주 좋은 제품이에요. 만족스럽습니다!,21,30,0.81,4,False
+R0973,P172,sports,기대했던 것보다 별로네요.,14,32,-0.6,1,False
+R0974,P163,electronics,그냥 괜찮아요. 특별한 점은 없네요.,20,21,0.13,4,False
+R0975,P100,home,돈 낭비였어요. 비추천합니다.,16,23,-0.59,1,False
+R0976,P190,home,좋지도 나쁘지도 않아요.,13,15,0.5,3,False
+R0977,P137,home,평범한 제품이에요. 예상했던 그대로입니다.,23,31,-0.22,4,False
+R0978,P195,fashion,기대 이상으로 좋았습니다. 강력 추천해요.,23,42,0.84,5,False
+R0979,P156,home,그냥 괜찮아요. 특별한 점은 없네요.,20,17,-0.14,4,False
+R0980,P163,electronics,평범한 제품이에요. 예상했던 그대로입니다.,23,12,-0.36,4,False
+R0981,P172,sports,이 제품 정말 최고예요!,13,46,0.54,5,False
+R0982,P124,sports,훌륭한 품질에 배송도 빨랐어요.,17,45,0.68,5,False
+R0983,P108,fashion,아주 좋은 제품이에요. 만족스럽습니다!,21,39,0.58,5,False
+R0984,P154,home,기대했던 것보다 별로네요.,14,26,-0.6,1,False
+R0985,P135,fashion,돈 낭비였어요. 비추천합니다.,16,31,-0.6,2,False
+R0986,P120,fashion,별로입니다. 추천하지 않습니다.,17,33,-0.52,2,False
+R0987,P155,sports,이 제품 정말 최고예요!,13,40,0.7,4,False
+R0988,P182,electronics,기대했던 것보다 별로네요.,14,26,-0.66,1,False
+R0989,P127,fashion,평범한 제품이에요. 예상했던 그대로입니다.,23,14,0.17,4,False
+R0990,P111,sports,다시 구매할 의향이 있습니다. 아주 만족해요.,25,31,0.91,5,False
+R0991,P184,sports,훌륭한 품질에 배송도 빨랐어요.,17,14,0.63,4,False
+R0992,P193,fashion,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,15,-0.65,2,False
+R0993,P149,home,그냥 괜찮아요. 특별한 점은 없네요.,20,41,-0.21,4,False
+R0994,P101,sports,다시 구매할 의향이 있습니다. 아주 만족해요.,25,41,0.98,5,False
+R0995,P146,fashion,기대했던 것보다 별로네요.,14,38,-0.65,1,False
+R0996,P141,sports,실망스러운 품질이었어요. 다시는 안 살 거예요.,26,34,-0.75,2,False
+R0997,P185,fashion,아주 좋은 제품이에요. 만족스럽습니다!,21,39,0.75,5,False
+R0998,P193,sports,훌륭한 품질에 배송도 빨랐어요.,17,18,0.52,4,False
+R0999,P122,electronics,별로입니다. 추천하지 않습니다.,17,42,-0.66,1,False
+R1000,P186,fashion,좋지도 나쁘지도 않아요.,13,46,-0.02,4,False
