@@ -4,17 +4,19 @@
 # 작성목적 : SKALA Python Day3 - Bcrypt 해시 기반 Rate Limiting 인증 시스템 (테스트 스크립트)
 # 변경사항 내역 :
 #   2026-01-14 - 최초 작성
+#   2026-01-15 - 3) 첫 실패는 401 출력, 이후 시도는 429만 3회 출력하도록 수정
 # -------------------------------------------------------------
 
 set -euo pipefail
 
 BASE_URL="http://127.0.0.1:8081"
-MAX_FAIL_STEPS=3          # 실패 누적 횟수(요구사항: 3번)
 EXTRA_SLEEP_SEC=0.1      # retry_after 이후 최소 여유
 DEFAULT_IP="10.0.0.1"     # 1~3번 IP
-IP_A="10.0.0.31"          # 4번 IP 분리
-IP_B="10.0.0.32"          # 4번 IP 분리
+IP_A="10.0.0.33"          # 4번 IP 분리
+IP_B="10.0.0.34"          # 4번 IP 분리
 
+# 3)에서 429를 몇 번 확인할지
+BLOCK_CHECKS=3
 
 # ---------- util ----------
 hr() { printf '%*s\n' 80 '' | tr ' ' '-'; }
@@ -83,49 +85,17 @@ show() {
   echo
 }
 
-# 401을 만들고 싶을 때: 429면 retry_after만큼 기다렸다가 다시 시도해서 "401이 나올 때까지" 진행
-post_until_401() {
-  local url="$1"
-  local json="$2"
-  shift 2
-
-  while true; do
-    http_post "$url" "$json" "$@"
-    local st
-    st="$(status_code)"
-    if [[ "$st" == "401" ]]; then
-      return 0
-    fi
-    if [[ "$st" == "429" ]]; then
-      # 차단이면 풀릴 때까지 대기 후 재시도
-      sleep_retry_after
-      continue
-    fi
-    # 예상 외(200/400 등)면 그대로 종료
-    return 0
-  done
-}
-
-# 200(성공)을 만들고 싶을 때: 429면 retry_after만큼 기다렸다가 다시 시도해서 "200이 나올 때까지" 진행
-post_until_200() {
-  local url="$1"
-  local json="$2"
-  shift 2
-
-  while true; do
-    http_post "$url" "$json" "$@"
-    local st
-    st="$(status_code)"
-    if [[ "$st" == "200" ]]; then
-      return 0
-    fi
-    if [[ "$st" == "429" ]]; then
-      sleep_retry_after
-      continue
-    fi
-    # 예상 외(401/400 등)면 그대로 종료
-    return 0
-  done
+assert_status() {
+  local expected="$1"
+  local got
+  got="$(status_code)"
+  if [[ "$got" != "$expected" ]]; then
+    echo "❌ 예상한 상태코드가 아님. expected=$expected got=$got"
+    echo "---- response body ----"
+    cat "$TMP_BODY" || true
+    echo
+    exit 1
+  fi
 }
 
 # ---------- tests ----------
@@ -138,30 +108,39 @@ title "2) 정상 로그인"
 http_post "$BASE_URL/login" '{"username":"user1","password":"Password123!"}' -H "X-Forwarded-For: ${DEFAULT_IP}"
 show
 
-title "3) 로그인 실패 3회 시도"
-for ((i=1;i<=MAX_FAIL_STEPS;i++)); do
-  echo "[FAIL ROUND $i/$MAX_FAIL_STEPS] (need 401 to increase fail_count)"
-  post_until_401 "$BASE_URL/login" '{"username":"user1","password":"wrong"}' -H "X-Forwarded-For: ${DEFAULT_IP}"
-  show
+title "3) 로그인 실패 3회 시도 -> 1회차는 401(인증 실패), 이후는 429(차단) ERROR 확인"
+echo "[FIRST FAIL] expect 401 (fail_count=1, backoff=1s로 차단 시작)"
+http_post "$BASE_URL/login" '{"username":"user1","password":"wrong"}' -H "X-Forwarded-For: ${DEFAULT_IP}"
+show
+assert_status "401"
 
-  echo "[IMMEDIATE RETRY] expect 429"
+# fail_count=1이면 서버 로직상 blocked_until=now+1s 이므로,
+# 그 1초 안에 바로 재요청하면 전부 429가 나와야 함.
+for ((i=1;i<=BLOCK_CHECKS;i++)); do
+  echo "[BLOCK CHECK $i/$BLOCK_CHECKS] expect 429 (차단 상태 확인)"
   http_post "$BASE_URL/login" '{"username":"user1","password":"wrong"}' -H "X-Forwarded-For: ${DEFAULT_IP}"
   show
-  sleep_retry_after
+  assert_status "429"
 done
+
+# 이후 단계 진행 전에 차단이 풀리도록 기다려주면 안정적
+echo "[WAIT UNBLOCK] retry_after 기반 대기 후 다음 테스트 진행"
+sleep_retry_after
 
 title "4) IP별 카운트 분리 (fail_count=1 확인)"
 echo "[IP_A=${IP_A}]"
-post_until_401 "$BASE_URL/login" '{"username":"user1","password":"wrong"}' -H "X-Forwarded-For: ${IP_A}"
+http_post "$BASE_URL/login" '{"username":"user1","password":"wrong"}' -H "X-Forwarded-For: ${IP_A}"
 show
+assert_status "401"
 sleep_retry_after
 
 echo "[IP_B=${IP_B}]"
-post_until_401 "$BASE_URL/login" '{"username":"user1","password":"wrong"}' -H "X-Forwarded-For: ${IP_B}"
+http_post "$BASE_URL/login" '{"username":"user1","password":"wrong"}' -H "X-Forwarded-For: ${IP_B}"
 show
+assert_status "401"
 sleep_retry_after
 
-title "5) 차단 해제 후 정상 로그인 성공 확인 (429 -> 200)"
+title "5) 차단 해제 후 정상 로그인 성공 확인"
 http_post "$BASE_URL/login" '{"username":"user1","password":"Password123!"}' -H "X-Forwarded-For: ${DEFAULT_IP}"
 show
 
