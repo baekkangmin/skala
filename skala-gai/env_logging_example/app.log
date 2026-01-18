@@ -16,3 +16,20 @@ Traceback (most recent call last):
         ~~^~~
 ZeroDivisionError: division by zero
 2026-01-13 13:05:43 | INFO | APP_NAME=MyCoolApp, LOG_LEVEL=DEBUG
+2026-01-17 16:31:02 | INFO | 앱 실행 시작
+2026-01-17 16:31:02 | DEBUG | 환경 변수 로딩 완료
+2026-01-17 16:31:02 | ERROR | 예외 발생 예시
+Traceback (most recent call last):
+  File "/Users/baekkangmin/workspace2/skala-gai/env_logging_example/main.py", line 57, in main
+    _ = 1 / 0
+        ~~^~~
+ZeroDivisionError: division by zero
+2026-01-17 16:31:02 | INFO | APP_NAME=MyCoolApp, LOG_LEVEL=DEBUG
+2026-01-17 16:32:30 | INFO | 앱 실행 시작
+2026-01-17 16:32:30 | ERROR | 예외 발생 예시
+Traceback (most recent call last):
+  File "/Users/baekkangmin/workspace2/skala-gai/env_logging_example/main.py", line 57, in main
+    _ = 1 / 0
+        ~~^~~
+ZeroDivisionError: division by zero
+2026-01-17 16:32:30 | INFO | APP_NAME=MyCoolApp, LOG_LEVEL=INFO

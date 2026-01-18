@@ -1,11 +1,11 @@
 [
   {
-    "timestamp": 1768348636.714514,
+    "timestamp": 1768641497.806606,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_001",
-    "process_id": 54367,
-    "thread_id": "worker-3",
+    "process_id": 34864,
+    "thread_id": "worker-4",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -14,26 +14,12 @@
     }
   },
   {
-    "timestamp": 1768348636.7157629,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_003",
-    "process_id": 54369,
-    "thread_id": "worker-5",
-    "stage": "LOAD",
-    "message": "Task started",
-    "context": {
-      "job_type": "DATA_CLEANING",
-      "input_size_mb": 310
-    }
-  },
-  {
-    "timestamp": 1768348636.71582,
+    "timestamp": 1768641497.8071492,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_002",
-    "process_id": 54368,
-    "thread_id": "worker-4",
+    "process_id": 34865,
+    "thread_id": "worker-5",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -42,11 +28,39 @@
     }
   },
   {
-    "timestamp": 1768348636.7164721,
+    "timestamp": 1768641497.8075619,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_003",
+    "process_id": 34862,
+    "thread_id": "worker-2",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 310
+    }
+  },
+  {
+    "timestamp": 1768641497.8076649,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_004",
+    "process_id": 34863,
+    "thread_id": "worker-3",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 1024
+    }
+  },
+  {
+    "timestamp": 1768641497.808021,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_005",
-    "process_id": 54370,
+    "process_id": 34866,
     "thread_id": "worker-6",
     "stage": "LOAD",
     "message": "Task started",
@@ -56,25 +70,11 @@
     }
   },
   {
-    "timestamp": 1768348636.716911,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_004",
-    "process_id": 54366,
-    "thread_id": "worker-2",
-    "stage": "LOAD",
-    "message": "Task started",
-    "context": {
-      "job_type": "MODEL_TRAINING",
-      "input_size_mb": 1024
-    }
-  },
-  {
-    "timestamp": 1768348636.717639,
+    "timestamp": 1768641497.808309,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_006",
-    "process_id": 54371,
+    "process_id": 34867,
     "thread_id": "worker-7",
     "stage": "LOAD",
     "message": "Task started",
@@ -84,12 +84,26 @@
     }
   },
   {
-    "timestamp": 1768348636.7205818,
+    "timestamp": 1768641497.8089879,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_007",
+    "process_id": 34868,
+    "thread_id": "worker-8",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 2048
+    }
+  },
+  {
+    "timestamp": 1768641497.810526,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_008",
-    "process_id": 54372,
-    "thread_id": "worker-8",
+    "process_id": 34869,
+    "thread_id": "worker-9",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -98,103 +112,24 @@
     }
   },
   {
-    "timestamp": 1768348636.7206001,
+    "timestamp": 1768641497.8222551,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_007",
-    "process_id": 54373,
-    "thread_id": "worker-9",
-    "stage": "LOAD",
-    "message": "Task started",
-    "context": {
-      "job_type": "MODEL_TRAINING",
-      "input_size_mb": 2048
-    }
-  },
-  {
-    "timestamp": 1768348636.7290938,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_004",
-    "process_id": 54366,
-    "thread_id": "worker-2",
+    "process_id": 34868,
+    "thread_id": "worker-8",
     "stage": "PREPROCESS",
     "message": "Data normalization completed",
     "context": {
-      "elapsed_ms": 2461
+      "elapsed_ms": 896
     }
   },
   {
-    "timestamp": 1768348636.733248,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_003",
-    "process_id": 54369,
-    "thread_id": "worker-5",
-    "stage": "CLEANING",
-    "message": "Null values removed",
-    "context": {
-      "rows_affected": 26750
-    }
-  },
-  {
-    "timestamp": 1768348636.755109,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_005",
-    "process_id": 54370,
-    "thread_id": "worker-6",
-    "stage": "CLEANING",
-    "message": "Null values removed",
-    "context": {
-      "rows_affected": 24320
-    }
-  },
-  {
-    "timestamp": 1768348636.755518,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_006",
-    "process_id": 54371,
-    "thread_id": "worker-7",
-    "stage": "PREPROCESS",
-    "message": "Resize completed",
-    "context": {
-      "target": "1080p"
-    }
-  },
-  {
-    "timestamp": 1768348636.7659369,
+    "timestamp": 1768641497.830373,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_001",
-    "process_id": 54367,
-    "thread_id": "worker-3",
-    "stage": "PREPROCESS",
-    "message": "Resize completed",
-    "context": {
-      "target": "1080p"
-    }
-  },
-  {
-    "timestamp": 1768348636.767802,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_008",
-    "process_id": 54372,
-    "thread_id": "worker-8",
-    "stage": "CLEANING",
-    "message": "Null values removed",
-    "context": {
-      "rows_affected": 29625
-    }
-  },
-  {
-    "timestamp": 1768348636.7681549,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_002",
-    "process_id": 54368,
+    "process_id": 34864,
     "thread_id": "worker-4",
     "stage": "PREPROCESS",
     "message": "Resize completed",
@@ -203,38 +138,103 @@
     }
   },
   {
-    "timestamp": 1768348636.768992,
+    "timestamp": 1768641497.830453,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_003",
+    "process_id": 34862,
+    "thread_id": "worker-2",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 12045
+    }
+  },
+  {
+    "timestamp": 1768641497.838759,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_007",
-    "process_id": 54373,
-    "thread_id": "worker-9",
-    "stage": "PREPROCESS",
-    "message": "Data normalization completed",
-    "context": {
-      "elapsed_ms": 2295
-    }
-  },
-  {
-    "timestamp": 1768348636.7741199,
-    "level": "WARN",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_004",
-    "process_id": 54366,
-    "thread_id": "worker-2",
+    "process_id": 34868,
+    "thread_id": "worker-8",
     "stage": "TRAINING",
-    "message": "GPU contention detected",
+    "message": "Epoch 3 completed",
     "context": {
-      "gpu_id": 0,
-      "lock_wait_ms": 387
+      "loss": 0.214,
+      "accuracy": 0.93
     }
   },
   {
-    "timestamp": 1768348636.7824059,
+    "timestamp": 1768641497.8396108,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_002",
-    "process_id": 54368,
+    "process_id": 34865,
+    "thread_id": "worker-5",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": 1768641497.84463,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_006",
+    "process_id": 34867,
+    "thread_id": "worker-7",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": 1768641497.85098,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_008",
+    "process_id": 34869,
+    "thread_id": "worker-9",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 15811
+    }
+  },
+  {
+    "timestamp": 1768641497.850985,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_004",
+    "process_id": 34863,
+    "thread_id": "worker-3",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 3934
+    }
+  },
+  {
+    "timestamp": 1768641497.85814,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_005",
+    "process_id": 34866,
+    "thread_id": "worker-6",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 29050
+    }
+  },
+  {
+    "timestamp": 1768641497.863758,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_001",
+    "process_id": 34864,
     "thread_id": "worker-4",
     "stage": "PROCESS",
     "message": "Augmentation completed",
@@ -246,25 +246,55 @@
     }
   },
   {
-    "timestamp": 1768348636.786906,
+    "timestamp": 1768641497.872154,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_005",
-    "process_id": 54370,
-    "thread_id": "worker-6",
-    "stage": "CLEANING",
-    "message": "Outliers filtered",
+    "task_id": "TASK_002",
+    "process_id": 34865,
+    "thread_id": "worker-5",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
     "context": {
-      "rows_removed": 769
+      "ops": [
+        "flip",
+        "crop"
+      ]
     }
   },
   {
-    "timestamp": 1768348636.7875588,
+    "timestamp": 1768641497.876509,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_008",
+    "process_id": 34869,
+    "thread_id": "worker-9",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 587
+    }
+  },
+  {
+    "timestamp": 1768641497.876705,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_007",
+    "process_id": 34868,
+    "thread_id": "worker-8",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 886
+    }
+  },
+  {
+    "timestamp": 1768641497.8772569,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_009",
-    "process_id": 54370,
-    "thread_id": "worker-6",
+    "process_id": 34869,
+    "thread_id": "worker-9",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -273,25 +303,12 @@
     }
   },
   {
-    "timestamp": 1768348636.7903628,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_003",
-    "process_id": 54369,
-    "thread_id": "worker-5",
-    "stage": "CLEANING",
-    "message": "Outliers filtered",
-    "context": {
-      "rows_removed": 191
-    }
-  },
-  {
-    "timestamp": 1768348636.79093,
+    "timestamp": 1768641497.877315,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_010",
-    "process_id": 54369,
-    "thread_id": "worker-5",
+    "process_id": 34868,
+    "thread_id": "worker-8",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -300,11 +317,92 @@
     }
   },
   {
-    "timestamp": 1768348636.7996302,
+    "timestamp": 1768641497.882099,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_003",
+    "process_id": 34862,
+    "thread_id": "worker-2",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 165
+    }
+  },
+  {
+    "timestamp": 1768641497.8826392,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_011",
+    "process_id": 34862,
+    "thread_id": "worker-2",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 210
+    }
+  },
+  {
+    "timestamp": 1768641497.890718,
+    "level": "WARN",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_004",
+    "process_id": 34863,
+    "thread_id": "worker-3",
+    "stage": "TRAINING",
+    "message": "GPU contention detected",
+    "context": {
+      "gpu_id": 0,
+      "lock_wait_ms": 143
+    }
+  },
+  {
+    "timestamp": 1768641497.896755,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_011",
+    "process_id": 34862,
+    "thread_id": "worker-2",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": 1768641497.90027,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_005",
+    "process_id": 34866,
+    "thread_id": "worker-6",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 555
+    }
+  },
+  {
+    "timestamp": 1768641497.9008079,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_012",
+    "process_id": 34866,
+    "thread_id": "worker-6",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 1536
+    }
+  },
+  {
+    "timestamp": 1768641497.901624,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_006",
-    "process_id": 54371,
+    "process_id": 34867,
     "thread_id": "worker-7",
     "stage": "PROCESS",
     "message": "Augmentation completed",
@@ -316,81 +414,24 @@
     }
   },
   {
-    "timestamp": 1768348636.802733,
+    "timestamp": 1768641497.9061792,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_004",
-    "process_id": 54366,
-    "thread_id": "worker-2",
-    "stage": "TRAINING",
-    "message": "Epoch 5 completed",
+    "task_id": "TASK_009",
+    "process_id": 34869,
+    "thread_id": "worker-9",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
     "context": {
-      "loss": 0.35,
-      "accuracy": 0.77
+      "target": "1080p"
     }
   },
   {
-    "timestamp": 1768348636.804765,
+    "timestamp": 1768641497.914098,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_001",
-    "process_id": 54367,
-    "thread_id": "worker-3",
-    "stage": "PROCESS",
-    "message": "Augmentation completed",
-    "context": {
-      "ops": [
-        "flip",
-        "crop"
-      ]
-    }
-  },
-  {
-    "timestamp": 1768348636.80478,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_008",
-    "process_id": 54372,
-    "thread_id": "worker-8",
-    "stage": "CLEANING",
-    "message": "Outliers filtered",
-    "context": {
-      "rows_removed": 248
-    }
-  },
-  {
-    "timestamp": 1768348636.8054101,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_011",
-    "process_id": 54372,
-    "thread_id": "worker-8",
-    "stage": "LOAD",
-    "message": "Task started",
-    "context": {
-      "job_type": "IMAGE_PROCESSING",
-      "input_size_mb": 210
-    }
-  },
-  {
-    "timestamp": 1768348636.809132,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_010",
-    "process_id": 54369,
-    "thread_id": "worker-5",
-    "stage": "CLEANING",
-    "message": "Null values removed",
-    "context": {
-      "rows_affected": 10288
-    }
-  },
-  {
-    "timestamp": 1768348636.81179,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_002",
-    "process_id": 54368,
+    "process_id": 34864,
     "thread_id": "worker-4",
     "stage": "FINISH",
     "message": "Image processing completed",
@@ -399,53 +440,25 @@
     }
   },
   {
-    "timestamp": 1768348636.812433,
+    "timestamp": 1768641497.914516,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_012",
-    "process_id": 54368,
-    "thread_id": "worker-4",
-    "stage": "LOAD",
-    "message": "Task started",
-    "context": {
-      "job_type": "MODEL_TRAINING",
-      "input_size_mb": 1536
-    }
-  },
-  {
-    "timestamp": 1768348636.816376,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_009",
-    "process_id": 54370,
-    "thread_id": "worker-6",
-    "stage": "PREPROCESS",
-    "message": "Resize completed",
-    "context": {
-      "target": "1080p"
-    }
-  },
-  {
-    "timestamp": 1768348636.8182242,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_004",
-    "process_id": 54366,
-    "thread_id": "worker-2",
+    "task_id": "TASK_002",
+    "process_id": 34865,
+    "thread_id": "worker-5",
     "stage": "FINISH",
-    "message": "Model training completed",
+    "message": "Image processing completed",
     "context": {
-      "total_epochs": 10,
-      "total_time_sec": 724
+      "output": "s3://bucket/path"
     }
   },
   {
-    "timestamp": 1768348636.81878,
+    "timestamp": 1768641497.9148679,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_013",
-    "process_id": 54366,
-    "thread_id": "worker-2",
+    "process_id": 34864,
+    "thread_id": "worker-4",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -454,81 +467,12 @@
     }
   },
   {
-    "timestamp": 1768348636.823662,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_011",
-    "process_id": 54372,
-    "thread_id": "worker-8",
-    "stage": "PREPROCESS",
-    "message": "Resize completed",
-    "context": {
-      "target": "1080p"
-    }
-  },
-  {
-    "timestamp": 1768348636.827094,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_007",
-    "process_id": 54373,
-    "thread_id": "worker-9",
-    "stage": "TRAINING",
-    "message": "Epoch 2 completed",
-    "context": {
-      "loss": 0.284,
-      "accuracy": 0.71
-    }
-  },
-  {
-    "timestamp": 1768348636.8298602,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_012",
-    "process_id": 54368,
-    "thread_id": "worker-4",
-    "stage": "PREPROCESS",
-    "message": "Data normalization completed",
-    "context": {
-      "elapsed_ms": 3986
-    }
-  },
-  {
-    "timestamp": 1768348636.831723,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_009",
-    "process_id": 54370,
-    "thread_id": "worker-6",
-    "stage": "PROCESS",
-    "message": "Augmentation completed",
-    "context": {
-      "ops": [
-        "flip",
-        "crop"
-      ]
-    }
-  },
-  {
-    "timestamp": 1768348636.835725,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_006",
-    "process_id": 54371,
-    "thread_id": "worker-7",
-    "stage": "FINISH",
-    "message": "Image processing completed",
-    "context": {
-      "output": "s3://bucket/path"
-    }
-  },
-  {
-    "timestamp": 1768348636.8370008,
+    "timestamp": 1768641497.915253,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_014",
-    "process_id": 54371,
-    "thread_id": "worker-7",
+    "process_id": 34865,
+    "thread_id": "worker-5",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -537,39 +481,68 @@
     }
   },
   {
-    "timestamp": 1768348636.850537,
+    "timestamp": 1768641497.9231858,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_013",
-    "process_id": 54366,
-    "thread_id": "worker-2",
+    "task_id": "TASK_010",
+    "process_id": 34868,
+    "thread_id": "worker-8",
     "stage": "CLEANING",
     "message": "Null values removed",
     "context": {
-      "rows_affected": 10124
+      "rows_affected": 11366
     }
   },
   {
-    "timestamp": 1768348636.860199,
+    "timestamp": 1768641497.928391,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_007",
-    "process_id": 54373,
-    "thread_id": "worker-9",
-    "stage": "FINISH",
-    "message": "Model training completed",
+    "task_id": "TASK_011",
+    "process_id": 34862,
+    "thread_id": "worker-2",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
     "context": {
-      "total_epochs": 10,
-      "total_time_sec": 235
+      "ops": [
+        "flip",
+        "crop"
+      ]
     }
   },
   {
-    "timestamp": 1768348636.861085,
+    "timestamp": 1768641497.9461079,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_006",
+    "process_id": 34867,
+    "thread_id": "worker-7",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": 1768641497.946134,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_004",
+    "process_id": 34863,
+    "thread_id": "worker-3",
+    "stage": "TRAINING",
+    "message": "Epoch 3 completed",
+    "context": {
+      "loss": 0.622,
+      "accuracy": 0.8
+    }
+  },
+  {
+    "timestamp": 1768641497.9468741,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_015",
-    "process_id": 54373,
-    "thread_id": "worker-9",
+    "process_id": 34867,
+    "thread_id": "worker-7",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -578,25 +551,67 @@
     }
   },
   {
-    "timestamp": 1768348636.863945,
+    "timestamp": 1768641497.9526742,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_001",
-    "process_id": 54367,
-    "thread_id": "worker-3",
-    "stage": "FINISH",
-    "message": "Image processing completed",
+    "task_id": "TASK_014",
+    "process_id": 34865,
+    "thread_id": "worker-5",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
     "context": {
-      "output": "s3://bucket/path"
+      "target": "1080p"
     }
   },
   {
-    "timestamp": 1768348636.864316,
+    "timestamp": 1768641497.954728,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_012",
+    "process_id": 34866,
+    "thread_id": "worker-6",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 923
+    }
+  },
+  {
+    "timestamp": 1768641497.9614332,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_009",
-    "process_id": 54370,
-    "thread_id": "worker-6",
+    "process_id": 34869,
+    "thread_id": "worker-9",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": 1768641497.961447,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_013",
+    "process_id": 34864,
+    "thread_id": "worker-4",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 11107
+    }
+  },
+  {
+    "timestamp": 1768641497.972863,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_011",
+    "process_id": 34862,
+    "thread_id": "worker-2",
     "stage": "FINISH",
     "message": "Image processing completed",
     "context": {
@@ -604,12 +619,12 @@
     }
   },
   {
-    "timestamp": 1768348636.8648891,
+    "timestamp": 1768641497.9736161,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_016",
-    "process_id": 54367,
-    "thread_id": "worker-3",
+    "process_id": 34862,
+    "thread_id": "worker-2",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -618,12 +633,41 @@
     }
   },
   {
-    "timestamp": 1768348636.865141,
+    "timestamp": 1768641497.980021,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_010",
+    "process_id": 34868,
+    "thread_id": "worker-8",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 774
+    }
+  },
+  {
+    "timestamp": 1768641497.980212,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_014",
+    "process_id": 34865,
+    "thread_id": "worker-5",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": 1768641497.9807801,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_017",
-    "process_id": 54370,
-    "thread_id": "worker-6",
+    "process_id": 34868,
+    "thread_id": "worker-8",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -632,41 +676,38 @@
     }
   },
   {
-    "timestamp": 1768348636.867224,
+    "timestamp": 1768641497.98655,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_010",
-    "process_id": 54369,
-    "thread_id": "worker-5",
+    "task_id": "TASK_015",
+    "process_id": 34867,
+    "thread_id": "worker-7",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 10224
+    }
+  },
+  {
+    "timestamp": 1768641497.998561,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_013",
+    "process_id": 34864,
+    "thread_id": "worker-4",
     "stage": "CLEANING",
     "message": "Outliers filtered",
     "context": {
-      "rows_removed": 632
+      "rows_removed": 258
     }
   },
   {
-    "timestamp": 1768348636.867444,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_011",
-    "process_id": 54372,
-    "thread_id": "worker-8",
-    "stage": "PROCESS",
-    "message": "Augmentation completed",
-    "context": {
-      "ops": [
-        "flip",
-        "crop"
-      ]
-    }
-  },
-  {
-    "timestamp": 1768348636.867917,
+    "timestamp": 1768641497.999346,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_018",
-    "process_id": 54369,
-    "thread_id": "worker-5",
+    "process_id": 34864,
+    "thread_id": "worker-4",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -675,66 +716,26 @@
     }
   },
   {
-    "timestamp": 1768348636.872119,
+    "timestamp": 1768641498.004954,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_012",
-    "process_id": 54368,
-    "thread_id": "worker-4",
-    "stage": "TRAINING",
-    "message": "Epoch 4 completed",
-    "context": {
-      "loss": 0.615,
-      "accuracy": 0.81
-    }
-  },
-  {
-    "timestamp": 1768348636.879723,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_015",
-    "process_id": 54373,
-    "thread_id": "worker-9",
-    "stage": "CLEANING",
-    "message": "Null values removed",
-    "context": {
-      "rows_affected": 11770
-    }
-  },
-  {
-    "timestamp": 1768348636.8841758,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_014",
-    "process_id": 54371,
-    "thread_id": "worker-7",
-    "stage": "PREPROCESS",
-    "message": "Resize completed",
-    "context": {
-      "target": "1080p"
-    }
-  },
-  {
-    "timestamp": 1768348636.890507,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_012",
-    "process_id": 54368,
-    "thread_id": "worker-4",
+    "task_id": "TASK_004",
+    "process_id": 34863,
+    "thread_id": "worker-3",
     "stage": "FINISH",
     "message": "Model training completed",
     "context": {
       "total_epochs": 10,
-      "total_time_sec": 486
+      "total_time_sec": 480
     }
   },
   {
-    "timestamp": 1768348636.891221,
+    "timestamp": 1768641498.005926,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_019",
-    "process_id": 54368,
-    "thread_id": "worker-4",
+    "process_id": 34863,
+    "thread_id": "worker-3",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -743,38 +744,52 @@
     }
   },
   {
-    "timestamp": 1768348636.9036028,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_018",
-    "process_id": 54369,
-    "thread_id": "worker-5",
-    "stage": "CLEANING",
-    "message": "Null values removed",
-    "context": {
-      "rows_affected": 10990
-    }
-  },
-  {
-    "timestamp": 1768348636.903905,
+    "timestamp": 1768641498.011956,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_016",
-    "process_id": 54367,
-    "thread_id": "worker-3",
+    "process_id": 34862,
+    "thread_id": "worker-2",
     "stage": "PREPROCESS",
     "message": "Data normalization completed",
     "context": {
-      "elapsed_ms": 1596
+      "elapsed_ms": 3180
     }
   },
   {
-    "timestamp": 1768348636.9071512,
+    "timestamp": 1768641498.014606,
+    "level": "WARN",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_012",
+    "process_id": 34866,
+    "thread_id": "worker-6",
+    "stage": "TRAINING",
+    "message": "GPU contention detected",
+    "context": {
+      "gpu_id": 0,
+      "lock_wait_ms": 521
+    }
+  },
+  {
+    "timestamp": 1768641498.019593,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_011",
-    "process_id": 54372,
-    "thread_id": "worker-8",
+    "task_id": "TASK_019",
+    "process_id": 34863,
+    "thread_id": "worker-3",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": 1768641498.0243762,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_014",
+    "process_id": 34865,
+    "thread_id": "worker-5",
     "stage": "FINISH",
     "message": "Image processing completed",
     "context": {
@@ -782,12 +797,38 @@
     }
   },
   {
-    "timestamp": 1768348636.908012,
+    "timestamp": 1768641498.0257149,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_009",
+    "process_id": 34869,
+    "thread_id": "worker-9",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": 1768641498.0259168,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_017",
+    "process_id": 34868,
+    "thread_id": "worker-8",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": 1768641498.0261278,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_020",
-    "process_id": 54372,
-    "thread_id": "worker-8",
+    "process_id": 34865,
+    "thread_id": "worker-5",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -796,38 +837,12 @@
     }
   },
   {
-    "timestamp": 1768348636.9094982,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_013",
-    "process_id": 54366,
-    "thread_id": "worker-2",
-    "stage": "CLEANING",
-    "message": "Outliers filtered",
-    "context": {
-      "rows_removed": 254
-    }
-  },
-  {
-    "timestamp": 1768348636.909746,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_017",
-    "process_id": 54370,
-    "thread_id": "worker-6",
-    "stage": "PREPROCESS",
-    "message": "Resize completed",
-    "context": {
-      "target": "1080p"
-    }
-  },
-  {
-    "timestamp": 1768348636.9102871,
+    "timestamp": 1768641498.027404,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_021",
-    "process_id": 54366,
-    "thread_id": "worker-2",
+    "process_id": 34869,
+    "thread_id": "worker-9",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -836,25 +851,52 @@
     }
   },
   {
-    "timestamp": 1768348636.915235,
+    "timestamp": 1768641498.038185,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_015",
-    "process_id": 54373,
-    "thread_id": "worker-9",
+    "process_id": 34867,
+    "thread_id": "worker-7",
     "stage": "CLEANING",
     "message": "Outliers filtered",
     "context": {
-      "rows_removed": 522
+      "rows_removed": 717
     }
   },
   {
-    "timestamp": 1768348636.915859,
+    "timestamp": 1768641498.038214,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_016",
+    "process_id": 34862,
+    "thread_id": "worker-2",
+    "stage": "TRAINING",
+    "message": "Epoch 2 completed",
+    "context": {
+      "loss": 0.139,
+      "accuracy": 0.72
+    }
+  },
+  {
+    "timestamp": 1768641498.0391989,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_018",
+    "process_id": 34864,
+    "thread_id": "worker-4",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 14180
+    }
+  },
+  {
+    "timestamp": 1768641498.0399108,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_022",
-    "process_id": 54373,
-    "thread_id": "worker-9",
+    "process_id": 34867,
+    "thread_id": "worker-7",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -863,12 +905,68 @@
     }
   },
   {
-    "timestamp": 1768348636.927215,
+    "timestamp": 1768641498.045067,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_020",
+    "process_id": 34865,
+    "thread_id": "worker-5",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 1650
+    }
+  },
+  {
+    "timestamp": 1768641498.052188,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_019",
-    "process_id": 54368,
+    "process_id": 34863,
+    "thread_id": "worker-3",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": 1768641498.066241,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_012",
+    "process_id": 34866,
+    "thread_id": "worker-6",
+    "stage": "TRAINING",
+    "message": "Epoch 2 completed",
+    "context": {
+      "loss": 0.916,
+      "accuracy": 0.86
+    }
+  },
+  {
+    "timestamp": 1768641498.069403,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_018",
+    "process_id": 34864,
     "thread_id": "worker-4",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 685
+    }
+  },
+  {
+    "timestamp": 1768641498.069427,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_022",
+    "process_id": 34867,
+    "thread_id": "worker-7",
     "stage": "PREPROCESS",
     "message": "Resize completed",
     "context": {
@@ -876,111 +974,25 @@
     }
   },
   {
-    "timestamp": 1768348636.930523,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_016",
-    "process_id": 54367,
-    "thread_id": "worker-3",
-    "stage": "TRAINING",
-    "message": "Epoch 5 completed",
-    "context": {
-      "loss": 0.299,
-      "accuracy": 0.85
-    }
-  },
-  {
-    "timestamp": 1768348636.931365,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_014",
-    "process_id": 54371,
-    "thread_id": "worker-7",
-    "stage": "PROCESS",
-    "message": "Augmentation completed",
-    "context": {
-      "ops": [
-        "flip",
-        "crop"
-      ]
-    }
-  },
-  {
-    "timestamp": 1768348636.946802,
+    "timestamp": 1768641498.072128,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_021",
-    "process_id": 54366,
-    "thread_id": "worker-2",
+    "process_id": 34869,
+    "thread_id": "worker-9",
     "stage": "CLEANING",
     "message": "Null values removed",
     "context": {
-      "rows_affected": 21205
+      "rows_affected": 22533
     }
   },
   {
-    "timestamp": 1768348636.95717,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_020",
-    "process_id": 54372,
-    "thread_id": "worker-8",
-    "stage": "PREPROCESS",
-    "message": "Data normalization completed",
-    "context": {
-      "elapsed_ms": 2604
-    }
-  },
-  {
-    "timestamp": 1768348636.957175,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_018",
-    "process_id": 54369,
-    "thread_id": "worker-5",
-    "stage": "CLEANING",
-    "message": "Outliers filtered",
-    "context": {
-      "rows_removed": 682
-    }
-  },
-  {
-    "timestamp": 1768348636.9574232,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_019",
-    "process_id": 54368,
-    "thread_id": "worker-4",
-    "stage": "PROCESS",
-    "message": "Augmentation completed",
-    "context": {
-      "ops": [
-        "flip",
-        "crop"
-      ]
-    }
-  },
-  {
-    "timestamp": 1768348636.9574301,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_016",
-    "process_id": 54367,
-    "thread_id": "worker-3",
-    "stage": "FINISH",
-    "message": "Model training completed",
-    "context": {
-      "total_epochs": 10,
-      "total_time_sec": 570
-    }
-  },
-  {
-    "timestamp": 1768348636.9583108,
+    "timestamp": 1768641498.073194,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_023",
-    "process_id": 54369,
-    "thread_id": "worker-5",
+    "process_id": 34864,
+    "thread_id": "worker-4",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -989,12 +1001,72 @@
     }
   },
   {
-    "timestamp": 1768348636.958696,
+    "timestamp": 1768641498.076651,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_017",
+    "process_id": 34868,
+    "thread_id": "worker-8",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": 1768641498.077296,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_020",
+    "process_id": 34865,
+    "thread_id": "worker-5",
+    "stage": "TRAINING",
+    "message": "Epoch 3 completed",
+    "context": {
+      "loss": 0.588,
+      "accuracy": 0.87
+    }
+  },
+  {
+    "timestamp": 1768641498.082846,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_016",
+    "process_id": 34862,
+    "thread_id": "worker-2",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 377
+    }
+  },
+  {
+    "timestamp": 1768641498.08467,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_022",
+    "process_id": 34867,
+    "thread_id": "worker-7",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": 1768641498.084828,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_024",
-    "process_id": 54367,
-    "thread_id": "worker-3",
+    "process_id": 34862,
+    "thread_id": "worker-2",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -1003,38 +1075,26 @@
     }
   },
   {
-    "timestamp": 1768348636.9636312,
+    "timestamp": 1768641498.086793,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_022",
-    "process_id": 54373,
-    "thread_id": "worker-9",
-    "stage": "PREPROCESS",
-    "message": "Resize completed",
+    "task_id": "TASK_012",
+    "process_id": 34866,
+    "thread_id": "worker-6",
+    "stage": "FINISH",
+    "message": "Model training completed",
     "context": {
-      "target": "1080p"
+      "total_epochs": 10,
+      "total_time_sec": 120
     }
   },
   {
-    "timestamp": 1768348636.963636,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_021",
-    "process_id": 54366,
-    "thread_id": "worker-2",
-    "stage": "CLEANING",
-    "message": "Outliers filtered",
-    "context": {
-      "rows_removed": 86
-    }
-  },
-  {
-    "timestamp": 1768348636.964562,
+    "timestamp": 1768641498.088914,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_025",
-    "process_id": 54366,
-    "thread_id": "worker-2",
+    "process_id": 34866,
+    "thread_id": "worker-6",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -1043,28 +1103,12 @@
     }
   },
   {
-    "timestamp": 1768348636.972432,
+    "timestamp": 1768641498.094966,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_017",
-    "process_id": 54370,
-    "thread_id": "worker-6",
-    "stage": "PROCESS",
-    "message": "Augmentation completed",
-    "context": {
-      "ops": [
-        "flip",
-        "crop"
-      ]
-    }
-  },
-  {
-    "timestamp": 1768348636.973823,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_014",
-    "process_id": 54371,
-    "thread_id": "worker-7",
+    "process_id": 34868,
+    "thread_id": "worker-8",
     "stage": "FINISH",
     "message": "Image processing completed",
     "context": {
@@ -1072,12 +1116,39 @@
     }
   },
   {
-    "timestamp": 1768348636.974709,
+    "timestamp": 1768641498.0957172,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_021",
+    "process_id": 34869,
+    "thread_id": "worker-9",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 402
+    }
+  },
+  {
+    "timestamp": 1768641498.095896,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_020",
+    "process_id": 34865,
+    "thread_id": "worker-5",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 697
+    }
+  },
+  {
+    "timestamp": 1768641498.1004689,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_026",
-    "process_id": 54371,
-    "thread_id": "worker-7",
+    "process_id": 34868,
+    "thread_id": "worker-8",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -1086,81 +1157,12 @@
     }
   },
   {
-    "timestamp": 1768348636.9794939,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_024",
-    "process_id": 54367,
-    "thread_id": "worker-3",
-    "stage": "PREPROCESS",
-    "message": "Data normalization completed",
-    "context": {
-      "elapsed_ms": 2105
-    }
-  },
-  {
-    "timestamp": 1768348636.988388,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_017",
-    "process_id": 54370,
-    "thread_id": "worker-6",
-    "stage": "FINISH",
-    "message": "Image processing completed",
-    "context": {
-      "output": "s3://bucket/path"
-    }
-  },
-  {
-    "timestamp": 1768348636.9893491,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_027",
-    "process_id": 54370,
-    "thread_id": "worker-6",
-    "stage": "LOAD",
-    "message": "Task started",
-    "context": {
-      "job_type": "IMAGE_PROCESSING",
-      "input_size_mb": 88
-    }
-  },
-  {
-    "timestamp": 1768348636.9939468,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_025",
-    "process_id": 54366,
-    "thread_id": "worker-2",
-    "stage": "PREPROCESS",
-    "message": "Resize completed",
-    "context": {
-      "target": "1080p"
-    }
-  },
-  {
-    "timestamp": 1768348636.999201,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_022",
-    "process_id": 54373,
-    "thread_id": "worker-9",
-    "stage": "PROCESS",
-    "message": "Augmentation completed",
-    "context": {
-      "ops": [
-        "flip",
-        "crop"
-      ]
-    }
-  },
-  {
-    "timestamp": 1768348637.0028212,
+    "timestamp": 1768641498.100768,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_019",
-    "process_id": 54368,
-    "thread_id": "worker-4",
+    "process_id": 34863,
+    "thread_id": "worker-3",
     "stage": "FINISH",
     "message": "Image processing completed",
     "context": {
@@ -1168,29 +1170,12 @@
     }
   },
   {
-    "timestamp": 1768348637.002826,
-    "level": "ERROR",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_020",
-    "process_id": 54372,
-    "thread_id": "worker-8",
-    "stage": "TRAINING",
-    "message": "CUDA out of memory",
-    "context": {
-      "retry_count": 1
-    },
-    "exception": {
-      "type": "OutOfMemoryError",
-      "stacktrace": "trainer.py:188 -> allocate_tensor()"
-    }
-  },
-  {
-    "timestamp": 1768348637.003965,
+    "timestamp": 1768641498.1012568,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_028",
-    "process_id": 54368,
-    "thread_id": "worker-4",
+    "process_id": 34869,
+    "thread_id": "worker-9",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -1199,124 +1184,39 @@
     }
   },
   {
-    "timestamp": 1768348637.00832,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_023",
-    "process_id": 54369,
-    "thread_id": "worker-5",
-    "stage": "CLEANING",
-    "message": "Null values removed",
-    "context": {
-      "rows_affected": 17253
-    }
-  },
-  {
-    "timestamp": 1768348637.00832,
-    "level": "WARN",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_024",
-    "process_id": 54367,
-    "thread_id": "worker-3",
-    "stage": "TRAINING",
-    "message": "GPU contention detected",
-    "context": {
-      "gpu_id": 0,
-      "lock_wait_ms": 360
-    }
-  },
-  {
-    "timestamp": 1768348637.008329,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_026",
-    "process_id": 54371,
-    "thread_id": "worker-7",
-    "stage": "CLEANING",
-    "message": "Null values removed",
-    "context": {
-      "rows_affected": 12646
-    }
-  },
-  {
-    "timestamp": 1768348637.0269241,
-    "level": "ERROR",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_024",
-    "process_id": 54367,
-    "thread_id": "worker-3",
-    "stage": "TRAINING",
-    "message": "CUDA out of memory",
-    "context": {
-      "retry_count": 1
-    },
-    "exception": {
-      "type": "OutOfMemoryError",
-      "stacktrace": "trainer.py:188 -> allocate_tensor()"
-    }
-  },
-  {
-    "timestamp": 1768348637.028652,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_025",
-    "process_id": 54366,
-    "thread_id": "worker-2",
-    "stage": "PROCESS",
-    "message": "Augmentation completed",
-    "context": {
-      "ops": [
-        "flip",
-        "crop"
-      ]
-    }
-  },
-  {
-    "timestamp": 1768348637.028658,
+    "timestamp": 1768641498.101485,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_027",
-    "process_id": 54370,
-    "thread_id": "worker-6",
-    "stage": "PREPROCESS",
-    "message": "Resize completed",
+    "process_id": 34865,
+    "thread_id": "worker-5",
+    "stage": "LOAD",
+    "message": "Task started",
     "context": {
-      "target": "1080p"
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 88
     }
   },
   {
-    "timestamp": 1768348637.037306,
+    "timestamp": 1768641498.102696,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_023",
-    "process_id": 54369,
-    "thread_id": "worker-5",
+    "process_id": 34864,
+    "thread_id": "worker-4",
     "stage": "CLEANING",
-    "message": "Outliers filtered",
+    "message": "Null values removed",
     "context": {
-      "rows_removed": 465
+      "rows_affected": 21882
     }
   },
   {
-    "timestamp": 1768348637.03856,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_022",
-    "process_id": 54373,
-    "thread_id": "worker-9",
-    "stage": "FINISH",
-    "message": "Image processing completed",
-    "context": {
-      "output": "s3://bucket/path"
-    }
-  },
-  {
-    "timestamp": 1768348637.039794,
+    "timestamp": 1768641498.1033118,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_029",
-    "process_id": 54369,
-    "thread_id": "worker-5",
+    "process_id": 34863,
+    "thread_id": "worker-3",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -1325,12 +1225,64 @@
     }
   },
   {
-    "timestamp": 1768348637.040288,
+    "timestamp": 1768641498.1141372,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_025",
+    "process_id": 34866,
+    "thread_id": "worker-6",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": 1768641498.117611,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_024",
+    "process_id": 34862,
+    "thread_id": "worker-2",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 2946
+    }
+  },
+  {
+    "timestamp": 1768641498.1229382,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_029",
+    "process_id": 34863,
+    "thread_id": "worker-3",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 21314
+    }
+  },
+  {
+    "timestamp": 1768641498.1229482,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_022",
+    "process_id": 34867,
+    "thread_id": "worker-7",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": 1768641498.1245701,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_030",
-    "process_id": 54373,
-    "thread_id": "worker-9",
+    "process_id": 34867,
+    "thread_id": "worker-7",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -1339,78 +1291,90 @@
     }
   },
   {
-    "timestamp": 1768348637.043982,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_020",
-    "process_id": 54372,
-    "thread_id": "worker-8",
-    "stage": "RETRY",
-    "message": "Retrying training with reduced batch size",
-    "context": {
-      "new_batch_size": 16
-    }
-  },
-  {
-    "timestamp": 1768348637.044215,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_020",
-    "process_id": 54372,
-    "thread_id": "worker-8",
-    "stage": "TRAINING",
-    "message": "Epoch 5 completed",
-    "context": {
-      "loss": 0.416,
-      "accuracy": 0.84
-    }
-  },
-  {
-    "timestamp": 1768348637.051588,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_024",
-    "process_id": 54367,
-    "thread_id": "worker-3",
-    "stage": "RETRY",
-    "message": "Retrying training with reduced batch size",
-    "context": {
-      "new_batch_size": 16
-    }
-  },
-  {
-    "timestamp": 1768348637.05171,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_028",
-    "process_id": 54368,
-    "thread_id": "worker-4",
-    "stage": "PREPROCESS",
-    "message": "Data normalization completed",
-    "context": {
-      "elapsed_ms": 3721
-    }
-  },
-  {
-    "timestamp": 1768348637.051878,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_024",
-    "process_id": 54367,
-    "thread_id": "worker-3",
-    "stage": "TRAINING",
-    "message": "Epoch 4 completed",
-    "context": {
-      "loss": 0.985,
-      "accuracy": 0.91
-    }
-  },
-  {
-    "timestamp": 1768348637.055637,
+    "timestamp": 1768641498.131207,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_027",
-    "process_id": 54370,
+    "process_id": 34865,
+    "thread_id": "worker-5",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": 1768641498.14163,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_028",
+    "process_id": 34869,
+    "thread_id": "worker-9",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 3098
+    }
+  },
+  {
+    "timestamp": 1768641498.147421,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_023",
+    "process_id": 34864,
+    "thread_id": "worker-4",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 287
+    }
+  },
+  {
+    "timestamp": 1768641498.147425,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_026",
+    "process_id": 34868,
+    "thread_id": "worker-8",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 12072
+    }
+  },
+  {
+    "timestamp": 1768641498.1497989,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_031",
+    "process_id": 34864,
+    "thread_id": "worker-4",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "MODEL_TRAINING",
+      "input_size_mb": 2048
+    }
+  },
+  {
+    "timestamp": 1768641498.15831,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_030",
+    "process_id": 34867,
+    "thread_id": "worker-7",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": 1768641498.162542,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_025",
+    "process_id": 34866,
     "thread_id": "worker-6",
     "stage": "PROCESS",
     "message": "Augmentation completed",
@@ -1422,92 +1386,25 @@
     }
   },
   {
-    "timestamp": 1768348637.05567,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_026",
-    "process_id": 54371,
-    "thread_id": "worker-7",
-    "stage": "CLEANING",
-    "message": "Outliers filtered",
-    "context": {
-      "rows_removed": 158
-    }
-  },
-  {
-    "timestamp": 1768348637.057913,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_031",
-    "process_id": 54371,
-    "thread_id": "worker-7",
-    "stage": "LOAD",
-    "message": "Task started",
-    "context": {
-      "job_type": "MODEL_TRAINING",
-      "input_size_mb": 2048
-    }
-  },
-  {
-    "timestamp": 1768348637.068144,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_030",
-    "process_id": 54373,
-    "thread_id": "worker-9",
-    "stage": "PREPROCESS",
-    "message": "Resize completed",
-    "context": {
-      "target": "1080p"
-    }
-  },
-  {
-    "timestamp": 1768348637.074121,
+    "timestamp": 1768641498.166236,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_029",
-    "process_id": 54369,
-    "thread_id": "worker-5",
+    "process_id": 34863,
+    "thread_id": "worker-3",
     "stage": "CLEANING",
-    "message": "Null values removed",
+    "message": "Outliers filtered",
     "context": {
-      "rows_affected": 14145
+      "rows_removed": 552
     }
   },
   {
-    "timestamp": 1768348637.07814,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_025",
-    "process_id": 54366,
-    "thread_id": "worker-2",
-    "stage": "FINISH",
-    "message": "Image processing completed",
-    "context": {
-      "output": "s3://bucket/path"
-    }
-  },
-  {
-    "timestamp": 1768348637.078685,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_028",
-    "process_id": 54368,
-    "thread_id": "worker-4",
-    "stage": "TRAINING",
-    "message": "Epoch 5 completed",
-    "context": {
-      "loss": 0.727,
-      "accuracy": 0.98
-    }
-  },
-  {
-    "timestamp": 1768348637.080388,
+    "timestamp": 1768641498.1686668,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_032",
-    "process_id": 54366,
-    "thread_id": "worker-2",
+    "process_id": 34863,
+    "thread_id": "worker-3",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -1516,54 +1413,98 @@
     }
   },
   {
-    "timestamp": 1768348637.101799,
+    "timestamp": 1768641498.171236,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_027",
+    "process_id": 34865,
+    "thread_id": "worker-5",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": 1768641498.1721349,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_024",
-    "process_id": 54367,
-    "thread_id": "worker-3",
-    "stage": "FINISH",
-    "message": "Model training completed",
+    "process_id": 34862,
+    "thread_id": "worker-2",
+    "stage": "TRAINING",
+    "message": "Epoch 3 completed",
     "context": {
-      "total_epochs": 10,
-      "total_time_sec": 833
+      "loss": 0.69,
+      "accuracy": 0.9
     }
   },
   {
-    "timestamp": 1768348637.101901,
+    "timestamp": 1768641498.176706,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_020",
-    "process_id": 54372,
-    "thread_id": "worker-8",
-    "stage": "FINISH",
-    "message": "Model training completed",
+    "task_id": "TASK_028",
+    "process_id": 34869,
+    "thread_id": "worker-9",
+    "stage": "TRAINING",
+    "message": "Epoch 5 completed",
     "context": {
-      "total_epochs": 10,
-      "total_time_sec": 735
+      "loss": 0.358,
+      "accuracy": 0.89
     }
   },
   {
-    "timestamp": 1768348637.104922,
+    "timestamp": 1768641498.18128,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_034",
-    "process_id": 54372,
-    "thread_id": "worker-8",
-    "stage": "LOAD",
-    "message": "Task started",
+    "task_id": "TASK_031",
+    "process_id": 34864,
+    "thread_id": "worker-4",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
     "context": {
-      "job_type": "DATA_CLEANING",
-      "input_size_mb": 480
+      "elapsed_ms": 3934
     }
   },
   {
-    "timestamp": 1768348637.104939,
+    "timestamp": 1768641498.186843,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_030",
+    "process_id": 34867,
+    "thread_id": "worker-7",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
+    "context": {
+      "ops": [
+        "flip",
+        "crop"
+      ]
+    }
+  },
+  {
+    "timestamp": 1768641498.1881542,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_027",
+    "process_id": 34865,
+    "thread_id": "worker-5",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": 1768641498.190798,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_033",
-    "process_id": 54367,
-    "thread_id": "worker-3",
+    "process_id": 34865,
+    "thread_id": "worker-5",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -1572,39 +1513,68 @@
     }
   },
   {
-    "timestamp": 1768348637.107392,
+    "timestamp": 1768641498.197485,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_031",
-    "process_id": 54371,
-    "thread_id": "worker-7",
-    "stage": "PREPROCESS",
-    "message": "Data normalization completed",
+    "process_id": 34864,
+    "thread_id": "worker-4",
+    "stage": "TRAINING",
+    "message": "Epoch 5 completed",
     "context": {
-      "elapsed_ms": 1940
+      "loss": 0.92,
+      "accuracy": 0.81
     }
   },
   {
-    "timestamp": 1768348637.1113942,
+    "timestamp": 1768641498.2020092,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_028",
-    "process_id": 54368,
-    "thread_id": "worker-4",
+    "process_id": 34869,
+    "thread_id": "worker-9",
     "stage": "FINISH",
     "message": "Model training completed",
     "context": {
       "total_epochs": 10,
-      "total_time_sec": 176
+      "total_time_sec": 337
     }
   },
   {
-    "timestamp": 1768348637.1133,
+    "timestamp": 1768641498.2025568,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_024",
+    "process_id": 34862,
+    "thread_id": "worker-2",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 507
+    }
+  },
+  {
+    "timestamp": 1768641498.2052102,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_034",
+    "process_id": 34869,
+    "thread_id": "worker-9",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "DATA_CLEANING",
+      "input_size_mb": 480
+    }
+  },
+  {
+    "timestamp": 1768641498.2054558,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_035",
-    "process_id": 54368,
-    "thread_id": "worker-4",
+    "process_id": 34862,
+    "thread_id": "worker-2",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -1613,54 +1583,25 @@
     }
   },
   {
-    "timestamp": 1768348637.120491,
+    "timestamp": 1768641498.206868,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_027",
-    "process_id": 54370,
-    "thread_id": "worker-6",
-    "stage": "FINISH",
-    "message": "Image processing completed",
-    "context": {
-      "output": "s3://bucket/path"
-    }
-  },
-  {
-    "timestamp": 1768348637.120669,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_030",
-    "process_id": 54373,
-    "thread_id": "worker-9",
-    "stage": "PROCESS",
-    "message": "Augmentation completed",
-    "context": {
-      "ops": [
-        "flip",
-        "crop"
-      ]
-    }
-  },
-  {
-    "timestamp": 1768348637.120919,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_029",
-    "process_id": 54369,
-    "thread_id": "worker-5",
+    "task_id": "TASK_026",
+    "process_id": 34868,
+    "thread_id": "worker-8",
     "stage": "CLEANING",
     "message": "Outliers filtered",
     "context": {
-      "rows_removed": 587
+      "rows_removed": 497
     }
   },
   {
-    "timestamp": 1768348637.122875,
+    "timestamp": 1768641498.2086349,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_036",
-    "process_id": 54370,
-    "thread_id": "worker-6",
+    "process_id": 34868,
+    "thread_id": "worker-8",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -1669,12 +1610,38 @@
     }
   },
   {
-    "timestamp": 1768348637.1230028,
+    "timestamp": 1768641498.208822,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_025",
+    "process_id": 34866,
+    "thread_id": "worker-6",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": 1768641498.2089732,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_032",
+    "process_id": 34863,
+    "thread_id": "worker-3",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 15964
+    }
+  },
+  {
+    "timestamp": 1768641498.210888,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_037",
-    "process_id": 54369,
-    "thread_id": "worker-5",
+    "process_id": 34866,
+    "thread_id": "worker-6",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -1683,38 +1650,38 @@
     }
   },
   {
-    "timestamp": 1768348637.1238341,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_032",
-    "process_id": 54366,
-    "thread_id": "worker-2",
-    "stage": "CLEANING",
-    "message": "Null values removed",
-    "context": {
-      "rows_affected": 29450
-    }
-  },
-  {
-    "timestamp": 1768348637.1420748,
+    "timestamp": 1768641498.220348,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_034",
-    "process_id": 54372,
-    "thread_id": "worker-8",
+    "process_id": 34869,
+    "thread_id": "worker-9",
     "stage": "CLEANING",
     "message": "Null values removed",
     "context": {
-      "rows_affected": 25886
+      "rows_affected": 22213
     }
   },
   {
-    "timestamp": 1768348637.1444411,
+    "timestamp": 1768641498.2217548,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_035",
+    "process_id": 34862,
+    "thread_id": "worker-2",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 1542
+    }
+  },
+  {
+    "timestamp": 1768641498.222857,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_033",
-    "process_id": 54367,
-    "thread_id": "worker-3",
+    "process_id": 34865,
+    "thread_id": "worker-5",
     "stage": "PREPROCESS",
     "message": "Resize completed",
     "context": {
@@ -1722,25 +1689,12 @@
     }
   },
   {
-    "timestamp": 1768348637.145994,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_035",
-    "process_id": 54368,
-    "thread_id": "worker-4",
-    "stage": "PREPROCESS",
-    "message": "Data normalization completed",
-    "context": {
-      "elapsed_ms": 2832
-    }
-  },
-  {
-    "timestamp": 1768348637.156713,
+    "timestamp": 1768641498.229231,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_030",
-    "process_id": 54373,
-    "thread_id": "worker-9",
+    "process_id": 34867,
+    "thread_id": "worker-7",
     "stage": "FINISH",
     "message": "Image processing completed",
     "context": {
@@ -1748,12 +1702,12 @@
     }
   },
   {
-    "timestamp": 1768348637.159206,
+    "timestamp": 1768641498.231074,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_038",
-    "process_id": 54373,
-    "thread_id": "worker-9",
+    "process_id": 34867,
+    "thread_id": "worker-7",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -1762,79 +1716,12 @@
     }
   },
   {
-    "timestamp": 1768348637.160248,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_031",
-    "process_id": 54371,
-    "thread_id": "worker-7",
-    "stage": "TRAINING",
-    "message": "Epoch 5 completed",
-    "context": {
-      "loss": 0.457,
-      "accuracy": 0.72
-    }
-  },
-  {
-    "timestamp": 1768348637.166642,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_036",
-    "process_id": 54370,
-    "thread_id": "worker-6",
-    "stage": "PREPROCESS",
-    "message": "Resize completed",
-    "context": {
-      "target": "1080p"
-    }
-  },
-  {
-    "timestamp": 1768348637.1686678,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_032",
-    "process_id": 54366,
-    "thread_id": "worker-2",
-    "stage": "CLEANING",
-    "message": "Outliers filtered",
-    "context": {
-      "rows_removed": 129
-    }
-  },
-  {
-    "timestamp": 1768348637.169081,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_037",
-    "process_id": 54369,
-    "thread_id": "worker-5",
-    "stage": "CLEANING",
-    "message": "Null values removed",
-    "context": {
-      "rows_affected": 23746
-    }
-  },
-  {
-    "timestamp": 1768348637.170646,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_039",
-    "process_id": 54366,
-    "thread_id": "worker-2",
-    "stage": "LOAD",
-    "message": "Task started",
-    "context": {
-      "job_type": "IMAGE_PROCESSING",
-      "input_size_mb": 175
-    }
-  },
-  {
-    "timestamp": 1768348637.175432,
+    "timestamp": 1768641498.246054,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_033",
-    "process_id": 54367,
-    "thread_id": "worker-3",
+    "process_id": 34865,
+    "thread_id": "worker-5",
     "stage": "PROCESS",
     "message": "Augmentation completed",
     "context": {
@@ -1845,25 +1732,66 @@
     }
   },
   {
-    "timestamp": 1768348637.186031,
+    "timestamp": 1768641498.248445,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_034",
-    "process_id": 54372,
-    "thread_id": "worker-8",
+    "task_id": "TASK_032",
+    "process_id": 34863,
+    "thread_id": "worker-3",
     "stage": "CLEANING",
     "message": "Outliers filtered",
     "context": {
-      "rows_removed": 138
+      "rows_removed": 730
     }
   },
   {
-    "timestamp": 1768348637.188333,
+    "timestamp": 1768641498.248789,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_031",
+    "process_id": 34864,
+    "thread_id": "worker-4",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 488
+    }
+  },
+  {
+    "timestamp": 1768641498.248852,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_034",
+    "process_id": 34869,
+    "thread_id": "worker-9",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 384
+    }
+  },
+  {
+    "timestamp": 1768641498.252907,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_039",
+    "process_id": 34863,
+    "thread_id": "worker-3",
+    "stage": "LOAD",
+    "message": "Task started",
+    "context": {
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 175
+    }
+  },
+  {
+    "timestamp": 1768641498.2532952,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_040",
-    "process_id": 54372,
-    "thread_id": "worker-8",
+    "process_id": 34869,
+    "thread_id": "worker-9",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -1872,40 +1800,12 @@
     }
   },
   {
-    "timestamp": 1768348637.1907892,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_035",
-    "process_id": 54368,
-    "thread_id": "worker-4",
-    "stage": "TRAINING",
-    "message": "Epoch 3 completed",
-    "context": {
-      "loss": 0.887,
-      "accuracy": 0.84
-    }
-  },
-  {
-    "timestamp": 1768348637.191282,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_031",
-    "process_id": 54371,
-    "thread_id": "worker-7",
-    "stage": "FINISH",
-    "message": "Model training completed",
-    "context": {
-      "total_epochs": 10,
-      "total_time_sec": 649
-    }
-  },
-  {
-    "timestamp": 1768348637.193082,
+    "timestamp": 1768641498.253689,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_041",
-    "process_id": 54371,
-    "thread_id": "worker-7",
+    "process_id": 34864,
+    "thread_id": "worker-4",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -1914,12 +1814,25 @@
     }
   },
   {
-    "timestamp": 1768348637.198327,
+    "timestamp": 1768641498.256125,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_039",
-    "process_id": 54366,
-    "thread_id": "worker-2",
+    "task_id": "TASK_037",
+    "process_id": 34866,
+    "thread_id": "worker-6",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 26505
+    }
+  },
+  {
+    "timestamp": 1768641498.2648718,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_036",
+    "process_id": 34868,
+    "thread_id": "worker-8",
     "stage": "PREPROCESS",
     "message": "Resize completed",
     "context": {
@@ -1927,24 +1840,51 @@
     }
   },
   {
-    "timestamp": 1768348637.199984,
+    "timestamp": 1768641498.26738,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_037",
-    "process_id": 54369,
-    "thread_id": "worker-5",
-    "stage": "CLEANING",
-    "message": "Outliers filtered",
+    "task_id": "TASK_035",
+    "process_id": 34862,
+    "thread_id": "worker-2",
+    "stage": "TRAINING",
+    "message": "Epoch 4 completed",
     "context": {
-      "rows_removed": 380
+      "loss": 0.735,
+      "accuracy": 0.83
     }
   },
   {
-    "timestamp": 1768348637.201836,
+    "timestamp": 1768641498.2730649,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_033",
+    "process_id": 34865,
+    "thread_id": "worker-5",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": 1768641498.2735748,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_038",
+    "process_id": 34867,
+    "thread_id": "worker-7",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 820
+    }
+  },
+  {
+    "timestamp": 1768641498.27532,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_042",
-    "process_id": 54369,
+    "process_id": 34865,
     "thread_id": "worker-5",
     "stage": "LOAD",
     "message": "Task started",
@@ -1954,25 +1894,38 @@
     }
   },
   {
-    "timestamp": 1768348637.20443,
+    "timestamp": 1768641498.278495,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_038",
-    "process_id": 54373,
+    "task_id": "TASK_040",
+    "process_id": 34869,
     "thread_id": "worker-9",
-    "stage": "PREPROCESS",
-    "message": "Data normalization completed",
+    "stage": "CLEANING",
+    "message": "Null values removed",
     "context": {
-      "elapsed_ms": 1158
+      "rows_affected": 23977
     }
   },
   {
-    "timestamp": 1768348637.2074308,
+    "timestamp": 1768641498.282784,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_041",
+    "process_id": 34864,
+    "thread_id": "worker-4",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 2278
+    }
+  },
+  {
+    "timestamp": 1768641498.291357,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_036",
-    "process_id": 54370,
-    "thread_id": "worker-6",
+    "process_id": 34868,
+    "thread_id": "worker-8",
     "stage": "PROCESS",
     "message": "Augmentation completed",
     "context": {
@@ -1983,39 +1936,51 @@
     }
   },
   {
-    "timestamp": 1768348637.2099042,
+    "timestamp": 1768641498.2971299,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_040",
-    "process_id": 54372,
-    "thread_id": "worker-8",
+    "task_id": "TASK_039",
+    "process_id": 34863,
+    "thread_id": "worker-3",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": 1768641498.2995589,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_042",
+    "process_id": 34865,
+    "thread_id": "worker-5",
+    "stage": "PREPROCESS",
+    "message": "Resize completed",
+    "context": {
+      "target": "1080p"
+    }
+  },
+  {
+    "timestamp": 1768641498.303083,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_037",
+    "process_id": 34866,
+    "thread_id": "worker-6",
     "stage": "CLEANING",
-    "message": "Null values removed",
+    "message": "Outliers filtered",
     "context": {
-      "rows_affected": 24909
+      "rows_removed": 463
     }
   },
   {
-    "timestamp": 1768348637.2159271,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_035",
-    "process_id": 54368,
-    "thread_id": "worker-4",
-    "stage": "FINISH",
-    "message": "Model training completed",
-    "context": {
-      "total_epochs": 10,
-      "total_time_sec": 268
-    }
-  },
-  {
-    "timestamp": 1768348637.218197,
+    "timestamp": 1768641498.305582,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_043",
-    "process_id": 54368,
-    "thread_id": "worker-4",
+    "process_id": 34866,
+    "thread_id": "worker-6",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -2024,12 +1989,12 @@
     }
   },
   {
-    "timestamp": 1768348637.219894,
+    "timestamp": 1768641498.306984,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_036",
-    "process_id": 54370,
-    "thread_id": "worker-6",
+    "process_id": 34868,
+    "thread_id": "worker-8",
     "stage": "FINISH",
     "message": "Image processing completed",
     "context": {
@@ -2037,26 +2002,12 @@
     }
   },
   {
-    "timestamp": 1768348637.2199318,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_038",
-    "process_id": 54373,
-    "thread_id": "worker-9",
-    "stage": "TRAINING",
-    "message": "Epoch 3 completed",
-    "context": {
-      "loss": 0.23,
-      "accuracy": 0.96
-    }
-  },
-  {
-    "timestamp": 1768348637.2216508,
+    "timestamp": 1768641498.30878,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_044",
-    "process_id": 54370,
-    "thread_id": "worker-6",
+    "process_id": 34868,
+    "thread_id": "worker-8",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -2065,25 +2016,55 @@
     }
   },
   {
-    "timestamp": 1768348637.223823,
+    "timestamp": 1768641498.323116,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_033",
-    "process_id": 54367,
+    "task_id": "TASK_039",
+    "process_id": 34863,
     "thread_id": "worker-3",
-    "stage": "FINISH",
-    "message": "Image processing completed",
+    "stage": "PROCESS",
+    "message": "Augmentation completed",
     "context": {
-      "output": "s3://bucket/path"
+      "ops": [
+        "flip",
+        "crop"
+      ]
     }
   },
   {
-    "timestamp": 1768348637.225366,
+    "timestamp": 1768641498.324338,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_040",
+    "process_id": 34869,
+    "thread_id": "worker-9",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 86
+    }
+  },
+  {
+    "timestamp": 1768641498.3243468,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_035",
+    "process_id": 34862,
+    "thread_id": "worker-2",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 878
+    }
+  },
+  {
+    "timestamp": 1768641498.3271701,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_045",
-    "process_id": 54367,
-    "thread_id": "worker-3",
+    "process_id": 34869,
+    "thread_id": "worker-9",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -2092,80 +2073,12 @@
     }
   },
   {
-    "timestamp": 1768348637.236434,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_039",
-    "process_id": 54366,
-    "thread_id": "worker-2",
-    "stage": "PROCESS",
-    "message": "Augmentation completed",
-    "context": {
-      "ops": [
-        "flip",
-        "crop"
-      ]
-    }
-  },
-  {
-    "timestamp": 1768348637.241816,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_042",
-    "process_id": 54369,
-    "thread_id": "worker-5",
-    "stage": "PREPROCESS",
-    "message": "Resize completed",
-    "context": {
-      "target": "1080p"
-    }
-  },
-  {
-    "timestamp": 1768348637.24502,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_041",
-    "process_id": 54371,
-    "thread_id": "worker-7",
-    "stage": "PREPROCESS",
-    "message": "Data normalization completed",
-    "context": {
-      "elapsed_ms": 3627
-    }
-  },
-  {
-    "timestamp": 1768348637.2450728,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_043",
-    "process_id": 54368,
-    "thread_id": "worker-4",
-    "stage": "CLEANING",
-    "message": "Null values removed",
-    "context": {
-      "rows_affected": 29189
-    }
-  },
-  {
-    "timestamp": 1768348637.248862,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_040",
-    "process_id": 54372,
-    "thread_id": "worker-8",
-    "stage": "CLEANING",
-    "message": "Outliers filtered",
-    "context": {
-      "rows_removed": 105
-    }
-  },
-  {
-    "timestamp": 1768348637.251192,
+    "timestamp": 1768641498.327682,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_046",
-    "process_id": 54372,
-    "thread_id": "worker-8",
+    "process_id": 34862,
+    "thread_id": "worker-2",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -2174,25 +2087,79 @@
     }
   },
   {
-    "timestamp": 1768348637.255703,
-    "level": "INFO",
+    "timestamp": 1768641498.330546,
+    "level": "WARN",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_045",
-    "process_id": 54367,
-    "thread_id": "worker-3",
-    "stage": "PREPROCESS",
-    "message": "Resize completed",
+    "task_id": "TASK_038",
+    "process_id": 34867,
+    "thread_id": "worker-7",
+    "stage": "TRAINING",
+    "message": "GPU contention detected",
     "context": {
-      "target": "1080p"
+      "gpu_id": 0,
+      "lock_wait_ms": 313
     }
   },
   {
-    "timestamp": 1768348637.261677,
+    "timestamp": 1768641498.341084,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_044",
+    "process_id": 34868,
+    "thread_id": "worker-8",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 2017
+    }
+  },
+  {
+    "timestamp": 1768641498.341245,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_041",
+    "process_id": 34864,
+    "thread_id": "worker-4",
+    "stage": "TRAINING",
+    "message": "Epoch 2 completed",
+    "context": {
+      "loss": 0.902,
+      "accuracy": 0.9
+    }
+  },
+  {
+    "timestamp": 1768641498.344971,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_043",
+    "process_id": 34866,
+    "thread_id": "worker-6",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 28219
+    }
+  },
+  {
+    "timestamp": 1768641498.346776,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_046",
+    "process_id": 34862,
+    "thread_id": "worker-2",
+    "stage": "CLEANING",
+    "message": "Null values removed",
+    "context": {
+      "rows_affected": 11844
+    }
+  },
+  {
+    "timestamp": 1768641498.360409,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_039",
-    "process_id": 54366,
-    "thread_id": "worker-2",
+    "process_id": 34863,
+    "thread_id": "worker-3",
     "stage": "FINISH",
     "message": "Image processing completed",
     "context": {
@@ -2200,26 +2167,26 @@
     }
   },
   {
-    "timestamp": 1768348637.263575,
+    "timestamp": 1768641498.36147,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_038",
-    "process_id": 54373,
-    "thread_id": "worker-9",
-    "stage": "FINISH",
-    "message": "Model training completed",
+    "process_id": 34867,
+    "thread_id": "worker-7",
+    "stage": "TRAINING",
+    "message": "Epoch 5 completed",
     "context": {
-      "total_epochs": 10,
-      "total_time_sec": 255
+      "loss": 0.143,
+      "accuracy": 0.9
     }
   },
   {
-    "timestamp": 1768348637.263613,
+    "timestamp": 1768641498.362952,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_047",
-    "process_id": 54366,
-    "thread_id": "worker-2",
+    "process_id": 34863,
+    "thread_id": "worker-3",
     "stage": "LOAD",
     "message": "Task started",
     "context": {
@@ -2228,25 +2195,11 @@
     }
   },
   {
-    "timestamp": 1768348637.26561,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_048",
-    "process_id": 54373,
-    "thread_id": "worker-9",
-    "stage": "LOAD",
-    "message": "Task started",
-    "context": {
-      "job_type": "IMAGE_PROCESSING",
-      "input_size_mb": 200
-    }
-  },
-  {
-    "timestamp": 1768348637.2741492,
+    "timestamp": 1768641498.363998,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_042",
-    "process_id": 54369,
+    "process_id": 34865,
     "thread_id": "worker-5",
     "stage": "PROCESS",
     "message": "Augmentation completed",
@@ -2258,64 +2211,65 @@
     }
   },
   {
-    "timestamp": 1768348637.2741828,
+    "timestamp": 1768641498.364629,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_044",
-    "process_id": 54370,
-    "thread_id": "worker-6",
+    "task_id": "TASK_045",
+    "process_id": 34869,
+    "thread_id": "worker-9",
     "stage": "PREPROCESS",
-    "message": "Data normalization completed",
+    "message": "Resize completed",
     "context": {
-      "elapsed_ms": 2956
+      "target": "1080p"
     }
   },
   {
-    "timestamp": 1768348637.281024,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_041",
-    "process_id": 54371,
-    "thread_id": "worker-7",
-    "stage": "TRAINING",
-    "message": "Epoch 1 completed",
-    "context": {
-      "loss": 0.652,
-      "accuracy": 0.96
-    }
-  },
-  {
-    "timestamp": 1768348637.29283,
+    "timestamp": 1768641498.369545,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_043",
-    "process_id": 54368,
-    "thread_id": "worker-4",
+    "process_id": 34866,
+    "thread_id": "worker-6",
     "stage": "CLEANING",
     "message": "Outliers filtered",
     "context": {
-      "rows_removed": 647
+      "rows_removed": 580
     }
   },
   {
-    "timestamp": 1768348637.294137,
+    "timestamp": 1768641498.371486,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_046",
-    "process_id": 54372,
-    "thread_id": "worker-8",
-    "stage": "CLEANING",
-    "message": "Null values removed",
+    "task_id": "TASK_048",
+    "process_id": 34866,
+    "thread_id": "worker-6",
+    "stage": "LOAD",
+    "message": "Task started",
     "context": {
-      "rows_affected": 10371
+      "job_type": "IMAGE_PROCESSING",
+      "input_size_mb": 200
     }
   },
   {
-    "timestamp": 1768348637.295716,
+    "timestamp": 1768641498.3761039,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_041",
+    "process_id": 34864,
+    "thread_id": "worker-4",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 757
+    }
+  },
+  {
+    "timestamp": 1768641498.378387,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_049",
-    "process_id": 54368,
+    "process_id": 34864,
     "thread_id": "worker-4",
     "stage": "LOAD",
     "message": "Task started",
@@ -2325,39 +2279,38 @@
     }
   },
   {
-    "timestamp": 1768348637.2960079,
-    "level": "WARN",
+    "timestamp": 1768641498.385342,
+    "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_044",
-    "process_id": 54370,
-    "thread_id": "worker-6",
-    "stage": "TRAINING",
-    "message": "GPU contention detected",
+    "task_id": "TASK_047",
+    "process_id": 34863,
+    "thread_id": "worker-3",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
     "context": {
-      "gpu_id": 0,
-      "lock_wait_ms": 339
+      "elapsed_ms": 708
     }
   },
   {
-    "timestamp": 1768348637.3029199,
+    "timestamp": 1768641498.387302,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_041",
-    "process_id": 54371,
+    "task_id": "TASK_038",
+    "process_id": 34867,
     "thread_id": "worker-7",
     "stage": "FINISH",
     "message": "Model training completed",
     "context": {
       "total_epochs": 10,
-      "total_time_sec": 424
+      "total_time_sec": 750
     }
   },
   {
-    "timestamp": 1768348637.304312,
+    "timestamp": 1768641498.3893309,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_050",
-    "process_id": 54371,
+    "process_id": 34867,
     "thread_id": "worker-7",
     "stage": "LOAD",
     "message": "Task started",
@@ -2367,38 +2320,26 @@
     }
   },
   {
-    "timestamp": 1768348637.3050601,
+    "timestamp": 1768641498.391498,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_047",
-    "process_id": 54366,
-    "thread_id": "worker-2",
-    "stage": "PREPROCESS",
-    "message": "Data normalization completed",
-    "context": {
-      "elapsed_ms": 1979
-    }
-  },
-  {
-    "timestamp": 1768348637.307462,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_046",
-    "process_id": 54372,
+    "task_id": "TASK_044",
+    "process_id": 34868,
     "thread_id": "worker-8",
-    "stage": "CLEANING",
-    "message": "Outliers filtered",
+    "stage": "TRAINING",
+    "message": "Epoch 4 completed",
     "context": {
-      "rows_removed": 241
+      "loss": 0.502,
+      "accuracy": 0.82
     }
   },
   {
-    "timestamp": 1768348637.3114822,
+    "timestamp": 1768641498.397523,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_045",
-    "process_id": 54367,
-    "thread_id": "worker-3",
+    "process_id": 34869,
+    "thread_id": "worker-9",
     "stage": "PROCESS",
     "message": "Augmentation completed",
     "context": {
@@ -2409,12 +2350,38 @@
     }
   },
   {
-    "timestamp": 1768348637.313496,
+    "timestamp": 1768641498.398145,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_046",
+    "process_id": 34862,
+    "thread_id": "worker-2",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 598
+    }
+  },
+  {
+    "timestamp": 1768641498.404128,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_050",
+    "process_id": 34867,
+    "thread_id": "worker-7",
+    "stage": "PREPROCESS",
+    "message": "Data normalization completed",
+    "context": {
+      "elapsed_ms": 3161
+    }
+  },
+  {
+    "timestamp": 1768641498.411909,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_048",
-    "process_id": 54373,
-    "thread_id": "worker-9",
+    "process_id": 34866,
+    "thread_id": "worker-6",
     "stage": "PREPROCESS",
     "message": "Resize completed",
     "context": {
@@ -2422,11 +2389,11 @@
     }
   },
   {
-    "timestamp": 1768348637.330764,
+    "timestamp": 1768641498.415675,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_042",
-    "process_id": 54369,
+    "process_id": 34865,
     "thread_id": "worker-5",
     "stage": "FINISH",
     "message": "Image processing completed",
@@ -2435,25 +2402,79 @@
     }
   },
   {
-    "timestamp": 1768348637.338978,
+    "timestamp": 1768641498.422274,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_049",
-    "process_id": 54368,
+    "process_id": 34864,
     "thread_id": "worker-4",
     "stage": "CLEANING",
     "message": "Null values removed",
     "context": {
-      "rows_affected": 25181
+      "rows_affected": 26433
     }
   },
   {
-    "timestamp": 1768348637.3410618,
-    "level": "ERROR",
+    "timestamp": 1768641498.426197,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_045",
+    "process_id": 34869,
+    "thread_id": "worker-9",
+    "stage": "FINISH",
+    "message": "Image processing completed",
+    "context": {
+      "output": "s3://bucket/path"
+    }
+  },
+  {
+    "timestamp": 1768641498.439636,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_047",
+    "process_id": 34863,
+    "thread_id": "worker-3",
+    "stage": "TRAINING",
+    "message": "Epoch 1 completed",
+    "context": {
+      "loss": 0.782,
+      "accuracy": 0.71
+    }
+  },
+  {
+    "timestamp": 1768641498.4415739,
+    "level": "INFO",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_049",
+    "process_id": 34864,
+    "thread_id": "worker-4",
+    "stage": "CLEANING",
+    "message": "Outliers filtered",
+    "context": {
+      "rows_removed": 51
+    }
+  },
+  {
+    "timestamp": 1768641498.445576,
+    "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_044",
-    "process_id": 54370,
-    "thread_id": "worker-6",
+    "process_id": 34868,
+    "thread_id": "worker-8",
+    "stage": "FINISH",
+    "message": "Model training completed",
+    "context": {
+      "total_epochs": 10,
+      "total_time_sec": 288
+    }
+  },
+  {
+    "timestamp": 1768641498.449962,
+    "level": "ERROR",
+    "batch_id": "BATCH_20260101",
+    "task_id": "TASK_050",
+    "process_id": 34867,
+    "thread_id": "worker-7",
     "stage": "TRAINING",
     "message": "CUDA out of memory",
     "context": {
@@ -2465,25 +2486,26 @@
     }
   },
   {
-    "timestamp": 1768348637.343852,
+    "timestamp": 1768641498.468033,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_050",
-    "process_id": 54371,
-    "thread_id": "worker-7",
-    "stage": "PREPROCESS",
-    "message": "Data normalization completed",
+    "task_id": "TASK_047",
+    "process_id": 34863,
+    "thread_id": "worker-3",
+    "stage": "FINISH",
+    "message": "Model training completed",
     "context": {
-      "elapsed_ms": 1428
+      "total_epochs": 10,
+      "total_time_sec": 234
     }
   },
   {
-    "timestamp": 1768348637.350869,
+    "timestamp": 1768641498.4728918,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_048",
-    "process_id": 54373,
-    "thread_id": "worker-9",
+    "process_id": 34866,
+    "thread_id": "worker-6",
     "stage": "PROCESS",
     "message": "Augmentation completed",
     "context": {
@@ -2494,65 +2516,12 @@
     }
   },
   {
-    "timestamp": 1768348637.354722,
+    "timestamp": 1768641498.4811919,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_047",
-    "process_id": 54366,
-    "thread_id": "worker-2",
-    "stage": "TRAINING",
-    "message": "Epoch 2 completed",
-    "context": {
-      "loss": 0.765,
-      "accuracy": 0.87
-    }
-  },
-  {
-    "timestamp": 1768348637.357769,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_045",
-    "process_id": 54367,
-    "thread_id": "worker-3",
-    "stage": "FINISH",
-    "message": "Image processing completed",
-    "context": {
-      "output": "s3://bucket/path"
-    }
-  },
-  {
-    "timestamp": 1768348637.362155,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_049",
-    "process_id": 54368,
-    "thread_id": "worker-4",
-    "stage": "CLEANING",
-    "message": "Outliers filtered",
-    "context": {
-      "rows_removed": 56
-    }
-  },
-  {
-    "timestamp": 1768348637.373525,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_048",
-    "process_id": 54373,
-    "thread_id": "worker-9",
-    "stage": "FINISH",
-    "message": "Image processing completed",
-    "context": {
-      "output": "s3://bucket/path"
-    }
-  },
-  {
-    "timestamp": 1768348637.373525,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_044",
-    "process_id": 54370,
-    "thread_id": "worker-6",
+    "task_id": "TASK_050",
+    "process_id": 34867,
+    "thread_id": "worker-7",
     "stage": "RETRY",
     "message": "Retrying training with reduced batch size",
     "context": {
@@ -2560,73 +2529,44 @@
     }
   },
   {
-    "timestamp": 1768348637.3739,
+    "timestamp": 1768641498.4815738,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_044",
-    "process_id": 54370,
-    "thread_id": "worker-6",
+    "task_id": "TASK_050",
+    "process_id": 34867,
+    "thread_id": "worker-7",
     "stage": "TRAINING",
     "message": "Epoch 5 completed",
     "context": {
-      "loss": 0.258,
-      "accuracy": 0.87
+      "loss": 0.473,
+      "accuracy": 0.97
     }
   },
   {
-    "timestamp": 1768348637.390861,
+    "timestamp": 1768641498.507412,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
-    "task_id": "TASK_050",
-    "process_id": 54371,
-    "thread_id": "worker-7",
-    "stage": "TRAINING",
-    "message": "Epoch 4 completed",
-    "context": {
-      "loss": 0.376,
-      "accuracy": 0.83
-    }
-  },
-  {
-    "timestamp": 1768348637.401868,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_044",
-    "process_id": 54370,
+    "task_id": "TASK_048",
+    "process_id": 34866,
     "thread_id": "worker-6",
     "stage": "FINISH",
-    "message": "Model training completed",
+    "message": "Image processing completed",
     "context": {
-      "total_epochs": 10,
-      "total_time_sec": 807
+      "output": "s3://bucket/path"
     }
   },
   {
-    "timestamp": 1768348637.4179971,
-    "level": "INFO",
-    "batch_id": "BATCH_20260101",
-    "task_id": "TASK_047",
-    "process_id": 54366,
-    "thread_id": "worker-2",
-    "stage": "FINISH",
-    "message": "Model training completed",
-    "context": {
-      "total_epochs": 10,
-      "total_time_sec": 510
-    }
-  },
-  {
-    "timestamp": 1768348637.443062,
+    "timestamp": 1768641498.519049,
     "level": "INFO",
     "batch_id": "BATCH_20260101",
     "task_id": "TASK_050",
-    "process_id": 54371,
+    "process_id": 34867,
     "thread_id": "worker-7",
     "stage": "FINISH",
     "message": "Model training completed",
     "context": {
       "total_epochs": 10,
-      "total_time_sec": 874
+      "total_time_sec": 361
     }
   }
 ]
