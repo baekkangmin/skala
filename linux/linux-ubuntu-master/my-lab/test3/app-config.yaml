@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Config
+metadata:
+  name: my-app
+spec:
+  port: 8080
+  db:
+    host: localhost
+    user: admin
+    pass: secret
