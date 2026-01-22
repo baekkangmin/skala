@@ -1,0 +1,6 @@
+alice 100
+bob 200
+charlie 300
+skala-001  10
+skala-002  20
+skala-003  30
