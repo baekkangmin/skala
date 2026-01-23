@@ -1,0 +1,7 @@
+# application.yml
+server:
+  port: 8090
+
+spring:
+  thymeleaf:
+    cache: false

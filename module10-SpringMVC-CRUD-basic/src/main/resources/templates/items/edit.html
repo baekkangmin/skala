@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edit Item</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Item 수정</h1>
+        <a class="btn" th:href="@{/items}">취소</a>
+      </header>
+
+      <form th:action="@{/items/edit}" method="post" th:object="${item}">
+        <input type="hidden" th:field="*{id}" />
+        <div class="form-row">
+          <label>이름</label>
+          <input type="text" th:field="*{name}" required />
+        </div>
+        <div class="form-row">
+          <label>가격</label>
+          <input type="number" th:field="*{price}" min="0" required />
+        </div>
+        <div class="form-row">
+          <label>수량</label>
+          <input type="number" th:field="*{quantity}" min="0" required />
+        </div>
+        <button class="btn" type="submit">수정</button>
+      </form>
+    </main>
+  </body>
+</html>

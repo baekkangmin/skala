@@ -1,0 +1,56 @@
+<!-- list.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Items</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Item 목록</h1>
+        <a class="btn" th:href="@{/items/new}">저장</a>
+      </header>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>아이디</th>
+              <th>이름</th>
+              <th>가격</th>
+              <th>수량</th>
+              <th>수정/삭제</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="it : ${items}">
+              <td th:text="${it.id}">1</td>
+              <td>
+                <a th:href="@{/items/view(id=${it.id})}" th:text="${it.name}"
+                  >이름</a
+                >
+              </td>
+              <td th:text="${it.price}">0</td>
+              <td th:text="${it.quantity}">0</td>
+              <td>
+                <a
+                  class="btn btn-outline"
+                  th:href="@{/items/edit/{id}(id=${it.id})}"
+                  >수정</a
+                >
+                <form
+                  th:action="@{/items/delete/{id}(id=${it.id})}"
+                  method="post"
+                  style="display: inline"
+                >
+                  <button class="btn btn-danger" type="submit">삭제</button>
+                </form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
