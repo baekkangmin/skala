@@ -1,1 +1,6 @@
 # application.yml
+server:
+  port: 8081
+  error:
+    # 에러 응답을 만들 때, 예외에 담긴 message를 항상 포함해서 내려라
+    include-message: always
