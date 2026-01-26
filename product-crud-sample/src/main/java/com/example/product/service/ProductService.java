@@ -27,6 +27,8 @@ public class ProductService{
    p.setDescription(r.getDescription());
    p.setPrice(r.getPrice());
    p.setStock(r.getStock());
+   p.setCategory(r.getCategory());
+   p.setStatus(r.getStatus());
    mapper.insert(p);
    return getProduct(p.getId());
  }
@@ -37,6 +39,8 @@ public class ProductService{
    p.setDescription(r.getDescription());
    p.setPrice(r.getPrice());
    p.setStock(r.getStock());
+   p.setCategory(r.getCategory());
+   p.setStatus(r.getStatus());
    mapper.update(p);
    return getProduct(id);
  }

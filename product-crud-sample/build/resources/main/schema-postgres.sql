@@ -1,0 +1,77 @@
+-- Postgres 전용: FK 때문에 CASCADE가 안전
+DROP TABLE IF EXISTS order_items CASCADE;
+DROP TABLE IF EXISTS orders CASCADE;
+DROP TABLE IF EXISTS cart_items CASCADE;
+DROP TABLE IF EXISTS carts CASCADE;
+DROP TABLE IF EXISTS products CASCADE;
+DROP TABLE IF EXISTS members CASCADE;
+
+-- members
+CREATE TABLE members(
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(150) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- products
+CREATE TABLE products(
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  description VARCHAR(255),
+  price NUMERIC(15,2) NOT NULL,
+  stock INT NOT NULL,
+  category VARCHAR(50) NOT NULL DEFAULT 'ETC',
+  status VARCHAR(20) NOT NULL DEFAULT 'ACTIVE',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- carts
+CREATE TABLE carts(
+  id BIGSERIAL PRIMARY KEY,
+  member_id BIGINT NOT NULL UNIQUE,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_carts_member FOREIGN KEY (member_id) REFERENCES members(id)
+);
+
+-- cart_items
+CREATE TABLE cart_items(
+  id BIGSERIAL PRIMARY KEY,
+  cart_id BIGINT NOT NULL,
+  product_id BIGINT NOT NULL,
+  quantity INT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT uq_cart_items UNIQUE(cart_id, product_id),
+  CONSTRAINT fk_cart_items_cart FOREIGN KEY (cart_id) REFERENCES carts(id),
+  CONSTRAINT fk_cart_items_product FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+-- orders
+CREATE TABLE orders(
+  id BIGSERIAL PRIMARY KEY,
+  member_id BIGINT NOT NULL,
+  status VARCHAR(20) NOT NULL,
+  total_amount NUMERIC(15,2) NOT NULL DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_orders_member FOREIGN KEY (member_id) REFERENCES members(id)
+);
+
+-- order_items
+CREATE TABLE order_items(
+  id BIGSERIAL PRIMARY KEY,
+  order_id BIGINT NOT NULL,
+  product_id BIGINT NOT NULL,
+  unit_price NUMERIC(15,2) NOT NULL,
+  quantity INT NOT NULL,
+  line_total NUMERIC(15,2) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_order_items_order FOREIGN KEY (order_id) REFERENCES orders(id),
+  CONSTRAINT fk_order_items_product FOREIGN KEY (product_id) REFERENCES products(id)
+);

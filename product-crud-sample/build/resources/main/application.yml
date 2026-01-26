@@ -1,23 +1,9 @@
-spring:
-  datasource:
-    url: jdbc:h2:mem:productdb;MODE=MySQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    username: sa
-    driver-class-name: org.h2.Driver
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
-  sql:
-    init:
-      mode: always
-
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.example.product.domain
   configuration:
     map-underscore-to-camel-case: true
 
-# Actuator 설정
 management:
   endpoints:
     web:
@@ -30,16 +16,3 @@ management:
       show-components: always
       probes:
         enabled: true
-  metrics:
-    tags:
-      application: ${spring.application.name:product-crud}
-    distribution:
-      percentiles-histogram:
-        http.server.requests: true
-      percentiles:
-        http.server.requests: 0.5, 0.9, 0.95, 0.99
-  health:
-    diskspace:
-      enabled: true
-    db:
-      enabled: true
