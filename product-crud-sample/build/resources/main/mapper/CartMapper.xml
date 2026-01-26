@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.product.mapper.CartMapper">
+
+    <resultMap id="CartMap" type="com.example.product.domain.Cart">
+        <id property="id" column="id"/>
+        <result property="memberId" column="member_id"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+    </resultMap>
+
+    <select id="findByMemberId" resultMap="CartMap">
+        SELECT id, member_id, created_at, updated_at
+        FROM carts
+        WHERE member_id = #{memberId}
+    </select>
+
+    <insert id="insert" parameterType="com.example.product.domain.Cart"
+            useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO carts(member_id) VALUES(#{memberId})
+    </insert>
+
+</mapper>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.product.mapper.OrderItemMapper">
+
+    <resultMap id="OrderItemMap" type="com.example.product.domain.OrderItem">
+        <id property="id" column="id"/>
+        <result property="orderId" column="order_id"/>
+        <result property="productId" column="product_id"/>
+        <result property="unitPrice" column="unit_price"/>
+        <result property="quantity" column="quantity"/>
+        <result property="lineTotal" column="line_total"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.example.product.domain.OrderItem"
+            useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO order_items(order_id, product_id, unit_price, quantity, line_total)
+        VALUES(#{orderId}, #{productId}, #{unitPrice}, #{quantity}, #{lineTotal})
+    </insert>
+
+    <select id="findByOrderId" resultMap="OrderItemMap">
+        SELECT id, order_id, product_id, unit_price, quantity, line_total, created_at, updated_at
+        FROM order_items
+        WHERE order_id = #{orderId}
+        ORDER BY id
+    </select>
+
+    <select id="findViewsByOrderId" resultType="com.example.product.domain.OrderItemView">
+        SELECT
+            p.id AS product_id,
+            p.name AS product_name,
+            oi.unit_price AS unit_price,
+            oi.quantity AS quantity,
+            oi.line_total AS line_total
+        FROM order_items oi
+        JOIN products p ON p.id = oi.product_id
+        WHERE oi.order_id = #{orderId}
+        ORDER BY oi.id
+    </select>
+
+</mapper>

@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: product-crud-prod
+
+server:
+  port: 8082
+
+logging:
+  level:
+    root: WARN
+    com.example.product: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%level] %logger{36} - %msg%n"
+  file:
+    name: logs/product-crud.log
+    max-size: 10MB
+    max-history: 30
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: when-authorized
+      show-components: when-authorized
+      probes:
+        enabled: true
+  metrics:
+    tags:
+      environment: prod
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
+      percentiles:
+        http.server.requests: 0.5, 0.9, 0.95, 0.99
+  health:
+    diskspace:
+      enabled: true
+    db:
+      enabled: true

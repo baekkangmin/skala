@@ -9,4 +9,7 @@ public interface ProductMapper{
  void insert(Product p);
  void update(Product p);
  void deleteById(Long id);
+ int decreaseStock(Long id, Integer qty);
+ int increaseStock(Long id, Integer qty);
+
 }

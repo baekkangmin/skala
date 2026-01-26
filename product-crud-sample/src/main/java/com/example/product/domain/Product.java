@@ -11,4 +11,7 @@ public class Product{
  private Integer stock;
  private LocalDateTime createdAt;
  private LocalDateTime updatedAt;
+// New fields
+private String category; 
+private String status;   
 }

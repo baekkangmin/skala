@@ -16,3 +16,30 @@ mybatis:
   type-aliases-package: com.example.product.domain
   configuration:
     map-underscore-to-camel-case: true
+
+# Actuator 설정
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,env,beans,configprops,httpexchanges,loggers,mappings
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+      probes:
+        enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name:product-crud}
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
+      percentiles:
+        http.server.requests: 0.5, 0.9, 0.95, 0.99
+  health:
+    diskspace:
+      enabled: true
+    db:
+      enabled: true

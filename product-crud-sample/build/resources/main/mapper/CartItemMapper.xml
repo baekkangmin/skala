@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.product.mapper.CartItemMapper">
+
+    <resultMap id="CartItemMap" type="com.example.product.domain.CartItem">
+        <id property="id" column="id"/>
+        <result property="cartId" column="cart_id"/>
+        <result property="productId" column="product_id"/>
+        <result property="quantity" column="quantity"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+    </resultMap>
+
+    <select id="findByCartIdAndProductId" resultMap="CartItemMap">
+        SELECT id, cart_id, product_id, quantity, created_at, updated_at
+        FROM cart_items
+        WHERE cart_id = #{cartId}
+          AND product_id = #{productId}
+    </select>
+
+    <insert id="insert" parameterType="com.example.product.domain.CartItem"
+            useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO cart_items(cart_id, product_id, quantity)
+        VALUES(#{cartId}, #{productId}, #{quantity})
+    </insert>
+
+    <update id="updateQty" parameterType="com.example.product.domain.CartItem">
+        UPDATE cart_items
+        SET quantity = #{quantity},
+            updated_at = CURRENT_TIMESTAMP
+        WHERE cart_id = #{cartId}
+          AND product_id = #{productId}
+    </update>
+
+    <delete id="deleteByCartIdAndProductId">
+        DELETE FROM cart_items
+        WHERE cart_id = #{cartId}
+          AND product_id = #{productId}
+    </delete>
+
+    <delete id="deleteAllByCartId">
+        DELETE FROM cart_items
+        WHERE cart_id = #{cartId}
+    </delete>
+
+    <!-- 장바구니 조회: products 조인 -->
+    <select id="findViewsByCartId" resultType="com.example.product.domain.CartItemView">
+        SELECT
+            p.id AS product_id,
+            p.name AS product_name,
+            p.price AS unit_price,
+            ci.quantity AS quantity,
+            (p.price * ci.quantity) AS line_total
+        FROM cart_items ci
+        JOIN products p ON p.id = ci.product_id
+        WHERE ci.cart_id = #{cartId}
+        ORDER BY p.id
+    </select>
+
+</mapper>
