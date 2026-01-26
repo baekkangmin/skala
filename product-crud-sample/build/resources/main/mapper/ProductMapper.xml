@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.product.mapper.ProductMapper">
+ <sql id="cols">id,name,description,price,stock,created_at,updated_at</sql>
+
+ <select id="findAll" resultType="com.example.product.domain.Product">
+   SELECT <include refid="cols"/> FROM products ORDER BY id DESC
+ </select>
+
+ <select id="findById" parameterType="long" resultType="com.example.product.domain.Product">
+   SELECT <include refid="cols"/> FROM products WHERE id=#{id}
+ </select>
+
+ <insert id="insert" parameterType="com.example.product.domain.Product"
+         useGeneratedKeys="true" keyProperty="id">
+   INSERT INTO products(name,description,price,stock,created_at,updated_at)
+   VALUES(#{name},#{description},#{price},#{stock},CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)
+ </insert>
+
+ <update id="update" parameterType="com.example.product.domain.Product">
+   UPDATE products SET
+     name=#{name}, description=#{description},
+     price=#{price}, stock=#{stock},
+     updated_at=CURRENT_TIMESTAMP
+   WHERE id=#{id}
+ </update>
+
+ <delete id="deleteById" parameterType="long">
+   DELETE FROM products WHERE id=#{id}
+ </delete>
+</mapper>
