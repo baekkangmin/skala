@@ -29,6 +29,6 @@ public class StockDto {
 
     @NotNull(message = "현재가는 필수입니다")
     private Long currentPrice;
-
+    
     private Long previousPrice;
 }

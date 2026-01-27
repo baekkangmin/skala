@@ -50,7 +50,8 @@ public class PortfolioService {
             // 기존 포트폴리오가 있으면 평균 단가 재계산
             Long totalQuantity = existingPortfolio.getQuantity() + quantity;
             Long totalCost = (existingPortfolio.getAveragePrice() * existingPortfolio.getQuantity()) + (price * quantity);
-            Long newAveragePrice = totalCost / totalQuantity;
+            // 정수 나눗셈 방지: Double로 계산 후 반올림
+            Long newAveragePrice = Math.round((double) totalCost / totalQuantity);
 
             existingPortfolio.setQuantity(totalQuantity);
             existingPortfolio.setAveragePrice(newAveragePrice);
@@ -75,8 +76,9 @@ public class PortfolioService {
                 .orElseThrow(() -> new RuntimeException("포트폴리오를 찾을 수 없습니다"));
 
         if (quantity <= 0) {
+            // 수량이 0 이하면 포트폴리오 삭제하고 빈 DTO 반환
             portfolioRepository.delete(portfolio);
-            return null;
+            throw new RuntimeException("수량은 0보다 커야 합니다. 포트폴리오를 삭제하려면 removeFromPortfolio 메서드를 사용하세요.");
         }
 
         portfolio.setQuantity(quantity);
