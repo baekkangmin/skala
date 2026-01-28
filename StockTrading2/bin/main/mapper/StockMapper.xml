@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.skala.stock.mapper.StockMapper">
+
+    <!-- 포트폴리오와 평가 손익 조회 -->
+    <select id="findPortfolioWithProfitLoss" resultType="com.skala.stock.dto.PortfolioDto">
+        SELECT 
+            p.id,
+            p.user_id AS userId,
+            u.username,
+            p.stock_id AS stockId,
+            s.code AS stockCode,
+            s.name AS stockName,
+            p.quantity,
+            p.average_price AS averagePrice,
+            s.current_price AS currentPrice,
+            (p.quantity * s.current_price) AS totalValue,
+            ((p.quantity * s.current_price) - (p.quantity * p.average_price)) AS profitLoss
+        FROM portfolios p
+        INNER JOIN users u ON p.user_id = u.id
+        INNER JOIN stocks s ON p.stock_id = s.id
+        WHERE p.user_id = #{userId}
+        ORDER BY s.code
+    </select>
+
+    <!-- 거래 내역 상세 조회 -->
+    <select id="findTransactionsWithDetails" resultType="com.skala.stock.dto.TransactionDto">
+        SELECT 
+            t.id,
+            t.user_id AS userId,
+            u.username,
+            t.stock_id AS stockId,
+            s.code AS stockCode,
+            s.name AS stockName,
+            t.type,
+            t.quantity,
+            t.price,
+            t.total_amount AS totalAmount,
+            t.transaction_date AS transactionDate,
+            t.created_at AS createdAt
+        FROM transactions t
+        INNER JOIN users u ON t.user_id = u.id
+        INNER JOIN stocks s ON t.stock_id = s.id
+        WHERE t.user_id = #{userId}
+        ORDER BY t.transaction_date DESC
+    </select>
+
+    <!-- 특정 주식 거래 내역 상세 조회 -->
+    <select id="findStockTransactionsWithDetails" resultType="com.skala.stock.dto.TransactionDto">
+        SELECT 
+            t.id,
+            t.user_id AS userId,
+            u.username,
+            t.stock_id AS stockId,
+            s.code AS stockCode,
+            s.name AS stockName,
+            t.type,
+            t.quantity,
+            t.price,
+            t.total_amount AS totalAmount,
+            t.transaction_date AS transactionDate,
+            t.created_at AS createdAt
+        FROM transactions t
+        INNER JOIN users u ON t.user_id = u.id
+        INNER JOIN stocks s ON t.stock_id = s.id
+        WHERE t.user_id = #{userId} AND t.stock_id = #{stockId}
+        ORDER BY t.transaction_date DESC
+    </select>
+
+    <!-- 총 자산 조회 -->
+    <select id="findTotalAssets" resultType="java.lang.Long">
+        SELECT 
+            COALESCE(u.balance, 0) + COALESCE(SUM(p.quantity * s.current_price), 0) AS totalAssets
+        FROM users u
+        LEFT JOIN portfolios p ON u.id = p.user_id
+        LEFT JOIN stocks s ON p.stock_id = s.id
+        WHERE u.id = #{userId}
+        GROUP BY u.id, u.balance
+    </select>
+
+    <!-- 총 수익률 조회 -->
+    <select id="findTotalReturnRate" resultType="java.lang.Double">
+        SELECT 
+            CASE 
+                WHEN COALESCE(SUM(p.quantity * p.average_price), 0) = 0 THEN 0
+                ELSE ROUND(
+                    ((COALESCE(SUM(p.quantity * s.current_price), 0) - COALESCE(SUM(p.quantity * p.average_price), 0)) 
+                    / COALESCE(SUM(p.quantity * p.average_price), 1)) * 100, 2
+                )
+            END AS returnRate
+        FROM portfolios p
+        INNER JOIN stocks s ON p.stock_id = s.id
+        WHERE p.user_id = #{userId}
+    </select>
+
+    <!-- 거래 통계 조회 -->
+    <select id="findTransactionStatistics" resultType="com.skala.stock.mapper.TransactionStatisticsDto">
+        SELECT 
+            s.code AS stockCode,
+            s.name AS stockName,
+            COALESCE(SUM(CASE WHEN t.type = 'BUY' THEN t.quantity ELSE 0 END), 0) AS totalBuyQuantity,
+            COALESCE(SUM(CASE WHEN t.type = 'SELL' THEN t.quantity ELSE 0 END), 0) AS totalSellQuantity,
+            COALESCE(SUM(CASE WHEN t.type = 'BUY' THEN t.quantity ELSE -t.quantity END), 0) AS netQuantity,
+            COALESCE(SUM(CASE WHEN t.type = 'BUY' THEN t.total_amount ELSE 0 END), 0) AS totalBuyAmount,
+            COALESCE(SUM(CASE WHEN t.type = 'SELL' THEN t.total_amount ELSE 0 END), 0) AS totalSellAmount,
+            COALESCE(SUM(CASE WHEN t.type = 'BUY' THEN t.total_amount ELSE -t.total_amount END), 0) AS netAmount
+        FROM stocks s
+        LEFT JOIN transactions t ON s.id = t.stock_id
+        WHERE s.id = #{stockId}
+        GROUP BY s.id, s.code, s.name
+    </select>
+
+    <!-- 일별 거래 내역 조회 -->
+    <select id="findDailyTransactions" resultType="com.skala.stock.dto.TransactionDto">
+        SELECT 
+            t.id,
+            t.user_id AS userId,
+            u.username,
+            t.stock_id AS stockId,
+            s.code AS stockCode,
+            s.name AS stockName,
+            t.type,
+            t.quantity,
+            t.price,
+            t.total_amount AS totalAmount,
+            t.transaction_date AS transactionDate,
+            t.created_at AS createdAt
+        FROM transactions t
+        INNER JOIN users u ON t.user_id = u.id
+        INNER JOIN stocks s ON t.stock_id = s.id
+        WHERE t.user_id = #{userId}
+          AND DATE(t.transaction_date) = #{date}
+        ORDER BY t.transaction_date DESC
+    </select>
+
+</mapper>
