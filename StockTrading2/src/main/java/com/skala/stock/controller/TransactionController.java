@@ -46,6 +46,7 @@ public class TransactionController {
     }  
 
     @GetMapping("/user/{userId}/stock/{stockId}")
+    @Operation(summary = "사용자 특정 주식 거래 내역 조회", description = "특정 사용자의 특정 주식에 대한 거래 내역을 조회합니다")
     public ResponseEntity<List<TransactionDto>> getUserStockTransactions(@PathVariable Long userId, @PathVariable Long stockId) {
     return ResponseEntity.ok(transactionService.getUserStockTransactions(userId, stockId));
 }
