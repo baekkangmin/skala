@@ -1,0 +1,15 @@
+# Docker 빌드 및 실행에서 제외할 파일
+.git
+.gitignore
+.gradle
+build
+bin
+*.md
+.vscode
+.idea
+*.iml
+
+# 테스트 및 임시 파일
+*.log
+*.tmp
+.DS_Store
