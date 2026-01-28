@@ -21,7 +21,7 @@ public class StockController {
     private final StockService stockService;
 
     @PostMapping
-    @Operation(summary = "주식 생성", description = "새로운 주식을 등록합니다")
+    @Operation(summary = "주식 생성", description = "새로운 주식을 등록합니다") // @RequestBody로 JSON 바디를 받아서 StockDto로 매핑
     public ResponseEntity<StockDto> createStock(@Valid @RequestBody StockDto stockDto) {
         StockDto createdStock = stockService.createStock(stockDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdStock);

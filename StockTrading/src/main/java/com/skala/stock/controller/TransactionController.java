@@ -27,7 +27,7 @@ public class TransactionController {
         TransactionDto transaction = transactionService.executeTrade(tradeRequest);
         return ResponseEntity.status(HttpStatus.CREATED).body(transaction);
     }
-
+    
     @GetMapping("/user/{userId}")
     @Operation(summary = "사용자 거래 내역 조회", description = "특정 사용자의 전체 거래 내역을 조회합니다")
     public ResponseEntity<List<TransactionDto>> getUserTransactions(@PathVariable Long userId) {

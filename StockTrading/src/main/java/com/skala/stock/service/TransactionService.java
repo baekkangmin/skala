@@ -57,9 +57,9 @@ public class TransactionService {
             }
         }
 
-        userRepository.save(user);
+        userRepository.save(user); // 없어도 동작하긴 하지만 명시적으로 저장한 것. 원래는 JPA의 영속성 컨텍스트가 변경 감지를 통해 자동으로 반영해줌
 
-        Transaction transaction = Transaction.builder()
+        Transaction transaction = Transaction.builder() // “이번 거래 한 건”을 DB에 기록하기 위해 Transaction 객체를 만듭니다.
                 .user(user)
                 .stock(stock)
                 .type(tradeRequest.getType())
@@ -86,11 +86,12 @@ public class TransactionService {
 
     // ✅ 추가: 특정 사용자 + 특정 주식 거래 내역
     public List<TransactionDto> getUserStockTransactions(Long userId, Long stockId) {
-        return transactionRepository.findByUserIdAndStockIdOrderByTransactionDateDesc(userId, stockId).stream()
+        return transactionRepository.findByUserIdAndStockIdOrderByTransactionDateDesc(userId, stockId).stream() //jpa에서 제공하는 메서드 네이밍 규칙을 활용한 쿼리 메서드
                 .map(this::convertToDto)
                 .collect(Collectors.toList());
     }
 
+    // 엔티티 -> DTO 변환 메서드
     private TransactionDto convertToDto(Transaction transaction) {
         return TransactionDto.builder()
                 .id(transaction.getId())

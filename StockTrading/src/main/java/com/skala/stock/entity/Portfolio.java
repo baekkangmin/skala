@@ -27,12 +27,12 @@ public class Portfolio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY) // ManyToOn: 사용자 한 명은 여러 포트폴리오를 가질 수 있습니다. fetch = FetchType.LAZY: 지연 로딩 설정
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "stock_id", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY) // ManyToOne: 주식 한 종목은 여러 포트폴리오에 포함될 수 있습니다.
+    @JoinColumn(name = "stock_id", nullable = false) // @JoinColumn은 항상 상대 엔티티의 PK를 참조
     private Stock stock;
 
     @Column(nullable = false)

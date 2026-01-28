@@ -27,11 +27,11 @@ public class Transaction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY) // ManyToOne: 한 사용자는 여러 거래를 할 수 있습니다.
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY) // ManyToOne: 한 주식은 여러 거래에 포함될 수 있습니다.
     @JoinColumn(name = "stock_id", nullable = false)
     private Stock stock;
 

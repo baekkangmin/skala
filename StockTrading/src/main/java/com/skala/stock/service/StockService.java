@@ -21,7 +21,7 @@ public class StockService {
     private final TransactionRepository transactionRepository;
     private final PortfolioRepository portfolioRepository;
 
-    @Transactional
+    @Transactional // 전부 성공하면 커밋, 하나라도 실패하면 롤백. DB 상태를 일관성 있게 유지
     public StockDto createStock(StockDto stockDto) {
         if (stockRepository.existsByCode(stockDto.getCode())) {
             throw new RuntimeException("이미 존재하는 종목 코드입니다: " + stockDto.getCode());
