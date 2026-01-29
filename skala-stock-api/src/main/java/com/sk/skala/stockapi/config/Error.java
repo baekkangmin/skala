@@ -1,5 +1,7 @@
 package com.sk.skala.stockapi.config;
 
+// enum이란 서로 관련된 상수들의 집합을 정의하는 특별한 데이터 타입입니다.
+// 여기서는 다양한 오류 상황을 나타내는 상수들을 정의하는 데 사용됩니다.
 public enum Error {
 	//@formatter:off
 	
