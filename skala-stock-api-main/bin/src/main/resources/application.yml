@@ -1,0 +1,41 @@
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    root: INFO
+    '[com.sk.skala]': DEBUG
+    
+spring:
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+
+  datasource:
+    url: jdbc:h2:mem:skala-stock
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
+application:
+  name: "SKALA-STOCK-API"
+  health:
+    url: http://localhost:8080/actuator/health
+    timeout: 5000
+    
